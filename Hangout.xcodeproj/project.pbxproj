@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7CF2E3D1A0D1D56003D0041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */; };
+		F7CF2E401A0D1D56003D0041 /* Hangout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E3E1A0D1D56003D0041 /* Hangout.xcdatamodeld */; };
+		F7CF2E421A0D1D56003D0041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E411A0D1D56003D0041 /* ViewController.swift */; };
+		F7CF2E451A0D1D56003D0041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF2E431A0D1D56003D0041 /* Main.storyboard */; };
+		F7CF2E471A0D1D56003D0041 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CF2E461A0D1D56003D0041 /* Images.xcassets */; };
+		F7CF2E4A1A0D1D56003D0041 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CF2E481A0D1D56003D0041 /* LaunchScreen.xib */; };
+		F7CF2E561A0D1D56003D0041 /* HangoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E551A0D1D56003D0041 /* HangoutTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7CF2E501A0D1D56003D0041 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7CF2E2F1A0D1D56003D0041 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7CF2E361A0D1D56003D0041;
+			remoteInfo = Hangout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F7CF2E371A0D1D56003D0041 /* Hangout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7CF2E3B1A0D1D56003D0041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7CF2E3F1A0D1D56003D0041 /* Hangout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hangout.xcdatamodel; sourceTree = "<group>"; };
+		F7CF2E411A0D1D56003D0041 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7CF2E441A0D1D56003D0041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7CF2E461A0D1D56003D0041 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F7CF2E491A0D1D56003D0041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F7CF2E4F1A0D1D56003D0041 /* HangoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7CF2E541A0D1D56003D0041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7CF2E551A0D1D56003D0041 /* HangoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangoutTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7CF2E341A0D1D56003D0041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7CF2E4C1A0D1D56003D0041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7CF2E2E1A0D1D56003D0041 = {
+			isa = PBXGroup;
+			children = (
+				F7CF2E391A0D1D56003D0041 /* Hangout */,
+				F7CF2E521A0D1D56003D0041 /* HangoutTests */,
+				F7CF2E381A0D1D56003D0041 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7CF2E381A0D1D56003D0041 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF2E371A0D1D56003D0041 /* Hangout.app */,
+				F7CF2E4F1A0D1D56003D0041 /* HangoutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7CF2E391A0D1D56003D0041 /* Hangout */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */,
+				F7CF2E411A0D1D56003D0041 /* ViewController.swift */,
+				F7CF2E431A0D1D56003D0041 /* Main.storyboard */,
+				F7CF2E461A0D1D56003D0041 /* Images.xcassets */,
+				F7CF2E481A0D1D56003D0041 /* LaunchScreen.xib */,
+				F7CF2E3E1A0D1D56003D0041 /* Hangout.xcdatamodeld */,
+				F7CF2E3A1A0D1D56003D0041 /* Supporting Files */,
+			);
+			path = Hangout;
+			sourceTree = "<group>";
+		};
+		F7CF2E3A1A0D1D56003D0041 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF2E3B1A0D1D56003D0041 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7CF2E521A0D1D56003D0041 /* HangoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF2E551A0D1D56003D0041 /* HangoutTests.swift */,
+				F7CF2E531A0D1D56003D0041 /* Supporting Files */,
+			);
+			path = HangoutTests;
+			sourceTree = "<group>";
+		};
+		F7CF2E531A0D1D56003D0041 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7CF2E541A0D1D56003D0041 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7CF2E361A0D1D56003D0041 /* Hangout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7CF2E591A0D1D56003D0041 /* Build configuration list for PBXNativeTarget "Hangout" */;
+			buildPhases = (
+				F7CF2E331A0D1D56003D0041 /* Sources */,
+				F7CF2E341A0D1D56003D0041 /* Frameworks */,
+				F7CF2E351A0D1D56003D0041 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hangout;
+			productName = Hangout;
+			productReference = F7CF2E371A0D1D56003D0041 /* Hangout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F7CF2E4E1A0D1D56003D0041 /* HangoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7CF2E5C1A0D1D56003D0041 /* Build configuration list for PBXNativeTarget "HangoutTests" */;
+			buildPhases = (
+				F7CF2E4B1A0D1D56003D0041 /* Sources */,
+				F7CF2E4C1A0D1D56003D0041 /* Frameworks */,
+				F7CF2E4D1A0D1D56003D0041 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7CF2E511A0D1D56003D0041 /* PBXTargetDependency */,
+			);
+			name = HangoutTests;
+			productName = HangoutTests;
+			productReference = F7CF2E4F1A0D1D56003D0041 /* HangoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7CF2E2F1A0D1D56003D0041 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "RECOGNOS ROMANIA";
+				TargetAttributes = {
+					F7CF2E361A0D1D56003D0041 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					F7CF2E4E1A0D1D56003D0041 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = F7CF2E361A0D1D56003D0041;
+					};
+				};
+			};
+			buildConfigurationList = F7CF2E321A0D1D56003D0041 /* Build configuration list for PBXProject "Hangout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7CF2E2E1A0D1D56003D0041;
+			productRefGroup = F7CF2E381A0D1D56003D0041 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7CF2E361A0D1D56003D0041 /* Hangout */,
+				F7CF2E4E1A0D1D56003D0041 /* HangoutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7CF2E351A0D1D56003D0041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7CF2E451A0D1D56003D0041 /* Main.storyboard in Resources */,
+				F7CF2E4A1A0D1D56003D0041 /* LaunchScreen.xib in Resources */,
+				F7CF2E471A0D1D56003D0041 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7CF2E4D1A0D1D56003D0041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7CF2E331A0D1D56003D0041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7CF2E421A0D1D56003D0041 /* ViewController.swift in Sources */,
+				F7CF2E401A0D1D56003D0041 /* Hangout.xcdatamodeld in Sources */,
+				F7CF2E3D1A0D1D56003D0041 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7CF2E4B1A0D1D56003D0041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7CF2E561A0D1D56003D0041 /* HangoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7CF2E511A0D1D56003D0041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7CF2E361A0D1D56003D0041 /* Hangout */;
+			targetProxy = F7CF2E501A0D1D56003D0041 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7CF2E431A0D1D56003D0041 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7CF2E441A0D1D56003D0041 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7CF2E481A0D1D56003D0041 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7CF2E491A0D1D56003D0041 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7CF2E571A0D1D56003D0041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F7CF2E581A0D1D56003D0041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7CF2E5A1A0D1D56003D0041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Hangout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F7CF2E5B1A0D1D56003D0041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Hangout/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F7CF2E5D1A0D1D56003D0041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HangoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hangout.app/Hangout";
+			};
+			name = Debug;
+		};
+		F7CF2E5E1A0D1D56003D0041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HangoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hangout.app/Hangout";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7CF2E321A0D1D56003D0041 /* Build configuration list for PBXProject "Hangout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7CF2E571A0D1D56003D0041 /* Debug */,
+				F7CF2E581A0D1D56003D0041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7CF2E591A0D1D56003D0041 /* Build configuration list for PBXNativeTarget "Hangout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7CF2E5A1A0D1D56003D0041 /* Debug */,
+				F7CF2E5B1A0D1D56003D0041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F7CF2E5C1A0D1D56003D0041 /* Build configuration list for PBXNativeTarget "HangoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7CF2E5D1A0D1D56003D0041 /* Debug */,
+				F7CF2E5E1A0D1D56003D0041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F7CF2E3E1A0D1D56003D0041 /* Hangout.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F7CF2E3F1A0D1D56003D0041 /* Hangout.xcdatamodel */,
+			);
+			currentVersion = F7CF2E3F1A0D1D56003D0041 /* Hangout.xcdatamodel */;
+			path = Hangout.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F7CF2E2F1A0D1D56003D0041 /* Project object */;
+}
