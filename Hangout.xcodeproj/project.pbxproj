@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F70A3F701A120C70008C48B3 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A3F641A120C70008C48B3 /* Array.swift */; };
-		F70A3F711A120C70008C48B3 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A3F651A120C70008C48B3 /* Dictionary.swift */; };
-		F70A3F721A120C70008C48B3 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A3F661A120C70008C48B3 /* Double.swift */; };
-		F70A3F731A120C70008C48B3 /* ExSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A3F681A120C70008C48B3 /* ExSwift.swift */; };
-		F70A3F741A120C70008C48B3 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A3F691A120C70008C48B3 /* Float.swift */; };
-		F70A3F751A120C70008C48B3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F70A3F6A1A120C70008C48B3 /* Info.plist */; };
-		F70A3F761A120C70008C48B3 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A3F6B1A120C70008C48B3 /* Int.swift */; };
-		F70A3F771A120C70008C48B3 /* NSArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A3F6C1A120C70008C48B3 /* NSArray.swift */; };
-		F70A3F781A120C70008C48B3 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A3F6D1A120C70008C48B3 /* Range.swift */; };
-		F70A3F791A120C70008C48B3 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A3F6E1A120C70008C48B3 /* Sequence.swift */; };
-		F70A3F7A1A120C70008C48B3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70A3F6F1A120C70008C48B3 /* String.swift */; };
 		F72E735D1A0FA43C00A29B71 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E735C1A0FA43C00A29B71 /* NavController.swift */; };
 		F72EC7D21A0FDE3500E532CB /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F72EC7D11A0FDE3500E532CB /* mountain.jpg */; };
 		F72EC7D81A0FDE5500E532CB /* ballGames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F72EC7D31A0FDE5500E532CB /* ballGames.jpg */; };
@@ -26,7 +15,6 @@
 		F72EC7DB1A0FDE5500E532CB /* outdoor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F72EC7D61A0FDE5500E532CB /* outdoor.jpg */; };
 		F72EC7DC1A0FDE5500E532CB /* water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F72EC7D71A0FDE5500E532CB /* water.jpg */; };
 		F73040191A0F83AD002EBDBB /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73040181A0F83AD002EBDBB /* AddActivityViewController.swift */; };
-		F7309AF71A161D6500B63266 /* EndpointCom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7309AF61A161D6500B63266 /* EndpointCom.swift */; };
 		F7309AF91A1623D100B63266 /* GpsLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7309AF81A1623D100B63266 /* GpsLocation.swift */; };
 		F7309AFB1A16266B00B63266 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7309AFA1A16266B00B63266 /* Activity.swift */; };
 		F7A271251A1643FE00205424 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7A271201A1643FE00205424 /* Info.plist */; };
@@ -37,7 +25,6 @@
 		F7A2712C1A18752700205424 /* Individual.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2712B1A18752700205424 /* Individual.swift */; };
 		F7A2712E1A18756100205424 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2712D1A18756100205424 /* Place.swift */; };
 		F7A271301A1875EE00205424 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2712F1A1875EE00205424 /* Meta.swift */; };
-		F7B6A8F51A18BAD800F3813C /* SFlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B6A8F41A18BAD800F3813C /* SFlatButton.swift */; };
 		F7CF2E3D1A0D1D56003D0041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */; };
 		F7CF2E401A0D1D56003D0041 /* Hangout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E3E1A0D1D56003D0041 /* Hangout.xcdatamodeld */; };
 		F7CF2E421A0D1D56003D0041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E411A0D1D56003D0041 /* ViewController.swift */; };
@@ -50,6 +37,17 @@
 		F7CF2E6C1A0F7040003D0041 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E6B1A0F7040003D0041 /* PersistenceHelper.swift */; };
 		F7E0DF261A1941F400C7E59D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E0DF251A1941F400C7E59D /* CollectionViewCell.swift */; };
 		F7E0DF291A19447500C7E59D /* avatar-male.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E0DF281A19447500C7E59D /* avatar-male.png */; };
+		F7E1B2381A1A503200D3E501 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B22C1A1A503200D3E501 /* Array.swift */; };
+		F7E1B2391A1A503200D3E501 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B22D1A1A503200D3E501 /* Dictionary.swift */; };
+		F7E1B23A1A1A503200D3E501 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B22E1A1A503200D3E501 /* Double.swift */; };
+		F7E1B23B1A1A503200D3E501 /* ExSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B2301A1A503200D3E501 /* ExSwift.swift */; };
+		F7E1B23C1A1A503200D3E501 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B2311A1A503200D3E501 /* Float.swift */; };
+		F7E1B23D1A1A503200D3E501 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7E1B2321A1A503200D3E501 /* Info.plist */; };
+		F7E1B23E1A1A503200D3E501 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B2331A1A503200D3E501 /* Int.swift */; };
+		F7E1B23F1A1A503200D3E501 /* NSArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B2341A1A503200D3E501 /* NSArray.swift */; };
+		F7E1B2401A1A503200D3E501 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B2351A1A503200D3E501 /* Range.swift */; };
+		F7E1B2411A1A503200D3E501 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B2361A1A503200D3E501 /* Sequence.swift */; };
+		F7E1B2421A1A503200D3E501 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B2371A1A503200D3E501 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,18 +61,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F70A3F641A120C70008C48B3 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		F70A3F651A120C70008C48B3 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
-		F70A3F661A120C70008C48B3 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
-		F70A3F671A120C70008C48B3 /* ExSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExSwift.h; sourceTree = "<group>"; };
-		F70A3F681A120C70008C48B3 /* ExSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExSwift.swift; sourceTree = "<group>"; };
-		F70A3F691A120C70008C48B3 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
-		F70A3F6A1A120C70008C48B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F70A3F6B1A120C70008C48B3 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		F70A3F6C1A120C70008C48B3 /* NSArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArray.swift; sourceTree = "<group>"; };
-		F70A3F6D1A120C70008C48B3 /* Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
-		F70A3F6E1A120C70008C48B3 /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
-		F70A3F6F1A120C70008C48B3 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F72E735C1A0FA43C00A29B71 /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		F72EC7D11A0FDE3500E532CB /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
 		F72EC7D31A0FDE5500E532CB /* ballGames.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ballGames.jpg; sourceTree = "<group>"; };
@@ -83,7 +69,6 @@
 		F72EC7D61A0FDE5500E532CB /* outdoor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = outdoor.jpg; sourceTree = "<group>"; };
 		F72EC7D71A0FDE5500E532CB /* water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = water.jpg; sourceTree = "<group>"; };
 		F73040181A0F83AD002EBDBB /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
-		F7309AF61A161D6500B63266 /* EndpointCom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointCom.swift; sourceTree = "<group>"; };
 		F7309AF81A1623D100B63266 /* GpsLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpsLocation.swift; sourceTree = "<group>"; };
 		F7309AFA1A16266B00B63266 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F7A271201A1643FE00205424 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +80,6 @@
 		F7A2712B1A18752700205424 /* Individual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Individual.swift; sourceTree = "<group>"; };
 		F7A2712D1A18756100205424 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		F7A2712F1A1875EE00205424 /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
-		F7B6A8F41A18BAD800F3813C /* SFlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFlatButton.swift; sourceTree = "<group>"; };
 		F7CF2E371A0D1D56003D0041 /* Hangout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF2E3B1A0D1D56003D0041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +96,18 @@
 		F7CF2E6B1A0F7040003D0041 /* PersistenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		F7E0DF251A1941F400C7E59D /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F7E0DF281A19447500C7E59D /* avatar-male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-male.png"; sourceTree = "<group>"; };
+		F7E1B22C1A1A503200D3E501 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = "ExSwift-master 3/ExSwift/Array.swift"; sourceTree = "<group>"; };
+		F7E1B22D1A1A503200D3E501 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = "ExSwift-master 3/ExSwift/Dictionary.swift"; sourceTree = "<group>"; };
+		F7E1B22E1A1A503200D3E501 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Double.swift; path = "ExSwift-master 3/ExSwift/Double.swift"; sourceTree = "<group>"; };
+		F7E1B22F1A1A503200D3E501 /* ExSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExSwift.h; path = "ExSwift-master 3/ExSwift/ExSwift.h"; sourceTree = "<group>"; };
+		F7E1B2301A1A503200D3E501 /* ExSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExSwift.swift; path = "ExSwift-master 3/ExSwift/ExSwift.swift"; sourceTree = "<group>"; };
+		F7E1B2311A1A503200D3E501 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Float.swift; path = "ExSwift-master 3/ExSwift/Float.swift"; sourceTree = "<group>"; };
+		F7E1B2321A1A503200D3E501 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "ExSwift-master 3/ExSwift/Info.plist"; sourceTree = "<group>"; };
+		F7E1B2331A1A503200D3E501 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Int.swift; path = "ExSwift-master 3/ExSwift/Int.swift"; sourceTree = "<group>"; };
+		F7E1B2341A1A503200D3E501 /* NSArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSArray.swift; path = "ExSwift-master 3/ExSwift/NSArray.swift"; sourceTree = "<group>"; };
+		F7E1B2351A1A503200D3E501 /* Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Range.swift; path = "ExSwift-master 3/ExSwift/Range.swift"; sourceTree = "<group>"; };
+		F7E1B2361A1A503200D3E501 /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sequence.swift; path = "ExSwift-master 3/ExSwift/Sequence.swift"; sourceTree = "<group>"; };
+		F7E1B2371A1A503200D3E501 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = "ExSwift-master 3/ExSwift/String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,18 +131,6 @@
 		F70A3F631A120C70008C48B3 /* ExSwift */ = {
 			isa = PBXGroup;
 			children = (
-				F70A3F641A120C70008C48B3 /* Array.swift */,
-				F70A3F651A120C70008C48B3 /* Dictionary.swift */,
-				F70A3F661A120C70008C48B3 /* Double.swift */,
-				F70A3F671A120C70008C48B3 /* ExSwift.h */,
-				F70A3F681A120C70008C48B3 /* ExSwift.swift */,
-				F70A3F691A120C70008C48B3 /* Float.swift */,
-				F70A3F6A1A120C70008C48B3 /* Info.plist */,
-				F70A3F6B1A120C70008C48B3 /* Int.swift */,
-				F70A3F6C1A120C70008C48B3 /* NSArray.swift */,
-				F70A3F6D1A120C70008C48B3 /* Range.swift */,
-				F70A3F6E1A120C70008C48B3 /* Sequence.swift */,
-				F70A3F6F1A120C70008C48B3 /* String.swift */,
 			);
 			name = ExSwift;
 			path = "../../../Downloads/ExSwift-master 2/ExSwift";
@@ -168,8 +152,18 @@
 		F7309AF51A161D1500B63266 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F7B6A8F41A18BAD800F3813C /* SFlatButton.swift */,
-				F7309AF61A161D6500B63266 /* EndpointCom.swift */,
+				F7E1B22C1A1A503200D3E501 /* Array.swift */,
+				F7E1B22D1A1A503200D3E501 /* Dictionary.swift */,
+				F7E1B22E1A1A503200D3E501 /* Double.swift */,
+				F7E1B22F1A1A503200D3E501 /* ExSwift.h */,
+				F7E1B2301A1A503200D3E501 /* ExSwift.swift */,
+				F7E1B2311A1A503200D3E501 /* Float.swift */,
+				F7E1B2321A1A503200D3E501 /* Info.plist */,
+				F7E1B2331A1A503200D3E501 /* Int.swift */,
+				F7E1B2341A1A503200D3E501 /* NSArray.swift */,
+				F7E1B2351A1A503200D3E501 /* Range.swift */,
+				F7E1B2361A1A503200D3E501 /* Sequence.swift */,
+				F7E1B2371A1A503200D3E501 /* String.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -372,9 +366,9 @@
 				F7CF2E451A0D1D56003D0041 /* Main.storyboard in Resources */,
 				F72EC7DC1A0FDE5500E532CB /* water.jpg in Resources */,
 				F7CF2E4A1A0D1D56003D0041 /* LaunchScreen.xib in Resources */,
+				F7E1B23D1A1A503200D3E501 /* Info.plist in Resources */,
 				F7CF2E471A0D1D56003D0041 /* Images.xcassets in Resources */,
 				F7A271251A1643FE00205424 /* Info.plist in Resources */,
-				F70A3F751A120C70008C48B3 /* Info.plist in Resources */,
 				F72EC7D91A0FDE5500E532CB /* indoor.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,36 +387,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7E1B23F1A1A503200D3E501 /* NSArray.swift in Sources */,
 				F7A271261A1643FE00205424 /* JSONPath.swift in Sources */,
+				F7E1B2391A1A503200D3E501 /* Dictionary.swift in Sources */,
 				F7CF2E421A0D1D56003D0041 /* ViewController.swift in Sources */,
+				F7E1B23C1A1A503200D3E501 /* Float.swift in Sources */,
 				F7CF2E401A0D1D56003D0041 /* Hangout.xcdatamodeld in Sources */,
-				F70A3F711A120C70008C48B3 /* Dictionary.swift in Sources */,
+				F7E1B23B1A1A503200D3E501 /* ExSwift.swift in Sources */,
 				F7A271271A1643FE00205424 /* SwiftJSONParser.swift in Sources */,
-				F70A3F781A120C70008C48B3 /* Range.swift in Sources */,
 				F7309AFB1A16266B00B63266 /* Activity.swift in Sources */,
-				F7309AF71A161D6500B63266 /* EndpointCom.swift in Sources */,
 				F7CF2E6C1A0F7040003D0041 /* PersistenceHelper.swift in Sources */,
-				F70A3F771A120C70008C48B3 /* NSArray.swift in Sources */,
-				F70A3F761A120C70008C48B3 /* Int.swift in Sources */,
-				F70A3F721A120C70008C48B3 /* Double.swift in Sources */,
 				F7A271301A1875EE00205424 /* Meta.swift in Sources */,
+				F7E1B2411A1A503200D3E501 /* Sequence.swift in Sources */,
 				F7A2712C1A18752700205424 /* Individual.swift in Sources */,
 				F7CF2E661A0D3019003D0041 /* DetailViewController.swift in Sources */,
+				F7E1B2381A1A503200D3E501 /* Array.swift in Sources */,
 				F73040191A0F83AD002EBDBB /* AddActivityViewController.swift in Sources */,
+				F7E1B2401A1A503200D3E501 /* Range.swift in Sources */,
 				F7CF2E601A0D27B0003D0041 /* ActivityManager.swift in Sources */,
+				F7E1B2421A1A503200D3E501 /* String.swift in Sources */,
+				F7E1B23E1A1A503200D3E501 /* Int.swift in Sources */,
+				F7E1B23A1A1A503200D3E501 /* Double.swift in Sources */,
 				F7CF2E3D1A0D1D56003D0041 /* AppDelegate.swift in Sources */,
 				F7309AF91A1623D100B63266 /* GpsLocation.swift in Sources */,
-				F70A3F701A120C70008C48B3 /* Array.swift in Sources */,
 				F7E0DF261A1941F400C7E59D /* CollectionViewCell.swift in Sources */,
 				F7A2712E1A18756100205424 /* Place.swift in Sources */,
-				F70A3F741A120C70008C48B3 /* Float.swift in Sources */,
 				F72E735D1A0FA43C00A29B71 /* NavController.swift in Sources */,
 				F7A2712A1A17EBBB00205424 /* Audit.swift in Sources */,
-				F70A3F7A1A120C70008C48B3 /* String.swift in Sources */,
 				F7A271281A1643FE00205424 /* SwiftRegex.swift in Sources */,
-				F70A3F791A120C70008C48B3 /* Sequence.swift in Sources */,
-				F70A3F731A120C70008C48B3 /* ExSwift.swift in Sources */,
-				F7B6A8F51A18BAD800F3813C /* SFlatButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
