@@ -40,8 +40,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let dangerbtn: SFlatButton = SFlatButton(frame: CGRectMake(60, 500, 200, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
         dangerbtn.setTitle("I want to join this", forState: UIControlState.Normal)
         self.view.addSubview(dangerbtn)
-        
-        self.view.addSubview(dangerbtn)
+    
         //Assign your UILabel textvto your String
         cellNameLabel.text = cellName
         cellDetailLabel.text = cellDesc

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC404C9E1A1A531E00AA24DD /* SFlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC404C9D1A1A531E00AA24DD /* SFlatButton.swift */; };
+		EC55F1741A1CF17100810425 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC55F1731A1CF17100810425 /* LoginViewController.swift */; };
 		F72E735D1A0FA43C00A29B71 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E735C1A0FA43C00A29B71 /* NavController.swift */; };
 		F72EC7D21A0FDE3500E532CB /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F72EC7D11A0FDE3500E532CB /* mountain.jpg */; };
 		F72EC7D81A0FDE5500E532CB /* ballGames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F72EC7D31A0FDE5500E532CB /* ballGames.jpg */; };
@@ -47,7 +49,6 @@
 		F7E1B23F1A1A503200D3E501 /* NSArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B2341A1A503200D3E501 /* NSArray.swift */; };
 		F7E1B2401A1A503200D3E501 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B2351A1A503200D3E501 /* Range.swift */; };
 		F7E1B2411A1A503200D3E501 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B2361A1A503200D3E501 /* Sequence.swift */; };
-		F7E1B2421A1A503200D3E501 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B2371A1A503200D3E501 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC404C9D1A1A531E00AA24DD /* SFlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFlatButton.swift; sourceTree = "<group>"; };
+		EC55F1731A1CF17100810425 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F72E735C1A0FA43C00A29B71 /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		F72EC7D11A0FDE3500E532CB /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
 		F72EC7D31A0FDE5500E532CB /* ballGames.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ballGames.jpg; sourceTree = "<group>"; };
@@ -107,7 +110,6 @@
 		F7E1B2341A1A503200D3E501 /* NSArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSArray.swift; path = "ExSwift-master 3/ExSwift/NSArray.swift"; sourceTree = "<group>"; };
 		F7E1B2351A1A503200D3E501 /* Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Range.swift; path = "ExSwift-master 3/ExSwift/Range.swift"; sourceTree = "<group>"; };
 		F7E1B2361A1A503200D3E501 /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sequence.swift; path = "ExSwift-master 3/ExSwift/Sequence.swift"; sourceTree = "<group>"; };
-		F7E1B2371A1A503200D3E501 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = "ExSwift-master 3/ExSwift/String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,14 +130,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F70A3F631A120C70008C48B3 /* ExSwift */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ExSwift;
-			path = "../../../Downloads/ExSwift-master 2/ExSwift";
-			sourceTree = "<group>";
-		};
 		F72EC7DD1A0FDE6600E532CB /* Photos */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +146,7 @@
 		F7309AF51A161D1500B63266 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EC404C9D1A1A531E00AA24DD /* SFlatButton.swift */,
 				F7E1B22C1A1A503200D3E501 /* Array.swift */,
 				F7E1B22D1A1A503200D3E501 /* Dictionary.swift */,
 				F7E1B22E1A1A503200D3E501 /* Double.swift */,
@@ -163,7 +158,6 @@
 				F7E1B2341A1A503200D3E501 /* NSArray.swift */,
 				F7E1B2351A1A503200D3E501 /* Range.swift */,
 				F7E1B2361A1A503200D3E501 /* Sequence.swift */,
-				F7E1B2371A1A503200D3E501 /* String.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -204,7 +198,6 @@
 				F7E0DF271A19442F00C7E59D /* Images */,
 				F7A2711F1A1643FE00205424 /* SwiftJSON */,
 				F7309AF51A161D1500B63266 /* Utils */,
-				F70A3F631A120C70008C48B3 /* ExSwift */,
 				F72EC7DD1A0FDE6600E532CB /* Photos */,
 				F7CF2E6A1A0F7003003D0041 /* Infrastructure */,
 				F7CF2E691A0F6FD6003D0041 /* Data Model */,
@@ -215,6 +208,7 @@
 				F73040181A0F83AD002EBDBB /* AddActivityViewController.swift */,
 				F72E735C1A0FA43C00A29B71 /* NavController.swift */,
 				F7E0DF251A1941F400C7E59D /* CollectionViewCell.swift */,
+				EC55F1731A1CF17100810425 /* LoginViewController.swift */,
 				F7CF2E461A0D1D56003D0041 /* Images.xcassets */,
 				F7CF2E481A0D1D56003D0041 /* LaunchScreen.xib */,
 				F7CF2E3E1A0D1D56003D0041 /* Hangout.xcdatamodeld */,
@@ -392,6 +386,7 @@
 				F7E1B2391A1A503200D3E501 /* Dictionary.swift in Sources */,
 				F7CF2E421A0D1D56003D0041 /* ViewController.swift in Sources */,
 				F7E1B23C1A1A503200D3E501 /* Float.swift in Sources */,
+				EC55F1741A1CF17100810425 /* LoginViewController.swift in Sources */,
 				F7CF2E401A0D1D56003D0041 /* Hangout.xcdatamodeld in Sources */,
 				F7E1B23B1A1A503200D3E501 /* ExSwift.swift in Sources */,
 				F7A271271A1643FE00205424 /* SwiftJSONParser.swift in Sources */,
@@ -405,7 +400,6 @@
 				F73040191A0F83AD002EBDBB /* AddActivityViewController.swift in Sources */,
 				F7E1B2401A1A503200D3E501 /* Range.swift in Sources */,
 				F7CF2E601A0D27B0003D0041 /* ActivityManager.swift in Sources */,
-				F7E1B2421A1A503200D3E501 /* String.swift in Sources */,
 				F7E1B23E1A1A503200D3E501 /* Int.swift in Sources */,
 				F7E1B23A1A1A503200D3E501 /* Double.swift in Sources */,
 				F7CF2E3D1A0D1D56003D0041 /* AppDelegate.swift in Sources */,
@@ -415,6 +409,7 @@
 				F72E735D1A0FA43C00A29B71 /* NavController.swift in Sources */,
 				F7A2712A1A17EBBB00205424 /* Audit.swift in Sources */,
 				F7A271281A1643FE00205424 /* SwiftRegex.swift in Sources */,
+				EC404C9E1A1A531E00AA24DD /* SFlatButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

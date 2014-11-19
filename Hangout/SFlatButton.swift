@@ -23,7 +23,7 @@ class SFlatButton: UIButton
     
     let SFbuttonType: SFlatButtonType = .SFBDefault
     
-    required init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
@@ -81,7 +81,7 @@ class SFlatButton: UIButton
                 self.layer.borderWidth = 1.0
                 break
             case .SFBDanger:
-                self.setBackgroundImage(self.imageWithColorToButton(UIColor(red: 232/255, green: 84/255, blue: 76/255, alpha: 1)), forState: UIControlState.Normal)
+                self.setBackgroundImage(self.imageWithColorToButton(UIColor(red: 212/255, green: 84/255, blue: 76/255, alpha: 1)), forState: UIControlState.Normal)
                 self.setBackgroundImage(self.imageWithColorToButton(UIColor(red: 193/255, green: 49/255, blue: 38/255, alpha: 1)), forState: UIControlState.Highlighted)
                 self.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
                 self.layer.borderColor = UIColor(red: 199/255, green: 63/255, blue: 52/255, alpha: 1).CGColor
