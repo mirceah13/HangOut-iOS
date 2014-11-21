@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //This is our Activity tableView
     @IBOutlet var activityTable: UITableView!
 
+    var userEmail:String = ""
+    var userName:String = ""
     var formater = NSDateFormatter()
     
     override func viewDidLoad() {

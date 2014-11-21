@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Hangout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" id="vXZ-lx-hvc" customClass="ViewController" customModule="Hangout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRY-fN-qMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1943" y="-160"/>
+            <point key="canvasLocation" x="1907" y="1296"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Ryb-c8-uHY">
@@ -102,12 +102,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dc-sP-gb8">
-                                <rect key="frame" x="5" y="64" width="208" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" red="0.8342013955116272" green="0.0" blue="0.048220028129049027" alpha="0.57000000000000006" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StartsOn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ov-Mt-Om2">
                                 <rect key="frame" x="16" y="99" width="288" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -235,6 +229,12 @@
                                 <color key="textColor" red="0.76977926587301582" green="0.76977926587301582" blue="0.76977926587301582" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dc-sP-gb8">
+                                <rect key="frame" x="5" y="64" width="208" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.8342013955116272" green="0.0" blue="0.048220028129049027" alpha="0.57000000000000006" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -254,7 +254,7 @@
             </objects>
             <point key="canvasLocation" x="2755" y="552"/>
         </scene>
-        <!--Login View Controller-->
+        <!--About yourself-->
         <scene sceneID="98q-eU-1m8">
             <objects>
                 <viewController id="3Cp-UR-Zsx" customClass="LoginViewController" customModule="Hangout" customModuleProvider="target" sceneMemberID="viewController">
@@ -263,35 +263,47 @@
                         <viewControllerLayoutGuide type="bottom" id="tT6-2C-iVn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9ZO-FS-s9z">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zM6-ur-zEH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Etq-j8-gDG">
                                 <rect key="frame" x="26" y="228" width="274" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3Cp-UR-Zsx" id="MNZ-B4-T8g"/>
+                                </connections>
                             </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oQj-ar-CD4" customClass="FBLoginView">
+                                <rect key="frame" x="60" y="392" width="200" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gk5-it-IE1">
                                 <rect key="frame" x="26" y="280" width="274" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3Cp-UR-Zsx" id="Nuk-E0-nJ7"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About yourself" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6I-uN-ty4">
-                                <rect key="frame" x="93" y="188" width="140" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Y8y-rZ-xJb"/>
+                    <navigationItem key="navigationItem" title="About yourself" id="Y8y-rZ-xJb"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="300" height="500"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="UserEmailTextField" destination="Etq-j8-gDG" id="v29-k2-Mg6"/>
+                        <outlet property="UserNameTextField" destination="gk5-it-IE1" id="hiC-CU-eTf"/>
+                        <outlet property="fbLoginView" destination="oQj-ar-CD4" id="vbG-n5-aSp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Il9-uH-Sc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="345" y="163"/>
+            <point key="canvasLocation" x="313" y="150"/>
         </scene>
         <!--Nav Controller-->
         <scene sceneID="gyf-b6-Bem">
@@ -328,7 +340,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHJ-d2-GBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1411" y="-160"/>
+            <point key="canvasLocation" x="1365" y="952"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fdT-5q-cip">
@@ -369,4 +381,7 @@
             <point key="canvasLocation" x="-432" y="150"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg" width="960" height="640"/>
+    </resources>
 </document>

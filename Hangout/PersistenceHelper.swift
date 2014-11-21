@@ -18,6 +18,33 @@ class PersistenceHelper: NSObject {
         context = appDel.managedObjectContext!
     }
     
+    class func ToObjects(datastr: NSString) -> [AnyObject]? {
+        var entities:[AnyObject] = []
+        var objectsJSONStrings:[String]? = []
+        
+        if (datastr != ""){
+            if ((datastr.hasPrefix("["))){ //we are array of JSON Objects
+                let subStringRange = NSMakeRange(1, (datastr.length - 2))
+                let ds = datastr.substringWithRange(subStringRange)
+                let separator:NSString = ",{"  + "\"" + "Id" + "\"" + ":"
+                objectsJSONStrings = ds.componentsSeparatedByString(separator) as [AnyObject]? as [String]?
+                for (index,value) in enumerate(objectsJSONStrings!){
+                    if (index > 0){ //add ,{"Id"
+                        objectsJSONStrings?[index] = "{\"Id\":" + value.stringByReplacingOccurrencesOfString("\\", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                            as String
+                    }
+                }
+            }
+            for item in objectsJSONStrings!{
+                
+                var act:Activity = Activity(JSONString: item as String)
+                entities.push(act)
+            }
+        }
+        return entities
+    }
+    
+    
     func save(entity: String, parameters: Dictionary<String, String>) -> Bool{
         
         var newEntity = NSEntityDescription.insertNewObjectForEntityForName(entity, inManagedObjectContext: context) as NSManagedObject
