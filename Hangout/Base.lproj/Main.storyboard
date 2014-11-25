@@ -28,7 +28,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="S0c-Oe-7T4">
-                        <barButtonItem key="backBarButtonItem" title=" " id="TFw-vT-lng"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4UP-a7-ytE">
                             <connections>
                                 <segue destination="1vm-aQ-ahU" kind="presentation" id="LPN-sp-IMb"/>
@@ -124,9 +123,6 @@
                                     <outlet property="delegate" destination="tMS-E3-1JG" id="odD-5b-Kp1"/>
                                 </connections>
                             </tableView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UrP-Yk-skz">
-                                <rect key="frame" x="5" y="336" width="315" height="140"/>
-                            </mapView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02O-2Y-gpg">
                                 <rect key="frame" x="10" y="132" width="294" height="46"/>
                                 <subviews>
@@ -235,10 +231,18 @@
                                 <color key="textColor" red="0.8342013955116272" green="0.0" blue="0.048220028129049027" alpha="0.57000000000000006" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UrP-Yk-skz">
+                                <rect key="frame" x="5" y="336" width="315" height="140"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tMS-E3-1JG" id="Nxn-sx-oWD"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qec-3l-cfz"/>
+                    <navigationItem key="navigationItem" id="qec-3l-cfz">
+                        <barButtonItem key="backBarButtonItem" title="&lt;" id="HFB-f4-mfg"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="cellDetailLabel" destination="s26-qe-kIE" id="lQO-85-NfC"/>
                         <outlet property="cellNameLabel" destination="2dc-sP-gb8" id="8O8-Bb-gTG"/>

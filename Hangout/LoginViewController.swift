@@ -30,12 +30,13 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     //Facebook  Delegate Methods
     
     func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
+    }
+    
+    func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser) {
+        UserEmailTextField.text = user.objectForKey("email") as NSString
+        UserNameTextField.text = user.name
         self.goToMain()
     }
-    
-    func loginViewFetchedUserInfo(loginView: FBLoginView!, user: FBGraphUser!) {
-    }
-    
     
     func loginViewShowingLoggedOutUser(loginView: FBLoginView!) {
     }
@@ -47,6 +48,7 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     func goToMain(){
         let mainVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainVC") as ViewController
 
+        
         mainVC.userEmail = UserEmailTextField.text
         mainVC.userName = UserNameTextField.text
         self.navigationController?.pushViewController(mainVC, animated: true)

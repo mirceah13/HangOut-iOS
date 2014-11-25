@@ -10,13 +10,8 @@ import UIKit
 import CoreData
 
 class PersistenceHelper: NSObject {
-   
-    var appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
-    var context: NSManagedObjectContext
     
-    override init() {
-        context = appDel.managedObjectContext!
-    }
+    var store:DataStore = Datastore()
     
     class func ToObjects(datastr: NSString) -> [AnyObject]? {
         var entities:[AnyObject] = []
@@ -44,19 +39,9 @@ class PersistenceHelper: NSObject {
         return entities
     }
     
-    
-    func save(entity: String, parameters: Dictionary<String, String>) -> Bool{
-        
-        var newEntity = NSEntityDescription.insertNewObjectForEntityForName(entity, inManagedObjectContext: context) as NSManagedObject
-        
-        for (key, value) in parameters{
-            newEntity.setValue(value, forKey: key)
-        }
-        
-        return context.save(nil);
-    }
-    
     func list(entity: String) -> [Activity] {
+        store.Query
+        
         var activities:[Activity] = []
         
         var url:String = "http://h-httpstore.azurewebsites.net/h-hang-out-activities/?chainWith=And&initiator=!Equals:dan.hintea@recognos.ro&participants=!Contains:dan.hintea@recognos.ro@startsOn=HigherThan:1415704137899&isCancelled=Equals:false&isWrapped=Equals:false"
@@ -93,13 +78,42 @@ class PersistenceHelper: NSObject {
         return activities
     }
     
-    func remove(entity: String, key:String, value:String) -> Bool {
+    class func saveUserToCoreData(email: String, name: String) -> Bool{
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let context = appDel.managedObjectContext!
+        let newEntity = NSEntityDescription.entityForName("User", inManagedObjectContext: context)
+        var newUser = User(entity: newEntity!, insertIntoManagedObjectContext: context)
+        newUser.userEmail = email
+        newUser.userName = name
         
-        var request = NSFetchRequest(entityName: entity)
+        return context.save(nil);
+    }
+    class func loadUserFromCoreData(email: String) -> [AnyObject]{
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let context = appDel.managedObjectContext!
+        
+        let request = NSFetchRequest(entityName: "User")
+        request.returnsObjectsAsFaults = false
+        
+        request.predicate = NSPredicate(format: "userEmail = %@" , email)
+        var result:NSArray = context.executeFetchRequest(request, error: nil)!
+        
+        if result.count > 0 {
+            println("\(result.count) found")
+        }
+        
+        return result
+    }
+    
+    class func removeUserFromCoreData() -> Bool {
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+        let context = appDel.managedObjectContext!
+        
+        let request = NSFetchRequest(entityName: "User")
         
         request.returnsObjectsAsFaults = false
         
-        request.predicate = NSPredicate(format: "\(key) = %@", value)
+        //request.predicate = NSPredicate(format: "\(key) = %@", value)
         
         var results: NSArray = context.executeFetchRequest(request, error: nil)!
         

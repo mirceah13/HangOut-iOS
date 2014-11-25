@@ -33,7 +33,7 @@ class Meta: NSObject {
         self.isCancelled = activity.isCancelled
         self.placeName = activity.place.name
         self.placeAddress = activity.place.address
-        self.placeLocationLat = activity.place.location.lat
-        self.placeLocationLng = activity.place.location.lng
+        self.placeLocationLat = activity.place.location!.lat!
+        self.placeLocationLng = activity.place.location!.lng!
     }
 }

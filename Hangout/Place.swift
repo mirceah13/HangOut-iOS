@@ -13,7 +13,7 @@ class Place: NSObject {
     var address:String = ""
     var details:String = ""
     var websiteUrl:String? = ""
-    var location:GpsLocation = GpsLocation(lat: 0,lng: 0)
+    var location:GpsLocation?
     var tags:NSArray = []
     
     class var unknown:Place {

@@ -20,12 +20,6 @@ class ActivityManager: NSObject {
         var tempActivities:NSArray = persistenceHelper.list("Activity")
         
         activities = tempActivities as [Activity]
-        /*
-        for res in tempActivities{
-            let act:Activity = res as Activity
-            activities.append(Activity(title: act.title as String, description: act.desc as String))
-        }
-        */
     }
     
     func addActivity(name: String, desc: String){

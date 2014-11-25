@@ -21,15 +21,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         
         navigationItem.title = "Activities"
-        //TODO setez poza ca titlu
-        //nagivationItem.titleView = UIImageVieew...
-        
+        self.saveAuthUser()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func saveAuthUser(){
+        if (PersistenceHelper.loadUserFromCoreData(self.userEmail).count > 0){
+            //show his activities
+        }
+        else {
+            PersistenceHelper.removeUserFromCoreData()
+            PersistenceHelper.saveUserToCoreData(self.userEmail, name: self.userName)
+        }
+
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -64,6 +73,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //Reference DetailViewController's var "cellNAme" and assign it to DetailViewController's var "activityItems"
         detail.cellName = actManager.activities[indexPath.row].title
         detail.cellDesc = "Initiated by " + actManager.activities[indexPath.row].initiator.name as String
+
+        detail.place = actManager.activities[indexPath.row].place
         if let startsOn = actManager.activities[indexPath.row].startsOn{
             detail.cellStartsOn = "Happening on " + formater.stringFromDate(startsOn)
         }

@@ -10,7 +10,7 @@ import UIKit
 import MapKit.MKMapView
 
 
-class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate {
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate, MKMapViewDelegate {
     
     //Our label for displaying var "items/cellName"
     @IBOutlet var cellNameLabel: UILabel!
@@ -28,7 +28,9 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var cellStartsOn: String = ""
     var confirmedMembers: [Individual] = []
     var pendingMembers: [Individual] = []
-    
+    var locationLat: Double?
+    var locationLng: Double?
+    var place: Place = Place.unknown
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -51,6 +53,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cellDetailLabel.numberOfLines = 0
 
+        self.showMap()
         // Do any additional setup after loading the view.
     }
 
@@ -120,5 +123,26 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
 
+    func showMap(){
+        var latitude:CLLocationDegrees = self.place.location!.lat!
+        var longitude:CLLocationDegrees = self.place.location!.lng!
+        
+        var latDelta:CLLocationDegrees = 0.01
+        var lngDelta:CLLocationDegrees = 0.01
+        
+        var theSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lngDelta)
+        var activityLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        
+        var theRegion:MKCoordinateRegion = MKCoordinateRegionMake(activityLocation, theSpan)
+        
+        self.mapView.setRegion(theRegion, animated: true)
+    
+        var activityLocationAnnotation = MKPointAnnotation()
+        activityLocationAnnotation.coordinate =  activityLocation
+        activityLocationAnnotation.title = self.place.name
+        activityLocationAnnotation.subtitle = self.place.address
+        
+        self.mapView.addAnnotation(activityLocationAnnotation)
+    }
 
 }

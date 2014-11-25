@@ -87,10 +87,10 @@ class Activity: NSObject{
             self.place.tags = placeTags
         }
         if let placeLocationLat = parser.get("Data.place.location.lat") as? Double{
-            self.place.location.lat = placeLocationLat
+            self.place.location?.lat = placeLocationLat
         }
         if let placeLocationLng = parser.get("Data.place.location.lng") as? Double{
-            self.place.location.lng = placeLocationLng
+            self.place.location?.lng = placeLocationLng
         }
         if let tags = parser.getArray("Data.tags"){
             self.tags = tags

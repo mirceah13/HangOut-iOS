@@ -22,7 +22,7 @@ class DataStore: NSObject {
         self.storeUrl = "http://localhost/HttpDataStore"
     }
     
-    func Query(chain: ChainOperation, queryParams: [QueryParameter]) -> NSDictionary{
+    func Query(queryParams: [QueryParameter]) -> NSDictionary{
         return self.Query(ChainOperation.And, queryParams: queryParams)
     }
     

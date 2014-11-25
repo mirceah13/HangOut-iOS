@@ -12,6 +12,8 @@
 		EC55F1771A1DDB2200810425 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC55F1761A1DDB2200810425 /* FacebookSDK.framework */; };
 		EC55F17A1A1DEB5F00810425 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC55F1791A1DEB5F00810425 /* 5.jpg */; };
 		EC55F17C1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC55F17B1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg */; };
+		ECC176DB1A232DF000A9C675 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC176DA1A232DF000A9C675 /* User.swift */; };
+		ECC176E51A23557A00A9C675 /* Hangout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECC176E31A23557A00A9C675 /* Hangout.xcdatamodeld */; };
 		ECCB0E3D1A1F43E300A10240 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCB0E3C1A1F43E300A10240 /* DataStore.swift */; };
 		ECCB0E3F1A1F48D700A10240 /* QueryParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCB0E3E1A1F48D700A10240 /* QueryParameter.swift */; };
 		F72E735D1A0FA43C00A29B71 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E735C1A0FA43C00A29B71 /* NavController.swift */; };
@@ -33,7 +35,6 @@
 		F7A2712E1A18756100205424 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2712D1A18756100205424 /* Place.swift */; };
 		F7A271301A1875EE00205424 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2712F1A1875EE00205424 /* Meta.swift */; };
 		F7CF2E3D1A0D1D56003D0041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */; };
-		F7CF2E401A0D1D56003D0041 /* Hangout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E3E1A0D1D56003D0041 /* Hangout.xcdatamodeld */; };
 		F7CF2E421A0D1D56003D0041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E411A0D1D56003D0041 /* ViewController.swift */; };
 		F7CF2E451A0D1D56003D0041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF2E431A0D1D56003D0041 /* Main.storyboard */; };
 		F7CF2E471A0D1D56003D0041 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CF2E461A0D1D56003D0041 /* Images.xcassets */; };
@@ -73,6 +74,8 @@
 		EC55F1781A1DDE8600810425 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		EC55F1791A1DEB5F00810425 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		EC55F17B1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg; sourceTree = "<group>"; };
+		ECC176DA1A232DF000A9C675 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ECC176E41A23557A00A9C675 /* Hangout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hangout.xcdatamodel; sourceTree = "<group>"; };
 		ECCB0E3C1A1F43E300A10240 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		ECCB0E3E1A1F48D700A10240 /* QueryParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryParameter.swift; sourceTree = "<group>"; };
 		F72E735C1A0FA43C00A29B71 /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
@@ -97,7 +100,6 @@
 		F7CF2E371A0D1D56003D0041 /* Hangout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF2E3B1A0D1D56003D0041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F7CF2E3F1A0D1D56003D0041 /* Hangout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hangout.xcdatamodel; sourceTree = "<group>"; };
 		F7CF2E411A0D1D56003D0041 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F7CF2E441A0D1D56003D0041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7CF2E461A0D1D56003D0041 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		F7CF2E2E1A0D1D56003D0041 = {
 			isa = PBXGroup;
 			children = (
+				ECC176E31A23557A00A9C675 /* Hangout.xcdatamodeld */,
 				F7CF2E391A0D1D56003D0041 /* Hangout */,
 				F7CF2E521A0D1D56003D0041 /* HangoutTests */,
 				F7CF2E381A0D1D56003D0041 /* Products */,
@@ -232,7 +235,6 @@
 				EC55F1731A1CF17100810425 /* LoginViewController.swift */,
 				F7CF2E461A0D1D56003D0041 /* Images.xcassets */,
 				F7CF2E481A0D1D56003D0041 /* LaunchScreen.xib */,
-				F7CF2E3E1A0D1D56003D0041 /* Hangout.xcdatamodeld */,
 				F7CF2E3A1A0D1D56003D0041 /* Supporting Files */,
 				EC55F1781A1DDE8600810425 /* Bridge-Header.h */,
 			);
@@ -274,6 +276,7 @@
 				F7A2712B1A18752700205424 /* Individual.swift */,
 				F7A2712D1A18756100205424 /* Place.swift */,
 				F7A2712F1A1875EE00205424 /* Meta.swift */,
+				ECC176DA1A232DF000A9C675 /* User.swift */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -411,11 +414,12 @@
 			files = (
 				F7E1B23F1A1A503200D3E501 /* NSArray.swift in Sources */,
 				F7A271261A1643FE00205424 /* JSONPath.swift in Sources */,
+				ECC176E51A23557A00A9C675 /* Hangout.xcdatamodeld in Sources */,
 				F7E1B2391A1A503200D3E501 /* Dictionary.swift in Sources */,
 				F7CF2E421A0D1D56003D0041 /* ViewController.swift in Sources */,
+				ECC176DB1A232DF000A9C675 /* User.swift in Sources */,
 				F7E1B23C1A1A503200D3E501 /* Float.swift in Sources */,
 				EC55F1741A1CF17100810425 /* LoginViewController.swift in Sources */,
-				F7CF2E401A0D1D56003D0041 /* Hangout.xcdatamodeld in Sources */,
 				F7E1B23B1A1A503200D3E501 /* ExSwift.swift in Sources */,
 				F7A271271A1643FE00205424 /* SwiftJSONParser.swift in Sources */,
 				F7309AFB1A16266B00B63266 /* Activity.swift in Sources */,
@@ -655,12 +659,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F7CF2E3E1A0D1D56003D0041 /* Hangout.xcdatamodeld */ = {
+		ECC176E31A23557A00A9C675 /* Hangout.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F7CF2E3F1A0D1D56003D0041 /* Hangout.xcdatamodel */,
+				ECC176E41A23557A00A9C675 /* Hangout.xcdatamodel */,
 			);
-			currentVersion = F7CF2E3F1A0D1D56003D0041 /* Hangout.xcdatamodel */;
+			currentVersion = ECC176E41A23557A00A9C675 /* Hangout.xcdatamodel */;
 			path = Hangout.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -9,8 +9,8 @@
 import UIKit
 
 class GpsLocation: NSObject {
-    var lat: Double = 0
-    var lng: Double = 0
+    var lat: Double?
+    var lng: Double?
     
     class var unknown:GpsLocation { return GpsLocation(lat:0, lng: 0)}
     
