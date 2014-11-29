@@ -10,24 +10,40 @@ import UIKit
 
 class LandingViewController: UIViewController {
 
+    @IBOutlet var lblUserInfo: UILabel?
+    @IBOutlet var imgUserInfo: UIImageView?
     var userName:String = ""
     var userEmail:String = ""
     var userProfileImageUrl:String = ""
     
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let initiateBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 170, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
+        let initiateBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 270, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
         initiateBtn.setTitle("INITIATE ACTIVITY", forState: UIControlState.Normal)
         
-        let yourActivitiesBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 220, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDefault)
+        let yourActivitiesBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 320, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDefault)
         yourActivitiesBtn.setTitle("YOUR ACTIVITIES", forState: UIControlState.Normal)
         
-        let joinableEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 370, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
+        let joinableEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 400, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
         joinableEventsBtn.setTitle("EVENTS YOU MAI JOIN ", forState: UIControlState.Normal)
         
-        let joinedEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 420, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDefault)
+        let joinedEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 450, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDefault)
         joinedEventsBtn.setTitle("JOINED EVENTS", forState: UIControlState.Normal)
+        lblUserInfo?.text = self.userName
+        let url = NSURL(string: self.userProfileImageUrl);
+        var imageData:NSData = NSData(contentsOfURL: url!)!
+        imgUserInfo?.image = UIImage(data: imageData)
+        
+        let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        button.frame = CGRectMake(270, 45, 39, 39)
+        button.addTarget(self, action: "promptLogout", forControlEvents:.TouchUpInside)
+        
+        self.view.addSubview(button)
 
         
         initiateBtn.addTarget(self, action: "goToInitiate", forControlEvents: .TouchUpInside)
@@ -75,6 +91,24 @@ class LandingViewController: UIViewController {
         activityVC.userEmail = self.userEmail
     
         return activityVC
+    }
+    
+    func promptLogout(){
+        let alertController: UIAlertController = UIAlertController(title: "Log out", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+
+        let logoutAction = UIAlertAction(title: "Log Out", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in self.logOut()})
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
+        alertController.addAction(logoutAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion:nil)
+    }
+    
+    func logOut(){
+        let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC") as LoginViewController
+        loginVC.UserNameTextField?.text = ""
+        loginVC.UserEmailTextField?.text = ""
+        FBSession.activeSession().closeAndClearTokenInformation()
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
 }

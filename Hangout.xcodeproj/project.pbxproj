@@ -24,6 +24,8 @@
 		F701725D1A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172561A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg */; };
 		F701725E1A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172571A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg */; };
 		F70172601A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F701725F1A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg */; };
+		F70172621A29F8810003EC09 /* snowBoard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172611A29F8810003EC09 /* snowBoard.jpg */; };
+		F70172641A29FFD10003EC09 /* snowboard2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172631A29FFD10003EC09 /* snowboard2.jpg */; };
 		F72E735D1A0FA43C00A29B71 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E735C1A0FA43C00A29B71 /* NavController.swift */; };
 		F72EC12D1A27184E0066093C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EC12C1A27184E0066093C /* DataService.swift */; };
 		F72EC12F1A285F9E0066093C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EC12E1A285F9E0066093C /* LandingViewController.swift */; };
@@ -96,6 +98,8 @@
 		F70172561A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg"; sourceTree = "<group>"; };
 		F70172571A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Women Water Wet Surfing iPhone 5 Wallpaper.jpg"; sourceTree = "<group>"; };
 		F701725F1A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg"; sourceTree = "<group>"; };
+		F70172611A29F8810003EC09 /* snowBoard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowBoard.jpg; sourceTree = "<group>"; };
+		F70172631A29FFD10003EC09 /* snowboard2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowboard2.jpg; sourceTree = "<group>"; };
 		F72E735C1A0FA43C00A29B71 /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		F72EC12C1A27184E0066093C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F72EC12E1A285F9E0066093C /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 		F7E0DF271A19442F00C7E59D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F70172631A29FFD10003EC09 /* snowboard2.jpg */,
+				F70172611A29F8810003EC09 /* snowBoard.jpg */,
 				F70172511A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg */,
 				F70172521A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg */,
 				F70172531A299C720003EC09 /* catSmile.jpg */,
@@ -429,9 +435,11 @@
 				F70172591A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg in Resources */,
 				F7E1B23D1A1A503200D3E501 /* Info.plist in Resources */,
 				F701725C1A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg in Resources */,
+				F70172621A29F8810003EC09 /* snowBoard.jpg in Resources */,
 				F701725D1A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg in Resources */,
 				F7CF2E471A0D1D56003D0041 /* Images.xcassets in Resources */,
 				F7A271251A1643FE00205424 /* Info.plist in Resources */,
+				F70172641A29FFD10003EC09 /* snowboard2.jpg in Resources */,
 				F72EC7D91A0FDE5500E532CB /* indoor.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,7 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     @IBOutlet var UserEmailTextField: UITextField!
     @IBOutlet var UserNameTextField: UITextField!
     @IBOutlet var fbLoginView: FBLoginView!
+    @IBOutlet weak var lblError: UILabel!
     
     var profileImageUrl:String = ""
     
@@ -28,6 +29,8 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         
         self.UserEmailTextField.backgroundColor = UIColor(red: 10, green: 10, blue: 10, alpha: 0.1)
         self.UserNameTextField.backgroundColor = UIColor(red: 10, green: 10, blue: 10, alpha: 0.1)
+        
+        
         
     }
     
@@ -52,6 +55,10 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     }
     
     func goToLanding(){
+        if (UserNameTextField?.text == "" || UserEmailTextField?.text == ""){
+            lblError.text = "Are you sure this is you? You haven't filled in the fields"
+            return
+        }
         var landingVC = self.storyboard?.instantiateViewControllerWithIdentifier("landingVC") as LandingViewController
 
         landingVC.userName = UserNameTextField.text

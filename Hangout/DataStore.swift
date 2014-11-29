@@ -168,13 +168,6 @@ class DataStore: NSObject {
             self.data = data
             self.meta = meta
         }
-        /*
-        func fromDto(dto: AnyObject){
-            var entity = Entity(data: dto.data!, meta: dto.meta!)
-            entity.id = dto.id
-            entity.checkTag = dto.checkTag
-        }
-        ß*/
     }
     
 }

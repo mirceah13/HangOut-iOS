@@ -41,7 +41,6 @@ class AddActivityViewController: UIViewController {
         navigationController?.presentingViewController?.dismissViewControllerAnimated(true, completion: {})
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

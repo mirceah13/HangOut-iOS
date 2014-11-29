@@ -20,6 +20,10 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     var activities:[Activity] = []
     var persistenceHelper: PersistenceHelper = PersistenceHelper()
     
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

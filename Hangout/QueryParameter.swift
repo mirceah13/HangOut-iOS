@@ -107,19 +107,11 @@ class QueryParameter: NSObject {
         var asDateTime: NSDate?
         var asBool: Bool?
         
-        //if let b = Bool( {
-        //        return asBool
-        //}
-        
         if let i = value.toInt(){
             asInt = i
             return asInt!
         }
-        
-        //if let d = value.toDecimal(){
-        //    return asDecimal
-        //}
-        //if value is NSDecimal {return asDecimal}
+    
         return asInt!
     }
     

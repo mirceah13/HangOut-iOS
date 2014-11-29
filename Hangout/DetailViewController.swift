@@ -35,6 +35,10 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         super.init(coder: aDecoder)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,6 +55,16 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         self.title = cellName
         
         cellDetailLabel.numberOfLines = 0
+        
+        let lineRect1 = CGRectMake(0, 200, self.view.bounds.width, 1)
+        var lineView1:UIView = UIView(frame: lineRect1)
+        lineView1.backgroundColor = UIColor.whiteColor()
+        
+        let lineRect2 = CGRectMake(0, 280, self.view.bounds.width, 1)
+        var lineView2:UIView = UIView(frame: lineRect2)
+        lineView2.backgroundColor = UIColor.whiteColor()
+        self.view.addSubview(lineView1)
+        self.view.addSubview(lineView2)
 
         self.showMap()
         // Do any additional setup after loading the view.
@@ -74,6 +88,11 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell =  collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as CollectionViewCell
         
+        cell.imgView.layer.shadowColor = UIColor.grayColor().CGColor
+        cell.imgView.layer.shadowOffset = CGSizeMake(0, 1);
+        cell.imgView.layer.shadowOpacity = 1;
+        cell.imgView.layer.shadowRadius = 1.0;
+        cell.imgView.clipsToBounds = false;
         
         if collectionView == confirmedMemersCollectionView{
             let member = confirmedMembers[indexPath.row] as Individual
