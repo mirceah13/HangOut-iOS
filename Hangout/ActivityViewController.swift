@@ -8,20 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ActivityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //This is our Activity tableView
     @IBOutlet var activityTable: UITableView!
 
     var userEmail:String = ""
     var userName:String = ""
+    var screenType:ActivityScreenType = ActivityScreenType.JoinableActivities
     var formater = NSDateFormatter()
+    var activities:[Activity] = []
+    var persistenceHelper: PersistenceHelper = PersistenceHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "Activities"
         self.saveAuthUser()
+        activities = persistenceHelper.list(Individual(name: self.userName, email: self.userEmail, profileUrl: ""), type: self.screenType) as [Activity]
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -46,17 +50,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return actManager.activities.count
+        return activities.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "TableView")!
     
         //Assigning content of the var "activityItems" to  the textLabel of each cell
-        cell.textLabel?.text = actManager.activities[indexPath.row].title
+        cell.textLabel?.text = activities[indexPath.row].title
     
         formater.dateFormat = "E d MMM hh:mm"
-        if let happening = actManager.activities[indexPath.row].startsOn{
+        if let happening = activities[indexPath.row].startsOn{
             cell.detailTextLabel?.text = "Happenning on " + formater.stringFromDate(happening)
         }
         cell.textLabel?.textColor = UIColor.grayColor()
@@ -66,31 +70,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         //Create instance of DetailViewController
         var detail:DetailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
  
         //Reference DetailViewController's var "cellNAme" and assign it to DetailViewController's var "activityItems"
-        detail.cellName = actManager.activities[indexPath.row].title
-        detail.cellDesc = "Initiated by " + actManager.activities[indexPath.row].initiator.name as String
+        detail.cellName = activities[indexPath.row].title
+        detail.cellDesc = "Initiated by " + activities[indexPath.row].initiator.name as String
 
-        detail.place = actManager.activities[indexPath.row].place
-        if let startsOn = actManager.activities[indexPath.row].startsOn{
+        detail.place = activities[indexPath.row].place
+        if let startsOn = activities[indexPath.row].startsOn{
             detail.cellStartsOn = "Happening on " + formater.stringFromDate(startsOn)
         }
-        detail.confirmedMembers = actManager.activities[indexPath.row].confirmedMembers
-        detail.pendingMembers = actManager.activities[indexPath.row].pendingMembers
+        detail.confirmedMembers = activities[indexPath.row].confirmedMembers
+        detail.pendingMembers = activities[indexPath.row].pendingMembers
         
         //Programmatically push to associated VC (DetailViewController)
         self.navigationController?.pushViewController(detail, animated: true)
         
-    }
-    
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.Delete){
-            actManager.removeActivity(indexPath.row)
-            activityTable.reloadData()
-        }
     }
 }
 

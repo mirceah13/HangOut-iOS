@@ -32,9 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func configureAppearance(){
-        UINavigationBar.appearance().barTintColor = UIColor.redColor()
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline), NSForegroundColorAttributeName: UIColor(red: 211, green: 121, blue: 11, alpha: 1)]
+        UINavigationBar.appearance().backgroundColor = UIColor.clearColor()
+        UINavigationBar.appearance().translucent = true
+        UINavigationBar.appearance().alpha = 8
+        UINavigationBar.appearance().tintColor = UIColor.blackColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline), NSForegroundColorAttributeName: UIColor(red: 11, green: 21, blue: 11, alpha: 1)]
     }
 
     func applicationWillResignActive(application: UIApplication) {

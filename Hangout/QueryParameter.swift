@@ -29,12 +29,46 @@ enum QueryParameterOperator: String
         }
         return Equals
     }
+    
+    static func fromEnum(op: QueryParameterOperator) -> String{
+        for item in QueryParameterOperator.allValues{
+            if (item == op){
+                return item.rawValue
+            }
+        }
+        return "Equals"
+    }
 }
 
-enum ChainOperation
+enum ChainOperation : String
 {
-    case And
-    case Or
+    case And = "And", Or = "Or"
+    
+    static let allValues = [And, Or]
+    static func toEnum(stringValue: String) -> ChainOperation{
+        for item in ChainOperation.allValues{
+            if (item.rawValue == stringValue){
+                return item
+            }
+        }
+        return And
+    }
+    
+    static func fromEnum(chain: ChainOperation) -> String{
+        for item in ChainOperation.allValues{
+            if (item == chain){
+                return item.rawValue
+            }
+        }
+        return "And"
+    }
+
+}
+
+enum DefaultMessageFor: String
+{
+    case success = "Operation completed successfully",
+         failure = "Cannot complete the operation, please try again or contact us"
 }
 
 
@@ -42,15 +76,18 @@ class QueryParameter: NSObject {
     var Name:String = ""
     var Operator:QueryParameterOperator
     var Value:AnyObject
+    var Negated:Bool = false
     
-    init(Name:String, Operator:QueryParameterOperator, Value:AnyObject){
+    init(Name:String, Operator:QueryParameterOperator, Value:AnyObject, Negated: Bool = false){
         self.Name = Name
         self.Operator = Operator
         self.Value = Value
+        self.Negated = Negated
     }
     
     func ToString() -> String {
-        return "\(self.Name)=\(self.Operator):\(self.Value)"
+        var negationStr = self.Negated ? "!" : ""
+        return "\(self.Name)=\(negationStr)\(QueryParameterOperator.fromEnum(self.Operator)):\(self.Value)"
     }
     
     class func Parse(name:String, queryCondition:String) -> QueryParameter{
@@ -75,6 +112,7 @@ class QueryParameter: NSObject {
         //}
         
         if let i = value.toInt(){
+            asInt = i
             return asInt!
         }
         

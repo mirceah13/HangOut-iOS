@@ -16,7 +16,18 @@
 		ECC176E51A23557A00A9C675 /* Hangout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECC176E31A23557A00A9C675 /* Hangout.xcdatamodeld */; };
 		ECCB0E3D1A1F43E300A10240 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCB0E3C1A1F43E300A10240 /* DataStore.swift */; };
 		ECCB0E3F1A1F48D700A10240 /* QueryParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCB0E3E1A1F48D700A10240 /* QueryParameter.swift */; };
+		F70172581A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172511A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg */; };
+		F70172591A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172521A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg */; };
+		F701725A1A299C720003EC09 /* catSmile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172531A299C720003EC09 /* catSmile.jpg */; };
+		F701725B1A299C720003EC09 /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172541A299C720003EC09 /* sky.jpg */; };
+		F701725C1A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172551A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg */; };
+		F701725D1A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172561A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg */; };
+		F701725E1A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172571A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg */; };
+		F70172601A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F701725F1A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg */; };
 		F72E735D1A0FA43C00A29B71 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E735C1A0FA43C00A29B71 /* NavController.swift */; };
+		F72EC12D1A27184E0066093C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EC12C1A27184E0066093C /* DataService.swift */; };
+		F72EC12F1A285F9E0066093C /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EC12E1A285F9E0066093C /* LandingViewController.swift */; };
+		F72EC1311A2869EC0066093C /* ActivityScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72EC1301A2869EC0066093C /* ActivityScreenType.swift */; };
 		F72EC7D21A0FDE3500E532CB /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F72EC7D11A0FDE3500E532CB /* mountain.jpg */; };
 		F72EC7D81A0FDE5500E532CB /* ballGames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F72EC7D31A0FDE5500E532CB /* ballGames.jpg */; };
 		F72EC7D91A0FDE5500E532CB /* indoor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F72EC7D41A0FDE5500E532CB /* indoor.jpg */; };
@@ -35,12 +46,11 @@
 		F7A2712E1A18756100205424 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2712D1A18756100205424 /* Place.swift */; };
 		F7A271301A1875EE00205424 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2712F1A1875EE00205424 /* Meta.swift */; };
 		F7CF2E3D1A0D1D56003D0041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */; };
-		F7CF2E421A0D1D56003D0041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E411A0D1D56003D0041 /* ViewController.swift */; };
+		F7CF2E421A0D1D56003D0041 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E411A0D1D56003D0041 /* ActivityViewController.swift */; };
 		F7CF2E451A0D1D56003D0041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF2E431A0D1D56003D0041 /* Main.storyboard */; };
 		F7CF2E471A0D1D56003D0041 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CF2E461A0D1D56003D0041 /* Images.xcassets */; };
 		F7CF2E4A1A0D1D56003D0041 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CF2E481A0D1D56003D0041 /* LaunchScreen.xib */; };
 		F7CF2E561A0D1D56003D0041 /* HangoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E551A0D1D56003D0041 /* HangoutTests.swift */; };
-		F7CF2E601A0D27B0003D0041 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E5F1A0D27B0003D0041 /* ActivityManager.swift */; };
 		F7CF2E661A0D3019003D0041 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E651A0D3019003D0041 /* DetailViewController.swift */; };
 		F7CF2E6C1A0F7040003D0041 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E6B1A0F7040003D0041 /* PersistenceHelper.swift */; };
 		F7E0DF261A1941F400C7E59D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E0DF251A1941F400C7E59D /* CollectionViewCell.swift */; };
@@ -78,7 +88,18 @@
 		ECC176E41A23557A00A9C675 /* Hangout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hangout.xcdatamodel; sourceTree = "<group>"; };
 		ECCB0E3C1A1F43E300A10240 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		ECCB0E3E1A1F48D700A10240 /* QueryParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryParameter.swift; sourceTree = "<group>"; };
+		F70172511A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bike Rider Top Mountain iPhone 6 Wallpaper.jpg"; sourceTree = "<group>"; };
+		F70172521A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg"; sourceTree = "<group>"; };
+		F70172531A299C720003EC09 /* catSmile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = catSmile.jpg; sourceTree = "<group>"; };
+		F70172541A299C720003EC09 /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
+		F70172551A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Penn Tennis Ball iPhone 5 Wallpaper.jpg"; sourceTree = "<group>"; };
+		F70172561A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg"; sourceTree = "<group>"; };
+		F70172571A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Women Water Wet Surfing iPhone 5 Wallpaper.jpg"; sourceTree = "<group>"; };
+		F701725F1A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg"; sourceTree = "<group>"; };
 		F72E735C1A0FA43C00A29B71 /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		F72EC12C1A27184E0066093C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		F72EC12E1A285F9E0066093C /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		F72EC1301A2869EC0066093C /* ActivityScreenType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityScreenType.swift; sourceTree = "<group>"; };
 		F72EC7D11A0FDE3500E532CB /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
 		F72EC7D31A0FDE5500E532CB /* ballGames.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ballGames.jpg; sourceTree = "<group>"; };
 		F72EC7D41A0FDE5500E532CB /* indoor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = indoor.jpg; sourceTree = "<group>"; };
@@ -100,14 +121,13 @@
 		F7CF2E371A0D1D56003D0041 /* Hangout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF2E3B1A0D1D56003D0041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F7CF2E411A0D1D56003D0041 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7CF2E411A0D1D56003D0041 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		F7CF2E441A0D1D56003D0041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7CF2E461A0D1D56003D0041 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F7CF2E491A0D1D56003D0041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F7CF2E4F1A0D1D56003D0041 /* HangoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF2E541A0D1D56003D0041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CF2E551A0D1D56003D0041 /* HangoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangoutTests.swift; sourceTree = "<group>"; };
-		F7CF2E5F1A0D27B0003D0041 /* ActivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
 		F7CF2E651A0D3019003D0041 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F7CF2E6B1A0F7040003D0041 /* PersistenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		F7E0DF251A1941F400C7E59D /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -227,7 +247,8 @@
 				F7CF2E691A0F6FD6003D0041 /* Data Model */,
 				F7CF2E431A0D1D56003D0041 /* Main.storyboard */,
 				F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */,
-				F7CF2E411A0D1D56003D0041 /* ViewController.swift */,
+				F72EC12E1A285F9E0066093C /* LandingViewController.swift */,
+				F7CF2E411A0D1D56003D0041 /* ActivityViewController.swift */,
 				F7CF2E651A0D3019003D0041 /* DetailViewController.swift */,
 				F73040181A0F83AD002EBDBB /* AddActivityViewController.swift */,
 				F72E735C1A0FA43C00A29B71 /* NavController.swift */,
@@ -269,7 +290,7 @@
 		F7CF2E691A0F6FD6003D0041 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				F7CF2E5F1A0D27B0003D0041 /* ActivityManager.swift */,
+				F72EC1301A2869EC0066093C /* ActivityScreenType.swift */,
 				F7309AF81A1623D100B63266 /* GpsLocation.swift */,
 				F7309AFA1A16266B00B63266 /* Activity.swift */,
 				F7A271291A17EBBB00205424 /* Audit.swift */,
@@ -287,6 +308,7 @@
 				F7CF2E6B1A0F7040003D0041 /* PersistenceHelper.swift */,
 				ECCB0E3C1A1F43E300A10240 /* DataStore.swift */,
 				ECCB0E3E1A1F48D700A10240 /* QueryParameter.swift */,
+				F72EC12C1A27184E0066093C /* DataService.swift */,
 			);
 			name = Infrastructure;
 			sourceTree = "<group>";
@@ -294,6 +316,14 @@
 		F7E0DF271A19442F00C7E59D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F70172511A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg */,
+				F70172521A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg */,
+				F70172531A299C720003EC09 /* catSmile.jpg */,
+				F70172541A299C720003EC09 /* sky.jpg */,
+				F701725F1A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg */,
+				F70172551A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg */,
+				F70172561A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg */,
+				F70172571A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg */,
 				EC55F17B1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg */,
 				EC55F1791A1DEB5F00810425 /* 5.jpg */,
 				F7E0DF281A19447500C7E59D /* avatar-male.png */,
@@ -384,14 +414,22 @@
 				F72EC7DA1A0FDE5500E532CB /* social.jpg in Resources */,
 				F72EC7D81A0FDE5500E532CB /* ballGames.jpg in Resources */,
 				F72EC7DB1A0FDE5500E532CB /* outdoor.jpg in Resources */,
+				F701725B1A299C720003EC09 /* sky.jpg in Resources */,
 				F72EC7D21A0FDE3500E532CB /* mountain.jpg in Resources */,
+				F70172601A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg in Resources */,
 				EC55F17C1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg in Resources */,
 				F7E0DF291A19447500C7E59D /* avatar-male.png in Resources */,
 				F7CF2E451A0D1D56003D0041 /* Main.storyboard in Resources */,
 				F72EC7DC1A0FDE5500E532CB /* water.jpg in Resources */,
 				EC55F17A1A1DEB5F00810425 /* 5.jpg in Resources */,
+				F701725A1A299C720003EC09 /* catSmile.jpg in Resources */,
+				F70172581A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg in Resources */,
+				F701725E1A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg in Resources */,
 				F7CF2E4A1A0D1D56003D0041 /* LaunchScreen.xib in Resources */,
+				F70172591A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg in Resources */,
 				F7E1B23D1A1A503200D3E501 /* Info.plist in Resources */,
+				F701725C1A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg in Resources */,
+				F701725D1A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg in Resources */,
 				F7CF2E471A0D1D56003D0041 /* Images.xcassets in Resources */,
 				F7A271251A1643FE00205424 /* Info.plist in Resources */,
 				F72EC7D91A0FDE5500E532CB /* indoor.jpg in Resources */,
@@ -414,9 +452,11 @@
 			files = (
 				F7E1B23F1A1A503200D3E501 /* NSArray.swift in Sources */,
 				F7A271261A1643FE00205424 /* JSONPath.swift in Sources */,
+				F72EC12D1A27184E0066093C /* DataService.swift in Sources */,
 				ECC176E51A23557A00A9C675 /* Hangout.xcdatamodeld in Sources */,
 				F7E1B2391A1A503200D3E501 /* Dictionary.swift in Sources */,
-				F7CF2E421A0D1D56003D0041 /* ViewController.swift in Sources */,
+				F7CF2E421A0D1D56003D0041 /* ActivityViewController.swift in Sources */,
+				F72EC1311A2869EC0066093C /* ActivityScreenType.swift in Sources */,
 				ECC176DB1A232DF000A9C675 /* User.swift in Sources */,
 				F7E1B23C1A1A503200D3E501 /* Float.swift in Sources */,
 				EC55F1741A1CF17100810425 /* LoginViewController.swift in Sources */,
@@ -433,13 +473,13 @@
 				F7E1B2381A1A503200D3E501 /* Array.swift in Sources */,
 				F73040191A0F83AD002EBDBB /* AddActivityViewController.swift in Sources */,
 				F7E1B2401A1A503200D3E501 /* Range.swift in Sources */,
-				F7CF2E601A0D27B0003D0041 /* ActivityManager.swift in Sources */,
 				F7E1B23E1A1A503200D3E501 /* Int.swift in Sources */,
 				F7E1B23A1A1A503200D3E501 /* Double.swift in Sources */,
 				F7CF2E3D1A0D1D56003D0041 /* AppDelegate.swift in Sources */,
 				F7309AF91A1623D100B63266 /* GpsLocation.swift in Sources */,
 				F7E0DF261A1941F400C7E59D /* CollectionViewCell.swift in Sources */,
 				F7A2712E1A18756100205424 /* Place.swift in Sources */,
+				F72EC12F1A285F9E0066093C /* LandingViewController.swift in Sources */,
 				F72E735D1A0FA43C00A29B71 /* NavController.swift in Sources */,
 				F7A2712A1A17EBBB00205424 /* Audit.swift in Sources */,
 				F7A271281A1643FE00205424 /* SwiftRegex.swift in Sources */,

@@ -11,4 +11,7 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imgView: UIImageView!
+    
+    @IBOutlet weak var userName: UILabel!
+    var userProfileImageUrl:String = ""
 }

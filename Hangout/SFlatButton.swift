@@ -45,11 +45,11 @@ class SFlatButton: UIButton
         switch (SFbuttonType)
         {
             case .SFBDefault:
-                self.setBackgroundImage(self.imageWithColorToButton(UIColor.whiteColor()), forState: UIControlState.Normal)
+                self.setBackgroundImage(self.imageWithColorToButton(UIColor(red: 254/255, green: 1/255, blue: 1/255, alpha: 0.1)), forState: UIControlState.Normal)
                 self.setBackgroundImage(self.imageWithColorToButton(UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)), forState: UIControlState.Highlighted)
-                self.setTitleColor(UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1), forState: UIControlState.Normal)
+                self.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
                 self.setTitleColor(UIColor(red: 77/255, green: 51/255, blue: 51/255, alpha: 1), forState: UIControlState.Highlighted)
-                self.layer.borderColor = UIColor(red: 162/255, green: 162/255, blue: 162/255, alpha: 1).CGColor
+                self.layer.borderColor = UIColor(red: 162/255, green: 162/255, blue: 162/255, alpha: 0.1).CGColor
                 self.layer.borderWidth = 1.0
                 break
             case .SFBPrimary:
@@ -81,7 +81,7 @@ class SFlatButton: UIButton
                 self.layer.borderWidth = 1.0
                 break
             case .SFBDanger:
-                self.setBackgroundImage(self.imageWithColorToButton(UIColor(red: 212/255, green: 84/255, blue: 76/255, alpha: 1)), forState: UIControlState.Normal)
+                self.setBackgroundImage(self.imageWithColorToButton(UIColor(red: 245/255, green: 44/255, blue: 76/255, alpha: 1)), forState: UIControlState.Normal)
                 self.setBackgroundImage(self.imageWithColorToButton(UIColor(red: 193/255, green: 49/255, blue: 38/255, alpha: 1)), forState: UIControlState.Highlighted)
                 self.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
                 self.layer.borderColor = UIColor(red: 199/255, green: 63/255, blue: 52/255, alpha: 1).CGColor

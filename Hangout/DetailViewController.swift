@@ -10,18 +10,17 @@ import UIKit
 import MapKit.MKMapView
 
 
-class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate, MKMapViewDelegate {
+class DetailViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate, MKMapViewDelegate {
     
     //Our label for displaying var "items/cellName"
     @IBOutlet var cellNameLabel: UILabel!
     @IBOutlet var cellDetailLabel: UILabel!
     @IBOutlet var cellStartsOnLabel: UILabel!
-    @IBOutlet var confirmedMembersTableView: UITableView!
-    @IBOutlet var pendingMembersTableView: UITableView!
     @IBOutlet weak var pendingMembersCollectionView: UICollectionView!
+    @IBOutlet weak var confirmedMemersCollectionView: UICollectionView!
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBOutlet weak var confirmedMemersCollectionView: UICollectionView!
+
     //Receiving variable assigned to out MainViewController's var "activityItems"
     var cellName:String = ""
     var cellDesc:String = ""
@@ -62,51 +61,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == confirmedMembersTableView{
-            return self.confirmedMembers.count
-        }
-        if tableView == pendingMembersTableView{
-            return self.pendingMembers.count
-        }
-        return 0
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MembersTableView")!
-        if tableView == confirmedMembersTableView{
-            //Assigning content of the var "activityItems" to  the textLabel of each cell
-            cell.textLabel?.font = UIFont(name: "Helvetica Neue", size: 11)
-            cell.textLabel?.text = self.confirmedMembers[indexPath.row].name + " [" + self.confirmedMembers[indexPath.row].email  + "]"
-        }
-        
-        if tableView == pendingMembersTableView{
-            //Assigning content of the var "activityItems" to  the textLabel of each cell
-            cell.textLabel?.font = UIFont(name: "Helvetica Neue", size: 11)
-            cell.textLabel?.text = self.pendingMembers[indexPath.row].name + " [" + self.pendingMembers[indexPath.row].email  + "]"
-        }
-        cell.textLabel?.textColor = UIColor.grayColor()
-        
-        return cell;
-    }
-
-    func tableView(tableView: UITableView!, viewForHeaderInSection section: Int) -> UIView! {
-        var label : UILabel = UILabel()
-        if tableView == pendingMembersTableView{
-            label.font = UIFont(name: "Helvetica-Bold", size: 12)
-            label.text = "Pending Members"
-            label.textColor = UIColor.whiteColor()
-            label.backgroundColor = UIColor.redColor()
-        }
-        if tableView == confirmedMembersTableView{
-            label.font = UIFont(name: "Helvetica-Bold", size: 12)
-            label.text = "Confirmed Members"
-            label.textColor = UIColor.whiteColor()
-            label.backgroundColor = UIColor.redColor()
-        }
-        return label
-    }
-    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == confirmedMemersCollectionView{
             return self.confirmedMembers.count
@@ -119,7 +73,31 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell =  collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as CollectionViewCell
-        cell.imgView.image = UIImage(named: "avatar-male.png")
+        
+        
+        if collectionView == confirmedMemersCollectionView{
+            let member = confirmedMembers[indexPath.row] as Individual
+            cell.userName?.text = member.name
+            if (member.avatarImageUrl != ""){
+                let url = NSURL(string: member.avatarImageUrl);
+                var imageData:NSData = NSData(contentsOfURL: url!)!
+                cell.imgView.image = UIImage(data: imageData)
+            } else {
+                cell.imgView.image = UIImage(named: "avatar-male.png")
+            }
+        }
+        if collectionView == pendingMembersCollectionView{
+            let member = pendingMembers[indexPath.row] as Individual
+            cell.userName?.text = member.name
+            if (member.avatarImageUrl != ""){
+                let url = NSURL(string: member.avatarImageUrl);
+                var imageData:NSData = NSData(contentsOfURL: url!)!
+                cell.imgView.image = UIImage(data: imageData)
+            } else {
+                cell.imgView.image = UIImage(named: "avatar-male.png")
+            }
+        }
+    
         return cell
     }
 

@@ -28,7 +28,7 @@ class AddActivityViewController: UIViewController {
     @IBAction func btnAddTask(sender: UIButton){
         var name: String = txtName.text
         var description: String = txtDescription.text
-        actManager.addActivity(name, desc: description)
+        //actManager.addActivity(name, desc: description)
         txtName.text = ""
         txtDescription.text = ""
         

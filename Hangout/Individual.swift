@@ -11,12 +11,14 @@ import UIKit
 class Individual: NSObject {
     var name: String = ""
     var email: String = ""
-    var profileUrl: String? = ""
+    var profileUrl: String = ""
+    var avatarImageUrl: String = ""
     
-    init(name:String, email:String, profileUrl:String?){
+    init(name:String, email:String, profileUrl:String){
         self.name = name;
         self.email = email;
         self.profileUrl = profileUrl
+        self.avatarImageUrl = ""
     }
     
     init(JSONDict: NSDictionary){
@@ -33,5 +35,35 @@ class Individual: NSObject {
         if let memberProfileUrl = JSONDict.valueForKey("profileUrl") as? String{
             self.profileUrl = memberProfileUrl
         }
+        if let memberProfileUrl = JSONDict.valueForKey("avatarImageUrl") as? String{
+            self.avatarImageUrl = memberProfileUrl
+        }
+    }
+    
+    func IS(me: Individual)->Bool{
+        return me.email == self.email
+    }
+    
+    func emailHash()->String{
+        return "Generate Hash TODO"
+    }
+    
+    func gravatarProfileImageUrl(size:String)->String{
+        return "http://www.gravatar.com/avatar/" + self.emailHash() + "?s=" + size
+    }
+    
+    func friendlyName()->String{
+        return self.name != "" ? self.name + "[" + self.email + "]" : self.email
+    }
+    
+    func setAvatar(url:String){
+        self.avatarImageUrl = url
+    }
+    
+    func avatar(size:String)->String{
+        if (self.avatarImageUrl == ""){
+            return self.gravatarProfileImageUrl(size)
+        }
+        return self.avatarImageUrl
     }
 }
