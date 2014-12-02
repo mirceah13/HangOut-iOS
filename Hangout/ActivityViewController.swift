@@ -13,8 +13,7 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     //This is our Activity tableView
     @IBOutlet var activityTable: UITableView!
 
-    var userEmail:String = ""
-    var userName:String = ""
+    var user:Individual = Individual()
     var screenType:ActivityScreenType = ActivityScreenType.JoinableActivities
     var formater = NSDateFormatter()
     var activities:[Activity] = []
@@ -29,7 +28,7 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         
         navigationItem.title = "Activities"
         self.saveAuthUser()
-        activities = persistenceHelper.list(Individual(name: self.userName, email: self.userEmail, profileUrl: ""), type: self.screenType) as [Activity]
+        activities = persistenceHelper.list(self.user, type: self.screenType) as [Activity]
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -39,12 +38,12 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func saveAuthUser(){
-        if (PersistenceHelper.loadUserFromCoreData(self.userEmail).count > 0){
+        if (PersistenceHelper.loadUserFromCoreData(self.user.email).count > 0){
             //show his activities
         }
         else {
             PersistenceHelper.removeUserFromCoreData()
-            PersistenceHelper.saveUserToCoreData(self.userEmail, name: self.userName)
+            PersistenceHelper.saveUserToCoreData(self.user.email, name: self.user.name)
         }
 
     }
@@ -60,6 +59,7 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "TableView")!
     
+        let rowActivity = activities[indexPath.row]
         //Assigning content of the var "activityItems" to  the textLabel of each cell
         cell.textLabel?.text = activities[indexPath.row].title
     
@@ -67,8 +67,30 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         if let happening = activities[indexPath.row].startsOn{
             cell.detailTextLabel?.text = "Happenning on " + formater.stringFromDate(happening)
         }
-        cell.textLabel?.textColor = UIColor.grayColor()
-        cell.detailTextLabel?.textColor = UIColor.redColor()
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.font = UIFont(name: "Avenir", size: 15)
+        cell.detailTextLabel?.textColor = UIColor(red: 10/255, green: 10/255, blue: 10/255, alpha: 1)
+        cell.detailTextLabel?.font = UIFont(name: "Avenir", size: 10)
+        cell.backgroundColor = UIColor.clearColor()
+        
+        var color = UIColor.whiteColor()
+        let initiatorlbl = UILabel(frame: CGRectMake(0, 0, 200, 21))
+        initiatorlbl.textColor = color
+        initiatorlbl.font = UIFont(name: "Avenir", size: 10)
+        initiatorlbl.center = CGPointMake(210, 10)
+        initiatorlbl.textAlignment = NSTextAlignment.Right
+        initiatorlbl.text = "with " + rowActivity.initiator.name
+        cell.addSubview(initiatorlbl)
+
+        if (rowActivity.confirmedMembers.count > 0){
+            let withOtherslbl = UILabel(frame: CGRectMake(0, 0, 200, 21))
+            withOtherslbl.textColor = color
+            withOtherslbl.font = UIFont(name: "Avenir", size: 10)
+            withOtherslbl.center = CGPointMake(210, 23)
+            withOtherslbl.textAlignment = NSTextAlignment.Right
+            withOtherslbl.text = "and \(rowActivity.confirmedMembers.count) others"
+            cell.addSubview(withOtherslbl)
+        }
         
         return cell;
     }
@@ -77,18 +99,10 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         //Create instance of DetailViewController
         var detail:DetailViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
  
-        //Reference DetailViewController's var "cellNAme" and assign it to DetailViewController's var "activityItems"
-        detail.cellName = activities[indexPath.row].title
-        detail.cellDesc = "Initiated by " + activities[indexPath.row].initiator.name as String
-
-        detail.place = activities[indexPath.row].place
-        if let startsOn = activities[indexPath.row].startsOn{
-            detail.cellStartsOn = "Happening on " + formater.stringFromDate(startsOn)
-        }
-        detail.confirmedMembers = activities[indexPath.row].confirmedMembers
-        detail.pendingMembers = activities[indexPath.row].pendingMembers
+        let row = activities[indexPath.row]
+        detail.activity = row
+        detail.user = self.user
         
-        //Programmatically push to associated VC (DetailViewController)
         self.navigationController?.pushViewController(detail, animated: true)
         
     }

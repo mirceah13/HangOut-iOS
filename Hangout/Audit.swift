@@ -8,10 +8,10 @@
 
 import UIKit
 
-class Audit: NSObject {
-    var reason: String = ""
+class Audit: Serializable {
+    var reason: NSString = ""
     var at: NSDate?
-    var email: String
+    var email: NSString
 
     init(reason: String, at:NSDate, email: String){
         self.reason = reason

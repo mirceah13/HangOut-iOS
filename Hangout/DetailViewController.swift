@@ -21,15 +21,10 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     @IBOutlet weak var mapView: MKMapView!
     
 
-    //Receiving variable assigned to out MainViewController's var "activityItems"
-    var cellName:String = ""
-    var cellDesc:String = ""
-    var cellStartsOn: String = ""
-    var confirmedMembers: [Individual] = []
-    var pendingMembers: [Individual] = []
-    var locationLat: Double?
-    var locationLng: Double?
-    var place: Place = Place.unknown
+    var persistenceHelper: PersistenceHelper = PersistenceHelper()
+    var activity:Activity = Activity()
+    var user:Individual = Individual()
+    var formater = NSDateFormatter()
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -42,17 +37,22 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        formater.dateFormat = "E d MMM hh:mm"
+        
         let dangerbtn: SFlatButton = SFlatButton(frame: CGRectMake(60, 500, 200, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
         dangerbtn.setTitle("I want to join this", forState: UIControlState.Normal)
+        dangerbtn.addTarget(self, action: "joinActivity", forControlEvents: .TouchUpInside)
         self.view.addSubview(dangerbtn)
     
         //Assign your UILabel textvto your String
-        cellNameLabel.text = cellName
-        cellDetailLabel.text = cellDesc
-        cellStartsOnLabel.text = cellStartsOn
+        cellNameLabel.text = self.activity.title
+        cellDetailLabel.text = "Initiated by " + activity.initiator.name as String
+        if let startsOn = activity.startsOn{
+            cellStartsOnLabel.text = "Happening on " + formater.stringFromDate(startsOn)
+        }
         
         //Assign String variable to NavBar title
-        self.title = cellName
+        self.title = self.activity.title
         
         cellDetailLabel.numberOfLines = 0
         
@@ -77,10 +77,10 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == confirmedMemersCollectionView{
-            return self.confirmedMembers.count
+            return self.activity.confirmedMembers.count
         }
         if collectionView == pendingMembersCollectionView{
-            return self.pendingMembers.count
+            return self.activity.pendingMembers.count
         }
         return 0
     }
@@ -88,14 +88,14 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell =  collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as CollectionViewCell
         
-        cell.imgView.layer.shadowColor = UIColor.grayColor().CGColor
-        cell.imgView.layer.shadowOffset = CGSizeMake(0, 1);
+        cell.imgView.layer.shadowColor = UIColor.whiteColor().CGColor
+        cell.imgView.layer.shadowOffset = CGSizeMake(0, 2);
         cell.imgView.layer.shadowOpacity = 1;
-        cell.imgView.layer.shadowRadius = 1.0;
+        cell.imgView.layer.shadowRadius = 2.0;
         cell.imgView.clipsToBounds = false;
         
         if collectionView == confirmedMemersCollectionView{
-            let member = confirmedMembers[indexPath.row] as Individual
+            let member = self.activity.confirmedMembers[indexPath.row] as Individual
             cell.userName?.text = member.name
             if (member.avatarImageUrl != ""){
                 let url = NSURL(string: member.avatarImageUrl);
@@ -106,7 +106,7 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
             }
         }
         if collectionView == pendingMembersCollectionView{
-            let member = pendingMembers[indexPath.row] as Individual
+            let member = self.activity.pendingMembers[indexPath.row] as Individual
             cell.userName?.text = member.name
             if (member.avatarImageUrl != ""){
                 let url = NSURL(string: member.avatarImageUrl);
@@ -121,8 +121,8 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     }
 
     func showMap(){
-        var latitude:CLLocationDegrees = self.place.location!.lat!
-        var longitude:CLLocationDegrees = self.place.location!.lng!
+        var latitude:CLLocationDegrees = self.activity.place.location!.lat!
+        var longitude:CLLocationDegrees = self.activity.place.location!.lng!
         
         var latDelta:CLLocationDegrees = 0.01
         var lngDelta:CLLocationDegrees = 0.01
@@ -136,10 +136,13 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     
         var activityLocationAnnotation = MKPointAnnotation()
         activityLocationAnnotation.coordinate =  activityLocation
-        activityLocationAnnotation.title = self.place.name
-        activityLocationAnnotation.subtitle = self.place.address
+        activityLocationAnnotation.title = self.activity.place.name
+        activityLocationAnnotation.subtitle = self.activity.place.address
         
         self.mapView.addAnnotation(activityLocationAnnotation)
     }
 
+    func joinActivity(){        
+        persistenceHelper.joinActivity(self.activity, individual: self.user)
+    }
 }

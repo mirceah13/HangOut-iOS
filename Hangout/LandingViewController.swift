@@ -12,9 +12,8 @@ class LandingViewController: UIViewController {
 
     @IBOutlet var lblUserInfo: UILabel?
     @IBOutlet var imgUserInfo: UIImageView?
-    var userName:String = ""
-    var userEmail:String = ""
-    var userProfileImageUrl:String = ""
+    
+    var user:Individual = Individual()
     
     override func viewDidAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = true
@@ -34,10 +33,16 @@ class LandingViewController: UIViewController {
         
         let joinedEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 450, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDefault)
         joinedEventsBtn.setTitle("JOINED EVENTS", forState: UIControlState.Normal)
-        lblUserInfo?.text = self.userName
-        let url = NSURL(string: self.userProfileImageUrl);
+        lblUserInfo?.text = self.user.name
+        let url = NSURL(string: self.user.avatarImageUrl);
         var imageData:NSData = NSData(contentsOfURL: url!)!
         imgUserInfo?.image = UIImage(data: imageData)
+        
+        imgUserInfo?.layer.shadowColor = UIColor.whiteColor().CGColor
+        imgUserInfo?.layer.shadowOffset = CGSizeMake(0, 3);
+        imgUserInfo?.layer.shadowOpacity = 1;
+        imgUserInfo?.layer.shadowRadius = 3.0;
+        imgUserInfo?.clipsToBounds = false;
         
         let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
         button.frame = CGRectMake(270, 45, 39, 39)
@@ -87,8 +92,7 @@ class LandingViewController: UIViewController {
     
     func fillActivityController()->ActivityViewController{
         let activityVC = self.storyboard?.instantiateViewControllerWithIdentifier("activityVC") as ActivityViewController
-        activityVC.userName = self.userName
-        activityVC.userEmail = self.userEmail
+        activityVC.user = self.user
     
         return activityVC
     }

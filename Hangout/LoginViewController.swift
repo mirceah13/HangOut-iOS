@@ -29,9 +29,6 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         
         self.UserEmailTextField.backgroundColor = UIColor(red: 10, green: 10, blue: 10, alpha: 0.1)
         self.UserNameTextField.backgroundColor = UIColor(red: 10, green: 10, blue: 10, alpha: 0.1)
-        
-        
-        
     }
     
     //Facebook  Delegate Methods
@@ -61,9 +58,9 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         }
         var landingVC = self.storyboard?.instantiateViewControllerWithIdentifier("landingVC") as LandingViewController
 
-        landingVC.userName = UserNameTextField.text
-        landingVC.userEmail = UserEmailTextField.text
-        landingVC.userProfileImageUrl = self.profileImageUrl
+        landingVC.user.name = UserNameTextField.text
+        landingVC.user.email = UserEmailTextField.text
+        landingVC.user.avatarImageUrl = self.profileImageUrl
         
         self.navigationController?.pushViewController(landingVC, animated: true)
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GpsLocation: NSObject {
+class GpsLocation: Serializable {
     var lat: Double?
     var lng: Double?
     

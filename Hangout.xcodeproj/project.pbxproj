@@ -17,7 +17,7 @@
 		ECCB0E3D1A1F43E300A10240 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCB0E3C1A1F43E300A10240 /* DataStore.swift */; };
 		ECCB0E3F1A1F48D700A10240 /* QueryParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCB0E3E1A1F48D700A10240 /* QueryParameter.swift */; };
 		F70172581A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172511A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg */; };
-		F70172591A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172521A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg */; };
+		F70172591A299C720003EC09 /* citybike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172521A299C720003EC09 /* citybike.jpg */; };
 		F701725A1A299C720003EC09 /* catSmile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172531A299C720003EC09 /* catSmile.jpg */; };
 		F701725B1A299C720003EC09 /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172541A299C720003EC09 /* sky.jpg */; };
 		F701725C1A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172551A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg */; };
@@ -39,6 +39,10 @@
 		F73040191A0F83AD002EBDBB /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73040181A0F83AD002EBDBB /* AddActivityViewController.swift */; };
 		F7309AF91A1623D100B63266 /* GpsLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7309AF81A1623D100B63266 /* GpsLocation.swift */; };
 		F7309AFB1A16266B00B63266 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7309AFA1A16266B00B63266 /* Activity.swift */; };
+		F73628B81A2A4B54002B1F4E /* bicycle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73628B71A2A4B54002B1F4E /* bicycle.jpg */; };
+		F73628BA1A2AF9C7002B1F4E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73628B91A2AF9C7002B1F4E /* Utils.swift */; };
+		F75784371A2B072400F559D4 /* red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F75784361A2B072400F559D4 /* red.jpg */; };
+		F79439F31A2CA43E00B8F29B /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79439F21A2CA43E00B8F29B /* Serializable.swift */; };
 		F7A271251A1643FE00205424 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7A271201A1643FE00205424 /* Info.plist */; };
 		F7A271261A1643FE00205424 /* JSONPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A271211A1643FE00205424 /* JSONPath.swift */; };
 		F7A271271A1643FE00205424 /* SwiftJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A271231A1643FE00205424 /* SwiftJSONParser.swift */; };
@@ -91,7 +95,7 @@
 		ECCB0E3C1A1F43E300A10240 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		ECCB0E3E1A1F48D700A10240 /* QueryParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryParameter.swift; sourceTree = "<group>"; };
 		F70172511A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bike Rider Top Mountain iPhone 6 Wallpaper.jpg"; sourceTree = "<group>"; };
-		F70172521A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg"; sourceTree = "<group>"; };
+		F70172521A299C720003EC09 /* citybike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = citybike.jpg; sourceTree = "<group>"; };
 		F70172531A299C720003EC09 /* catSmile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = catSmile.jpg; sourceTree = "<group>"; };
 		F70172541A299C720003EC09 /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
 		F70172551A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Penn Tennis Ball iPhone 5 Wallpaper.jpg"; sourceTree = "<group>"; };
@@ -113,6 +117,10 @@
 		F73040181A0F83AD002EBDBB /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
 		F7309AF81A1623D100B63266 /* GpsLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpsLocation.swift; sourceTree = "<group>"; };
 		F7309AFA1A16266B00B63266 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		F73628B71A2A4B54002B1F4E /* bicycle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bicycle.jpg; sourceTree = "<group>"; };
+		F73628B91A2AF9C7002B1F4E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F75784361A2B072400F559D4 /* red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red.jpg; sourceTree = "<group>"; };
+		F79439F21A2CA43E00B8F29B /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		F7A271201A1643FE00205424 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A271211A1643FE00205424 /* JSONPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONPath.swift; sourceTree = "<group>"; };
 		F7A271221A1643FE00205424 /* SwiftJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftJSONParser.h; sourceTree = "<group>"; };
@@ -204,6 +212,7 @@
 				F7E1B2341A1A503200D3E501 /* NSArray.swift */,
 				F7E1B2351A1A503200D3E501 /* Range.swift */,
 				F7E1B2361A1A503200D3E501 /* Sequence.swift */,
+				F79439F21A2CA43E00B8F29B /* Serializable.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -313,6 +322,7 @@
 				ECCB0E3C1A1F43E300A10240 /* DataStore.swift */,
 				ECCB0E3E1A1F48D700A10240 /* QueryParameter.swift */,
 				F72EC12C1A27184E0066093C /* DataService.swift */,
+				F73628B91A2AF9C7002B1F4E /* Utils.swift */,
 			);
 			name = Infrastructure;
 			sourceTree = "<group>";
@@ -320,10 +330,12 @@
 		F7E0DF271A19442F00C7E59D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F75784361A2B072400F559D4 /* red.jpg */,
+				F73628B71A2A4B54002B1F4E /* bicycle.jpg */,
 				F70172631A29FFD10003EC09 /* snowboard2.jpg */,
 				F70172611A29F8810003EC09 /* snowBoard.jpg */,
 				F70172511A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg */,
-				F70172521A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg */,
+				F70172521A299C720003EC09 /* citybike.jpg */,
 				F70172531A299C720003EC09 /* catSmile.jpg */,
 				F70172541A299C720003EC09 /* sky.jpg */,
 				F701725F1A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg */,
@@ -422,6 +434,7 @@
 				F72EC7DB1A0FDE5500E532CB /* outdoor.jpg in Resources */,
 				F701725B1A299C720003EC09 /* sky.jpg in Resources */,
 				F72EC7D21A0FDE3500E532CB /* mountain.jpg in Resources */,
+				F73628B81A2A4B54002B1F4E /* bicycle.jpg in Resources */,
 				F70172601A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg in Resources */,
 				EC55F17C1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg in Resources */,
 				F7E0DF291A19447500C7E59D /* avatar-male.png in Resources */,
@@ -432,7 +445,8 @@
 				F70172581A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg in Resources */,
 				F701725E1A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg in Resources */,
 				F7CF2E4A1A0D1D56003D0041 /* LaunchScreen.xib in Resources */,
-				F70172591A299C720003EC09 /* City Speed Bicycle Bokeh Lights Background iPhone 5 Wallpaper.jpg in Resources */,
+				F75784371A2B072400F559D4 /* red.jpg in Resources */,
+				F70172591A299C720003EC09 /* citybike.jpg in Resources */,
 				F7E1B23D1A1A503200D3E501 /* Info.plist in Resources */,
 				F701725C1A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg in Resources */,
 				F70172621A29F8810003EC09 /* snowBoard.jpg in Resources */,
@@ -468,7 +482,9 @@
 				ECC176DB1A232DF000A9C675 /* User.swift in Sources */,
 				F7E1B23C1A1A503200D3E501 /* Float.swift in Sources */,
 				EC55F1741A1CF17100810425 /* LoginViewController.swift in Sources */,
+				F73628BA1A2AF9C7002B1F4E /* Utils.swift in Sources */,
 				F7E1B23B1A1A503200D3E501 /* ExSwift.swift in Sources */,
+				F79439F31A2CA43E00B8F29B /* Serializable.swift in Sources */,
 				F7A271271A1643FE00205424 /* SwiftJSONParser.swift in Sources */,
 				F7309AFB1A16266B00B63266 /* Activity.swift in Sources */,
 				F7CF2E6C1A0F7040003D0041 /* PersistenceHelper.swift in Sources */,

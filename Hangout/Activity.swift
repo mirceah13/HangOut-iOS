@@ -8,21 +8,27 @@
 
 import UIKit
 
-class Activity: NSObject{
-    var initiator:Individual
+class Activity: Serializable{
+    var id: NSString = ""
+    var checkTag: NSString = ""
+    var initiator:Individual = Individual()
     var pendingMembers:[Individual] = []
     var confirmedMembers:[Individual] = []
-    var title:String = ""
-    var desc:String = ""
+    var title:NSString = ""
+    var desc:NSString = ""
     var startsOn:NSDate?
     var endsOn:NSDate?
     var isWrapped:Bool = false
     var isCancelled:Bool = false
-    var cancellationReason:String = ""
+    var cancellationReason:NSString = ""
     var bailAudit:[Audit] = []
     var unWrapAudit:[Audit] = []
     var tags:NSArray = []
     var place:Place = Place.unknown
+    
+    override init(){
+        super.init()
+    }
     
     init(initiator:Individual, title:String, startsOn:NSDate, endsOn:NSDate, place:Place, description:String){
         self.initiator = initiator
@@ -35,13 +41,19 @@ class Activity: NSObject{
     
     init(JSONString: String){
         var null:NSNull
-        let cleanQuotes = JSONString.stringByReplacingOccurrencesOfString("\\\"", withString: "fmm", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        let cleanQuotes = JSONString.stringByReplacingOccurrencesOfString("\\\"", withString: "<mToKm>", options: NSStringCompareOptions.LiteralSearch, range: nil)
         let cleanedv1 = cleanQuotes.stringByReplacingOccurrencesOfString("\\\"", withString: "\"", options: NSStringCompareOptions.LiteralSearch, range: nil)
         let cleaned = cleanedv1.stringByReplacingOccurrencesOfString("\"\"}", withString: "\"}", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        let cleanedFinal = cleaned.stringByReplacingOccurrencesOfString("fmm", withString: "\\\"", options: NSStringCompareOptions.LiteralSearch, range: nil) as NSString!
+        let cleanedFinal = cleaned.stringByReplacingOccurrencesOfString("<mToKm>", withString: "\\\"", options: NSStringCompareOptions.LiteralSearch, range: nil) as NSString!
         var JSONdata = (cleanedFinal).dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true) as NSData?
         let parser = JSONParser(JSONdata)
         
+        if let id = parser.get("Id") as? String{
+            self.id = id
+        }
+        if let checkTag = parser.get("CheckTag") as? String{
+            self.checkTag = checkTag
+        }
         if let startsOn = parser.get("Data.startsOn") as? Double{
             self.startsOn = NSDate(timeIntervalSince1970: startsOn / 1000)
         }

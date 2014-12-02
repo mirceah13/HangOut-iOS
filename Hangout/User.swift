@@ -9,6 +9,6 @@
 import CoreData
 
 class User: NSManagedObject {
-    @NSManaged var userEmail:String
-    @NSManaged var userName:String
+    @NSManaged var userEmail:NSString
+    @NSManaged var userName:NSString
 }

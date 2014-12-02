@@ -8,11 +8,11 @@
 
 import UIKit
 
-class Place: NSObject {
-    var name:String = ""
-    var address:String = ""
-    var details:String = ""
-    var websiteUrl:String? = ""
+class Place: Serializable {
+    var name:NSString = ""
+    var address:NSString = ""
+    var details:NSString = ""
+    var websiteUrl:NSString? = ""
     var location:GpsLocation?
     var tags:NSArray = []
     

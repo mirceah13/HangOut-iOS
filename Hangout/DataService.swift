@@ -75,4 +75,13 @@ class DataService: NSObject {
         
         return activities
     }
+    
+    func joinActivity(id: String, token: String, activity: Activity, individual: Individual){
+        if (activity.hasParticipant(individual)){
+            //This member is already part of the activity
+        }
+        activity.joinMember(individual)
+        
+        persistUpdatedActivity(id, token: token, activity: activity)
+    }
 }

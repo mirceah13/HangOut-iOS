@@ -8,24 +8,24 @@
 
 import UIKit
 
-class Meta: NSObject {
-    var initiator:String = ""
-    var participants:String = ""
-    var confirmedParticipants:String = ""
-    var title:String = ""
+class Meta: Serializable {
+    var initiator:NSString = ""
+    var participants:NSString = ""
+    var confirmedParticipants:NSString = ""
+    var title:NSString = ""
     var startsOn:NSDate?
     var endsOn:NSDate?
     var isWrapped:Bool = false
     var isCancelled:Bool = false
-    var placeName:String = ""
-    var placeAddress:String = ""
+    var placeName:NSString = ""
+    var placeAddress:NSString = ""
     var placeLocationLat:Double = 0
     var placeLocationLng:Double = 0
     
     init(activity:Activity){
         self.initiator = activity.initiator.email
-        self.participants = ",".join(activity.pendingMembers.map{ $0.email })
-        self.confirmedParticipants = ",".join(activity.confirmedMembers.map{ $0.email })
+        //self.participants = ",".join(activity.pendingMembers.map{ $0.email }) as NSString
+        //self.confirmedParticipants = ",".join(activity.confirmedMembers.map{ $0.email }) as NSString
         self.title = activity.title
         self.startsOn = activity.startsOn
         self.endsOn = activity.endsOn

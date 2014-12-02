@@ -53,6 +53,10 @@ class PersistenceHelper: NSObject {
         return activities
     }
     
+    func joinActivity(activity: Activity, individual: Individual){
+        dataService.joinActivity(activity.id, token: activity.checkTag, activity: activity, individual: individual)
+    }
+    
     class func saveUserToCoreData(email: String, name: String) -> Bool{
         let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
         let context = appDel.managedObjectContext!

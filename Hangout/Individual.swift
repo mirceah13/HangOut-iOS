@@ -8,11 +8,15 @@
 
 import UIKit
 
-class Individual: NSObject {
-    var name: String = ""
-    var email: String = ""
-    var profileUrl: String = ""
-    var avatarImageUrl: String = ""
+class Individual: Serializable {
+    var name: NSString = ""
+    var email: NSString = ""
+    var profileUrl: NSString = ""
+    var avatarImageUrl: NSString = ""
+    
+    override init(){
+        super.init()
+    }
     
     init(name:String, email:String, profileUrl:String){
         self.name = name;

@@ -8,6 +8,11 @@
 
 import UIKit
 
+class multa: Serializable {
+    var nume: NSString = ""
+    var prenume: NSString = ""
+}
+
 class DataStore: NSObject {
     var storeUrl: String = ""
     var storeName: String = "http://h-httpstore.azurewebsites.net/h-hang-out-activities"
@@ -25,11 +30,6 @@ class DataStore: NSObject {
     override init(){
         super.init()
     }
-    /*
-    func Query(queryParams: [QueryParameter]) -> NSDictionary{
-        return self.Query(ChainOperation.And, queryParams: queryParams)
-    }
-*/
     
     func Query(chain: ChainOperation, queryParams: [QueryParameter]) -> [AnyObject]{
         var url = self.GenerateQueryUrl(chain, queryParams: queryParams)
@@ -112,13 +112,19 @@ class DataStore: NSObject {
         return entities[0]
     }
     
-    func Save(entity: AnyObject){
-        var url = ""
+    func Save(entity: Entity){
+        var entityArray:[Entity] = [entity]
+        var url = self.storeUrl + self.storeName
         var request:NSMutableURLRequest = NSMutableURLRequest()
         var session = NSURLSession.sharedSession()
         request.URL = NSURL(string: url)
         request.HTTPMethod = "PUT"
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(entity, options: nil, error: nil)
+        
+        var err: NSError?
+        var act = entity.toJsonString()
+        var json = NSJSONSerialization.dataWithJSONObject(entityArray, options: NSJSONWritingOptions.allZeros, error: &err)
+        
+        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(entityArray, options: nil, error: nil)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
@@ -158,9 +164,9 @@ class DataStore: NSObject {
         //TODO
     }
     
-    class Entity: NSObject {
-        var id:String = ""
-        var checkTag: String = ""
+    class Entity : Serializable{
+        var id:NSString = ""
+        var checkTag: NSString = ""
         var data: AnyObject?
         var meta: AnyObject?
         
