@@ -31,4 +31,14 @@ class Utils: NSObject {
         
         return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: 1)
     }
+    
+    class func currentDate()->NSDate{
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
+        let hour = components.hour
+        let minutes = components.minute
+        
+        return date
+    }
 }

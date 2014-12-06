@@ -28,6 +28,8 @@ class Serializable : NSObject{
             
             if propValue is Serializable {
                 propertiesDictionary.setValue((propValue as Serializable).toDictionary(), forKey: propName!)
+            } else if (propValue == nil){
+                continue
             } else if propValue is Array<Serializable> {
                 var subArray = Array<NSDictionary>()
                 for item in (propValue as Array<Serializable>) {
@@ -36,14 +38,19 @@ class Serializable : NSObject{
                 propertiesDictionary.setValue(subArray, forKey: propName!)
             } else if propValue is NSData {
                 propertiesDictionary.setValue((propValue as NSData).base64EncodedStringWithOptions(nil), forKey: propName!)
-            } else if propValue is Bool {
+            } else if self.isBool(propValue, propName: propName!) {
                 propertiesDictionary.setValue((propValue as Bool).boolValue, forKey: propName!)
+            } else if propValue is Double {
+                propertiesDictionary.setValue(propValue.doubleValue, forKey: propName!)
+            } else if propValue is Int {
+                propertiesDictionary.setValue(propValue.integerValue, forKey: propName!)
             } else if propValue is NSDate {
                 var date = propValue as NSDate
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.dateFormat = "Z"
-                var dateString = NSString(format: "/Date(%.0f000%@)/", date.timeIntervalSince1970, dateFormatter.stringFromDate(date))
-                propertiesDictionary.setValue(dateString, forKey: propName!)
+                var dateString = NSString(format: "%.0f000%", date.timeIntervalSince1970, dateFormatter.stringFromDate(date))
+                var dateAsDouble = dateString.doubleValue
+                propertiesDictionary.setValue(dateAsDouble, forKey: propName!)
             } else {
                 propertiesDictionary.setValue(propValue, forKey: propName!)
             }
@@ -62,5 +69,17 @@ class Serializable : NSObject{
         return NSString(data: self.toJson(), encoding: NSUTF8StringEncoding)
     }
     
+    func isBool(propValue: AnyObject, propName: NSString) -> Bool{
+        if propValue is Bool {
+            if (exc.contains(propName)){
+                return false
+            } else{
+                return propValue as CFBooleanRef == kCFBooleanTrue || propValue as CFBooleanRef == kCFBooleanFalse
+            }
+        }
+        return false
+    }
+    
+    var exc:[NSString] = ["maxInstantConfirms"]
    override  init() { }
 }

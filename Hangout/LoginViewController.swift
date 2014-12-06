@@ -29,6 +29,9 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         
         self.UserEmailTextField.backgroundColor = UIColor(red: 10, green: 10, blue: 10, alpha: 0.1)
         self.UserNameTextField.backgroundColor = UIColor(red: 10, green: 10, blue: 10, alpha: 0.1)
+        
+        //FBSession.activeSession().closeAndClearTokenInformation()
+        
     }
     
     //Facebook  Delegate Methods

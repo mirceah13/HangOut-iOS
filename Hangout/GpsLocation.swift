@@ -9,8 +9,8 @@
 import UIKit
 
 class GpsLocation: Serializable {
-    var lat: Double?
-    var lng: Double?
+    var lat: Double = 0
+    var lng: Double = 0
     
     class var unknown:GpsLocation { return GpsLocation(lat:0, lng: 0)}
     

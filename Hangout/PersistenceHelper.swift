@@ -15,6 +15,7 @@ class PersistenceHelper: NSObject {
     
     class func ToObjects(datastr: NSString) -> [AnyObject]? {
         var entities:[AnyObject] = []
+        var entityTags:[AnyObject] = []
         var objectsJSONStrings:[String]? = []
         
         if (datastr != ""){
@@ -54,7 +55,7 @@ class PersistenceHelper: NSObject {
     }
     
     func joinActivity(activity: Activity, individual: Individual){
-        dataService.joinActivity(activity.id, token: activity.checkTag, activity: activity, individual: individual)
+        dataService.joinActivity(activity.getId(), token: activity.getCheckTag(), imageUrl: activity.getImageUrl(), activity: activity.0, individual: individual)
     }
     
     class func saveUserToCoreData(email: String, name: String) -> Bool{

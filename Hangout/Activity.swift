@@ -9,13 +9,18 @@
 import UIKit
 
 class Activity: Serializable{
-    var id: NSString = ""
-    var checkTag: NSString = ""
+    private var Id: NSString = ""
+    private var CheckTag: NSString = ""
+    private var imageUrl: NSString = ""
     var initiator:Individual = Individual()
     var pendingMembers:[Individual] = []
     var confirmedMembers:[Individual] = []
     var title:NSString = ""
     var desc:NSString = ""
+    var imageUrls:[NSString] = []
+    var logoUrl:NSString = ""
+    var isMemberInstantlyConfirmed:Bool = false
+    var maxInstantConfirms:Int = 0
     var startsOn:NSDate?
     var endsOn:NSDate?
     var isWrapped:Bool = false
@@ -43,16 +48,19 @@ class Activity: Serializable{
         var null:NSNull
         let cleanQuotes = JSONString.stringByReplacingOccurrencesOfString("\\\"", withString: "<mToKm>", options: NSStringCompareOptions.LiteralSearch, range: nil)
         let cleanedv1 = cleanQuotes.stringByReplacingOccurrencesOfString("\\\"", withString: "\"", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        let cleaned = cleanedv1.stringByReplacingOccurrencesOfString("\"\"}", withString: "\"}", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        let cleanedFinal = cleaned.stringByReplacingOccurrencesOfString("<mToKm>", withString: "\\\"", options: NSStringCompareOptions.LiteralSearch, range: nil) as NSString!
-        var JSONdata = (cleanedFinal).dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true) as NSData?
+        //let cleaned = cleanedv1.stringByReplacingOccurrencesOfString("\"\"}", withString: "\"}", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        let cleanedFinal = cleanedv1.stringByReplacingOccurrencesOfString("<mToKm>", withString: "\\\"", options: NSStringCompareOptions.LiteralSearch, range: nil) as NSString!
+        var JSONdata = (cleanedFinal).dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) as NSData?
         let parser = JSONParser(JSONdata)
         
         if let id = parser.get("Id") as? String{
-            self.id = id
+            self.Id = id
         }
         if let checkTag = parser.get("CheckTag") as? String{
-            self.checkTag = checkTag
+            self.CheckTag = checkTag
+        }
+        if let imageUrl = parser.get("imageUrl") as? String{
+            self.imageUrl = imageUrl
         }
         if let startsOn = parser.get("Data.startsOn") as? Double{
             self.startsOn = NSDate(timeIntervalSince1970: startsOn / 1000)
@@ -65,6 +73,15 @@ class Activity: Serializable{
         }
         if let title = parser.get("Data.title") as? String{
             self.title = title
+        }
+        if let logoUrl = parser.get("logoUrl") as? String{
+            self.logoUrl = logoUrl
+        }
+        if let isMemberInstantlyConfirmed = parser.get("Data.isMemberInstantlyConfirmed") as? Bool{
+            self.isMemberInstantlyConfirmed = isMemberInstantlyConfirmed
+        }
+        if let maxInstantConfirms = parser.get("Data.maxInstantConfirms") as? Int{
+            self.maxInstantConfirms = maxInstantConfirms
         }
         if let cancellationReason = parser.get("Data.cancellationReason") as? String{
             self.cancellationReason = cancellationReason
@@ -85,15 +102,24 @@ class Activity: Serializable{
         if let initiatorProfileUrl = parser.get("Data.initiator.profileUrl") as? String{
             self.initiator.profileUrl = initiatorProfileUrl
         }
-        self.place = Place(name: "", address: "", details: "", websiteUrl: "", location: GpsLocation.unknown)
+        self.place = Place(name: "", address: "", details: "", websiteUrl: "", logoUrl: "", matchWeight: 0, location: GpsLocation.unknown)
         if let placeName = parser.get("Data.place.name") as? String{
             self.place.name = placeName
+        }
+        if let placeDetails = parser.get("Data.place.details") as? String{
+            self.place.details = placeDetails
         }
         if let placeAddress = parser.get("Data.place.address") as? String{
             self.place.address = placeAddress
         }
         if let placeWebsiteUrl = parser.get("Data.place.websiteUrl") as? String{
             self.place.websiteUrl = placeWebsiteUrl
+        }
+        if let placeLogoUrl = parser.get("Data.place.logoUrl") as? String{
+            self.place.logoUrl = placeLogoUrl
+        }
+        if let placeMatchWeight = parser.get("Data.place.matchWeight") as? Int{
+            self.place.matchWeight = placeMatchWeight
         }
         if let placeTags = parser.getArray("Data.place.tags"){
             self.place.tags = placeTags
@@ -138,6 +164,25 @@ class Activity: Serializable{
                 self.confirmedMembers.push(memberEntry)
             }
         }
+        
+        if let imageUrls = parser.get("Data.imageUrls") as? NSArray{
+            for item in imageUrls{
+                //let url = item as NSDictionary
+                self.imageUrls.push(item as NSString)
+            }
+        }
+    }
+    
+    func getId()->NSString{
+        return self.Id
+    }
+    
+    func getCheckTag()->NSString{
+        return self.CheckTag
+    }
+    
+    func getImageUrl()->NSString{
+        return self.imageUrl
     }
     
     func friendlyStatus() -> String{
@@ -151,7 +196,7 @@ class Activity: Serializable{
     }
     
     func allParticipants() -> [Individual]{
-        self.pendingMembers.append(self.initiator)
+        //self.pendingMembers.append(self.initiator)
         return self.pendingMembers
     }
     

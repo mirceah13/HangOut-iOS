@@ -12,16 +12,6 @@ class DataService: NSObject {
     
     var dataStore: DataStore = DataStore()
     
-    class func currentDate()->NSDate{
-        let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: date)
-        let hour = components.hour
-        let minutes = components.minute
-        
-        return date
-    }
-    
     func loadActivity(id: String){
         let activity: AnyObject = dataStore.Load(id)
         
@@ -32,10 +22,11 @@ class DataService: NSObject {
         dataStore.Save(entity)
     }
     
-    func persistUpdatedActivity(id: String, token: String, activity: Activity){
+    func persistUpdatedActivity(id: String, token: String, imageUrl: String, activity: Activity){
         var entity = DataStore.Entity(data: activity, meta: activity.meta())
-        entity.id = id
-        entity.checkTag = token
+        entity.Id = id
+        entity.CheckTag = token
+        entity.imageUrl = imageUrl
         
         dataStore.Save(entity)
     }
@@ -44,7 +35,7 @@ class DataService: NSObject {
         var params:[QueryParameter] = []
         params.push(QueryParameter(Name: "initiator", Operator: QueryParameterOperator.Equals, Value: user.email, Negated: true))
         params.push(QueryParameter(Name: "participants", Operator: QueryParameterOperator.Contains, Value: user.email, Negated: true))
-        params.push(QueryParameter(Name: "startsOn", Operator: QueryParameterOperator.HigherThan, Value: Int(DataService.currentDate().timeIntervalSince1970 as Double)))
+        params.push(QueryParameter(Name: "startsOn", Operator: QueryParameterOperator.HigherThan, Value: Int(Utils.currentDate().timeIntervalSince1970 as Double * 1000)))
         params.push(QueryParameter(Name: "isCancelled", Operator: QueryParameterOperator.Equals, Value: "false"))
         params.push(QueryParameter(Name: "isWrapped", Operator: QueryParameterOperator.Equals, Value: "false"))
     
@@ -57,7 +48,7 @@ class DataService: NSObject {
     func fetchActivitiesFor(user: Individual)->[Activity]{
         var params:[QueryParameter] = []
         params.push(QueryParameter(Name: "initiator", Operator: QueryParameterOperator.Equals, Value: user.email))
-        params.push(QueryParameter(Name: "startsOn", Operator: QueryParameterOperator.HigherThan, Value: Int(DataService.currentDate().timeIntervalSince1970 as Double)))
+        params.push(QueryParameter(Name: "startsOn", Operator: QueryParameterOperator.HigherThan, Value: Int(Utils.currentDate().timeIntervalSince1970 as Double * 1000)))
         params.push(QueryParameter(Name: "isCancelled", Operator: QueryParameterOperator.Equals, Value: "false"))
         
         var activities = dataStore.Query(ChainOperation.And, queryParams: params) as [Activity]
@@ -68,7 +59,7 @@ class DataService: NSObject {
     func fetchActivitiesForParticipant(user: Individual)->[Activity]{
         var params:[QueryParameter] = []
         params.push(QueryParameter(Name: "participants", Operator: QueryParameterOperator.Contains, Value: user.email))
-        params.push(QueryParameter(Name: "startsOn", Operator: QueryParameterOperator.HigherThan, Value: Int(DataService.currentDate().timeIntervalSince1970 as Double)))
+        params.push(QueryParameter(Name: "startsOn", Operator: QueryParameterOperator.HigherThan, Value: Int(Utils.currentDate().timeIntervalSince1970 as Double * 1000)))
         params.push(QueryParameter(Name: "isCancelled", Operator: QueryParameterOperator.Equals, Value: "false"))
         
         var activities = dataStore.Query(ChainOperation.And, queryParams: params) as [Activity]
@@ -76,12 +67,12 @@ class DataService: NSObject {
         return activities
     }
     
-    func joinActivity(id: String, token: String, activity: Activity, individual: Individual){
+    func joinActivity(id: String, token: String, imageUrl: String, activity: Activity, individual: Individual){
         if (activity.hasParticipant(individual)){
             //This member is already part of the activity
         }
         activity.joinMember(individual)
         
-        persistUpdatedActivity(id, token: token, activity: activity)
+        persistUpdatedActivity(id, token: token, imageUrl: imageUrl, activity: activity)
     }
 }

@@ -8,11 +8,6 @@
 
 import UIKit
 
-class multa: Serializable {
-    var nume: NSString = ""
-    var prenume: NSString = ""
-}
-
 class DataStore: NSObject {
     var storeUrl: String = ""
     var storeName: String = "http://h-httpstore.azurewebsites.net/h-hang-out-activities"
@@ -113,7 +108,6 @@ class DataStore: NSObject {
     }
     
     func Save(entity: Entity){
-        var entityArray:[Entity] = [entity]
         var url = self.storeUrl + self.storeName
         var request:NSMutableURLRequest = NSMutableURLRequest()
         var session = NSURLSession.sharedSession()
@@ -121,10 +115,13 @@ class DataStore: NSObject {
         request.HTTPMethod = "PUT"
         
         var err: NSError?
-        var act = entity.toJsonString()
-        var json = NSJSONSerialization.dataWithJSONObject(entityArray, options: NSJSONWritingOptions.allZeros, error: &err)
+        var act:String = entity.toJsonString()
+        //act = "[\(act)]"
+        act = act.stringByReplacingOccurrencesOfString("\"desc\"", withString: "\"description\"", options: NSStringCompareOptions.LiteralSearch, range: nil) as String
+        //var json = NSJSONSerialization.dataWithJSONObject(act, options: NSJSONWritingOptions.PrettyPrinted, error: &err)
+        var json = act.dataUsingEncoding(NSUTF8StringEncoding)
         
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(entityArray, options: nil, error: nil)
+        request.HTTPBody = json
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
@@ -165,15 +162,20 @@ class DataStore: NSObject {
     }
     
     class Entity : Serializable{
-        var id:NSString = ""
-        var checkTag: NSString = ""
-        var data: AnyObject?
-        var meta: AnyObject?
-        
+        var Id:NSString = ""
+        var CheckTag: NSString = ""
+        var Data: AnyObject?
+        var Meta: AnyObject?
+        var LastModifiedOn: String  = ""
+        var imageUrl: NSString = ""
         init(data: AnyObject, meta: AnyObject ){
-            self.data = data
-            self.meta = meta
+            var formater:NSDateFormatter = NSDateFormatter()
+            formater.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            self.Data = data
+            self.Meta = meta
+            self.LastModifiedOn = formater.stringFromDate(Utils.currentDate())
         }
+        
     }
     
 }

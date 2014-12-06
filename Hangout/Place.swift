@@ -12,20 +12,24 @@ class Place: Serializable {
     var name:NSString = ""
     var address:NSString = ""
     var details:NSString = ""
-    var websiteUrl:NSString? = ""
+    var websiteUrl:NSString = ""
+    var logoUrl:NSString = ""
+    var matchWeight:Int = 0
     var location:GpsLocation?
     var tags:NSArray = []
     
     class var unknown:Place {
-        return Place(name: "", address: "", details: "", websiteUrl: "", location: GpsLocation.unknown)
+        return Place(name: "", address: "", details: "", websiteUrl: "", logoUrl: "" , matchWeight: 0, location: GpsLocation.unknown)
     }
     
-    init(name:String, address:String, details:String, websiteUrl:String?, location:GpsLocation){
+    init(name:String, address:String, details:String, websiteUrl:String, logoUrl:String, matchWeight:Int, location:GpsLocation){
         self.name = name
         self.address = address
         self.details = details
         self.websiteUrl = websiteUrl
         self.location = location
+        self.logoUrl = logoUrl
+        self.matchWeight = matchWeight
         self.tags = []
     }
 }

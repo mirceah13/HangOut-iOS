@@ -338,17 +338,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="citybike.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oiP-gL-d9R">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mountain-trip-1024x1024-wallpaper-3628.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oiP-gL-d9R">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <visualEffectView opaque="NO" alpha="0.90000000000000024" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bbb-jo-3Mz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="gWw-pA-6iZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-MR-f3T">
                                 <rect key="frame" x="270" y="45" width="39" height="39"/>
                             </imageView>
@@ -439,6 +431,7 @@
     <resources>
         <image name="bicycle.jpg" width="640" height="1136"/>
         <image name="citybike.jpg" width="640" height="1136"/>
+        <image name="mountain-trip-1024x1024-wallpaper-3628.jpg" width="615" height="947"/>
         <image name="sky.jpg" width="640" height="1136"/>
     </resources>
 </document>

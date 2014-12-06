@@ -25,7 +25,12 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     var activity:Activity = Activity()
     var user:Individual = Individual()
     var formater = NSDateFormatter()
+    
+    var pendingMembers:[Individual] = []
+    var confirmedMembers:[Individual] = []
 
+    var dangerbtn: SFlatButton = SFlatButton(frame: CGRectMake(60, 500, 200, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -39,8 +44,26 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         
         formater.dateFormat = "E d MMM hh:mm"
         
-        let dangerbtn: SFlatButton = SFlatButton(frame: CGRectMake(60, 500, 200, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
-        dangerbtn.setTitle("I want to join this", forState: UIControlState.Normal)
+        var alreadyJoined:Bool = false;
+        
+        for member in self.activity.pendingMembers  {
+            if member.email == self.user.email {
+                alreadyJoined = true
+                break
+            }
+        }
+        for member in self.activity.confirmedMembers  {
+            if member.email == self.user.email {
+                alreadyJoined = true
+                break
+            }
+        }
+        if (alreadyJoined){
+            dangerbtn.setTitle("Cancel my participation", forState: UIControlState.Normal)
+        } else {
+            dangerbtn.setTitle("I want to join this", forState: UIControlState.Normal)
+        }
+        
         dangerbtn.addTarget(self, action: "joinActivity", forControlEvents: .TouchUpInside)
         self.view.addSubview(dangerbtn)
     
@@ -50,6 +73,11 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         if let startsOn = activity.startsOn{
             cellStartsOnLabel.text = "Happening on " + formater.stringFromDate(startsOn)
         }
+        
+        pendingMembers = self.activity.pendingMembers
+        confirmedMembers = self.activity.confirmedMembers
+        pendingMembers.push(self.activity.initiator)
+        confirmedMembers.push(self.activity.initiator)
         
         //Assign String variable to NavBar title
         self.title = self.activity.title
@@ -77,10 +105,10 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == confirmedMemersCollectionView{
-            return self.activity.confirmedMembers.count
+            return confirmedMembers.count
         }
         if collectionView == pendingMembersCollectionView{
-            return self.activity.pendingMembers.count
+            return pendingMembers.count
         }
         return 0
     }
@@ -95,7 +123,7 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         cell.imgView.clipsToBounds = false;
         
         if collectionView == confirmedMemersCollectionView{
-            let member = self.activity.confirmedMembers[indexPath.row] as Individual
+            let member = confirmedMembers[indexPath.row] as Individual
             cell.userName?.text = member.name
             if (member.avatarImageUrl != ""){
                 let url = NSURL(string: member.avatarImageUrl);
@@ -106,7 +134,7 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
             }
         }
         if collectionView == pendingMembersCollectionView{
-            let member = self.activity.pendingMembers[indexPath.row] as Individual
+            let member = pendingMembers[indexPath.row] as Individual
             cell.userName?.text = member.name
             if (member.avatarImageUrl != ""){
                 let url = NSURL(string: member.avatarImageUrl);
@@ -121,8 +149,8 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     }
 
     func showMap(){
-        var latitude:CLLocationDegrees = self.activity.place.location!.lat!
-        var longitude:CLLocationDegrees = self.activity.place.location!.lng!
+        var latitude:CLLocationDegrees = self.activity.place.location!.lat
+        var longitude:CLLocationDegrees = self.activity.place.location!.lng
         
         var latDelta:CLLocationDegrees = 0.01
         var lngDelta:CLLocationDegrees = 0.01
@@ -144,5 +172,13 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
 
     func joinActivity(){        
         persistenceHelper.joinActivity(self.activity, individual: self.user)
+        if (!self.pendingMembers.contains(self.user)){
+            self.pendingMembers.push(self.user)
+            self.dangerbtn.setTitle("Cancel my participation", forState: UIControlState.Normal)
+        }
+        self.pendingMembersCollectionView.reloadData()
+        let activityVC = self.storyboard?.instantiateViewControllerWithIdentifier("activityVC") as ActivityViewController
+        activityVC.activities = persistenceHelper.list(self.user, type: ActivityScreenType.JoinableActivities) as [Activity]
+        activityVC.activityTable?.reloadData()
     }
 }

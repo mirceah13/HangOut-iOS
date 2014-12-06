@@ -10,13 +10,14 @@ import UIKit
 
 class Meta: Serializable {
     var initiator:NSString = ""
-    var participants:NSString = ""
-    var confirmedParticipants:NSString = ""
+    var participants:String = ""
+    var confirmedParticipants:String = ""
     var title:NSString = ""
     var startsOn:NSDate?
     var endsOn:NSDate?
     var isWrapped:Bool = false
     var isCancelled:Bool = false
+    var isMemberInstantlyConfirmed:Bool = false
     var placeName:NSString = ""
     var placeAddress:NSString = ""
     var placeLocationLat:Double = 0
@@ -24,8 +25,8 @@ class Meta: Serializable {
     
     init(activity:Activity){
         self.initiator = activity.initiator.email
-        //self.participants = ",".join(activity.pendingMembers.map{ $0.email }) as NSString
-        //self.confirmedParticipants = ",".join(activity.confirmedMembers.map{ $0.email }) as NSString
+        self.participants = ",".join(activity.pendingMembers.map{ $0.email as String }) as String
+        self.confirmedParticipants = ",".join(activity.confirmedMembers.map{ $0.email as String }) as String
         self.title = activity.title
         self.startsOn = activity.startsOn
         self.endsOn = activity.endsOn
@@ -33,7 +34,8 @@ class Meta: Serializable {
         self.isCancelled = activity.isCancelled
         self.placeName = activity.place.name
         self.placeAddress = activity.place.address
-        self.placeLocationLat = activity.place.location!.lat!
-        self.placeLocationLng = activity.place.location!.lng!
+        self.placeLocationLat = activity.place.location!.lat
+        self.placeLocationLng = activity.place.location!.lng
+        self.isMemberInstantlyConfirmed = activity.isMemberInstantlyConfirmed
     }
 }

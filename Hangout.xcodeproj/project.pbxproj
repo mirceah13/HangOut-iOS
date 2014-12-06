@@ -43,6 +43,10 @@
 		F73628BA1A2AF9C7002B1F4E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73628B91A2AF9C7002B1F4E /* Utils.swift */; };
 		F75784371A2B072400F559D4 /* red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F75784361A2B072400F559D4 /* red.jpg */; };
 		F79439F31A2CA43E00B8F29B /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79439F21A2CA43E00B8F29B /* Serializable.swift */; };
+		F7958A881A326B2700DA7101 /* Ski 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7958A871A326B2700DA7101 /* Ski 3.jpg */; };
+		F7958A8A1A326CD200DA7101 /* extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7958A891A326CD200DA7101 /* extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg */; };
+		F7958A8C1A326DAB00DA7101 /* tennis-balls-1280x1024-wallpaper-8533.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7958A8B1A326DAB00DA7101 /* tennis-balls-1280x1024-wallpaper-8533.jpg */; };
+		F7958A8E1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7958A8D1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg */; };
 		F7A271251A1643FE00205424 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7A271201A1643FE00205424 /* Info.plist */; };
 		F7A271261A1643FE00205424 /* JSONPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A271211A1643FE00205424 /* JSONPath.swift */; };
 		F7A271271A1643FE00205424 /* SwiftJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A271231A1643FE00205424 /* SwiftJSONParser.swift */; };
@@ -121,6 +125,10 @@
 		F73628B91A2AF9C7002B1F4E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F75784361A2B072400F559D4 /* red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red.jpg; sourceTree = "<group>"; };
 		F79439F21A2CA43E00B8F29B /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
+		F7958A871A326B2700DA7101 /* Ski 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ski 3.jpg"; sourceTree = "<group>"; };
+		F7958A891A326CD200DA7101 /* extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg"; sourceTree = "<group>"; };
+		F7958A8B1A326DAB00DA7101 /* tennis-balls-1280x1024-wallpaper-8533.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tennis-balls-1280x1024-wallpaper-8533.jpg"; sourceTree = "<group>"; };
+		F7958A8D1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mountain-trip-1024x1024-wallpaper-3628.jpg"; sourceTree = "<group>"; };
 		F7A271201A1643FE00205424 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A271211A1643FE00205424 /* JSONPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONPath.swift; sourceTree = "<group>"; };
 		F7A271221A1643FE00205424 /* SwiftJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftJSONParser.h; sourceTree = "<group>"; };
@@ -330,6 +338,10 @@
 		F7E0DF271A19442F00C7E59D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F7958A8D1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg */,
+				F7958A8B1A326DAB00DA7101 /* tennis-balls-1280x1024-wallpaper-8533.jpg */,
+				F7958A891A326CD200DA7101 /* extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg */,
+				F7958A871A326B2700DA7101 /* Ski 3.jpg */,
 				F75784361A2B072400F559D4 /* red.jpg */,
 				F73628B71A2A4B54002B1F4E /* bicycle.jpg */,
 				F70172631A29FFD10003EC09 /* snowboard2.jpg */,
@@ -398,6 +410,7 @@
 				TargetAttributes = {
 					F7CF2E361A0D1D56003D0041 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = U47K7U4T3N;
 					};
 					F7CF2E4E1A0D1D56003D0041 = {
 						CreatedOnToolsVersion = 6.1;
@@ -430,13 +443,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F72EC7DA1A0FDE5500E532CB /* social.jpg in Resources */,
+				F7958A8A1A326CD200DA7101 /* extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg in Resources */,
 				F72EC7D81A0FDE5500E532CB /* ballGames.jpg in Resources */,
 				F72EC7DB1A0FDE5500E532CB /* outdoor.jpg in Resources */,
+				F7958A8E1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg in Resources */,
+				F7958A8C1A326DAB00DA7101 /* tennis-balls-1280x1024-wallpaper-8533.jpg in Resources */,
 				F701725B1A299C720003EC09 /* sky.jpg in Resources */,
 				F72EC7D21A0FDE3500E532CB /* mountain.jpg in Resources */,
 				F73628B81A2A4B54002B1F4E /* bicycle.jpg in Resources */,
 				F70172601A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg in Resources */,
 				EC55F17C1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg in Resources */,
+				F7958A881A326B2700DA7101 /* Ski 3.jpg in Resources */,
 				F7E0DF291A19447500C7E59D /* avatar-male.png in Resources */,
 				F7CF2E451A0D1D56003D0041 /* Main.storyboard in Resources */,
 				F72EC7DC1A0FDE5500E532CB /* water.jpg in Resources */,
