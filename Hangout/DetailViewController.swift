@@ -13,7 +13,6 @@ import MapKit.MKMapView
 class DetailViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate, MKMapViewDelegate {
     
     //Our label for displaying var "items/cellName"
-    @IBOutlet var cellNameLabel: UILabel!
     @IBOutlet var cellDetailLabel: UILabel!
     @IBOutlet var cellStartsOnLabel: UILabel!
     @IBOutlet weak var pendingMembersCollectionView: UICollectionView!
@@ -24,12 +23,13 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     var persistenceHelper: PersistenceHelper = PersistenceHelper()
     var activity:Activity = Activity()
     var user:Individual = Individual()
+    var pendingLabel:UILabel = UILabel()
     var formater = NSDateFormatter()
     
     var pendingMembers:[Individual] = []
     var confirmedMembers:[Individual] = []
 
-    var dangerbtn: SFlatButton = SFlatButton(frame: CGRectMake(60, 500, 200, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
+    var dangerbtn: SFlatButton = SFlatButton(frame: CGRectMake(60, 510, 200, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -60,15 +60,15 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         }
         if (alreadyJoined){
             dangerbtn.setTitle("Cancel my participation", forState: UIControlState.Normal)
+            dangerbtn.addTarget(self, action: "promptBailoutReason", forControlEvents: .TouchUpInside)
         } else {
             dangerbtn.setTitle("I want to join this", forState: UIControlState.Normal)
+            dangerbtn.addTarget(self, action: "joinActivity", forControlEvents: .TouchUpInside)
         }
         
-        dangerbtn.addTarget(self, action: "joinActivity", forControlEvents: .TouchUpInside)
+        
         self.view.addSubview(dangerbtn)
-    
-        //Assign your UILabel textvto your String
-        cellNameLabel.text = self.activity.title
+
         cellDetailLabel.text = "Initiated by " + activity.initiator.name as String
         if let startsOn = activity.startsOn{
             cellStartsOnLabel.text = "Happening on " + formater.stringFromDate(startsOn)
@@ -83,17 +83,8 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         self.title = self.activity.title
         
         cellDetailLabel.numberOfLines = 0
+        self.drawLayout()
         
-        let lineRect1 = CGRectMake(0, 200, self.view.bounds.width, 1)
-        var lineView1:UIView = UIView(frame: lineRect1)
-        lineView1.backgroundColor = UIColor.whiteColor()
-        
-        let lineRect2 = CGRectMake(0, 280, self.view.bounds.width, 1)
-        var lineView2:UIView = UIView(frame: lineRect2)
-        lineView2.backgroundColor = UIColor.whiteColor()
-        self.view.addSubview(lineView1)
-        self.view.addSubview(lineView2)
-
         self.showMap()
         // Do any additional setup after loading the view.
     }
@@ -116,7 +107,7 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         var cell =  collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as CollectionViewCell
         
-        cell.imgView.layer.shadowColor = UIColor.whiteColor().CGColor
+        cell.imgView.layer.shadowColor = UIColor.grayColor().CGColor
         cell.imgView.layer.shadowOffset = CGSizeMake(0, 2);
         cell.imgView.layer.shadowOpacity = 1;
         cell.imgView.layer.shadowRadius = 2.0;
@@ -175,10 +166,102 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         if (!self.pendingMembers.contains(self.user)){
             self.pendingMembers.push(self.user)
             self.dangerbtn.setTitle("Cancel my participation", forState: UIControlState.Normal)
+            self.dangerbtn.removeTarget(self, action: "joinActivity", forControlEvents: .TouchUpInside)
+            self.dangerbtn.addTarget(self, action: "promptBailoutReason", forControlEvents: .TouchUpInside)
+
         }
         self.pendingMembersCollectionView.reloadData()
         let activityVC = self.storyboard?.instantiateViewControllerWithIdentifier("activityVC") as ActivityViewController
         activityVC.activities = persistenceHelper.list(self.user, type: ActivityScreenType.JoinableActivities) as [Activity]
         activityVC.activityTable?.reloadData()
+        pendingLabel.text = "\(self.pendingMembers.count) willing participant(s)"
+    }
+    
+    func leaveActivity(reason: String){
+        persistenceHelper.leaveActivity(self.activity, individual: self.user, reason: reason)
+        for member in self.pendingMembers  {
+            if member.email == self.user.email {
+                self.pendingMembers.remove(member)
+                self.dangerbtn.setTitle("I want to join this", forState: UIControlState.Normal)
+                self.dangerbtn.removeTarget(self, action: "promptBailoutReason", forControlEvents: .TouchUpInside)
+                self.dangerbtn.addTarget(self, action: "joinActivity", forControlEvents: .TouchUpInside)
+                self.pendingLabel.text = "\(self.pendingMembers.count) willing participant(s)"
+                break
+            }
+        }
+        
+        self.pendingMembersCollectionView.reloadData()
+        let activityVC = self.storyboard?.instantiateViewControllerWithIdentifier("activityVC") as ActivityViewController
+        activityVC.activities = persistenceHelper.list(self.user, type: ActivityScreenType.JoinableActivities) as [Activity]
+        activityVC.activityTable?.reloadData()
+    }
+    
+    func promptBailoutReason(){
+        let alertController: UIAlertController = UIAlertController(title: "Bail out", message: "Are you sure you want to bail out?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let changedMind = UIAlertAction(title: "I changed my mind", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in self.leaveActivity("I changed my mind")})
+        let feel = UIAlertAction(title: "Just don't feel like it", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in self.leaveActivity("Just don't feel like it")})
+        let plans = UIAlertAction(title: "Got better plans", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in self.leaveActivity("Got better plans")})
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
+        alertController.addAction(changedMind)
+        alertController.addAction(feel)
+        alertController.addAction(plans)
+        alertController.addAction(cancelAction)
+        
+        self.presentViewController(alertController, animated: true, completion:nil)
+    }
+    
+    func goToChat(){
+        let chatVC = self.storyboard?.instantiateViewControllerWithIdentifier("chatVC") as ChatViewController
+        self.navigationController?.pushViewController(chatVC, animated: true)
+    }
+    
+    func goToLanding(){
+        let landingVC = self.storyboard?.instantiateViewControllerWithIdentifier("landingVC") as LandingViewController
+        self.navigationController?.pushViewController(landingVC, animated: true)
+    }
+    
+    func drawLayout(){
+        let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        button.frame = CGRectMake(257, 74, 43, 43)
+        button.addTarget(self, action: "goToChat", forControlEvents:.TouchUpInside)
+        
+        let bGround0 = CGRectMake(0, 121, self.view.bounds.width, 16)
+        var bView0:UIView = UIView(frame: bGround0)
+        bView0.backgroundColor = Utils.colorWithHexString("#EB3F3F")
+        
+        bView0.layer.shadowColor = UIColor.grayColor().CGColor
+        bView0.layer.shadowOffset = CGSizeMake(0, 1);
+        bView0.layer.shadowOpacity = 1;
+        bView0.layer.shadowRadius = 1.0;
+        bView0.clipsToBounds = false;
+        
+        let bGround1 = CGRectMake(0, 201, self.view.bounds.width, 16)
+        var bView1:UIView = UIView(frame: bGround1)
+        bView1.backgroundColor = UIColor.whiteColor()
+        
+        bView1.layer.shadowColor = UIColor.grayColor().CGColor
+        bView1.layer.shadowOffset = CGSizeMake(0, 1);
+        bView1.layer.shadowOpacity = 1;
+        bView1.layer.shadowRadius = 1.0;
+        bView1.clipsToBounds = false;
+        
+        let confirmedLabel = UILabel(frame: CGRectMake(5, 119, 200, 21))
+        confirmedLabel.font = UIFont(name: "Avenir", size: 11)
+        confirmedLabel.text = "\(self.confirmedMembers.count) confirmed participant(s)"
+        confirmedLabel.textColor = UIColor.whiteColor()
+        
+        pendingLabel = UILabel(frame: CGRectMake(5, 199, 200, 21))
+        pendingLabel.font = UIFont(name: "Avenir", size: 11)
+        pendingLabel.text = "\(self.pendingMembers.count) willing participant(s)"
+        pendingLabel.textColor = UIColor.grayColor()
+        
+        
+        self.view.addSubview(bView0)
+        self.view.addSubview(bView1)
+        self.view.addSubview(confirmedLabel)
+        self.view.addSubview(pendingLabel)
+        self.view.addSubview(button)
+
     }
 }

@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bicycle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wPv-li-bcH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snowBoard.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wPv-li-bcH">
                                 <rect key="frame" x="0.0" y="-7" width="320" height="575"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jcf-J2-XTf">
@@ -111,7 +111,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="citybike.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gVK-as-0AO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snowBoard.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gVK-as-0AO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDU-S4-Qug">
@@ -127,14 +127,26 @@
                                             </connections>
                                         </mapView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StartsOn" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ov-Mt-Om2">
-                                            <rect key="frame" x="16" y="252" width="288" height="25"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                            <rect key="frame" x="48" y="256" width="269" height="25"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="11"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s26-qe-kIE">
-                                            <rect key="frame" x="107" y="22" width="208" height="25"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="13"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grey_new_seo-17-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wta-TV-vgI">
+                                            <rect key="frame" x="257" y="9" width="45" height="45"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitterRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="oWu-gg-LrJ">
+                                            <rect key="frame" x="105" y="9" width="45" height="45"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebookRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="C2t-ou-Mz5">
+                                            <rect key="frame" x="25" y="9" width="45" height="45"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="googleRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="a3k-N3-qj3">
+                                            <rect key="frame" x="182" y="9" width="45" height="45"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s26-qe-kIE">
+                                            <rect key="frame" x="8" y="409" width="309" height="25"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -146,10 +158,10 @@
                                 <rect key="frame" x="-5" y="256" width="330" height="56"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02O-2Y-gpg">
-                                <rect key="frame" x="10" y="127" width="294" height="65"/>
+                                <rect key="frame" x="10" y="127" width="294" height="73"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pQy-m7-0fH">
-                                        <rect key="frame" x="0.0" y="4" width="294" height="61"/>
+                                        <rect key="frame" x="0.0" y="12" width="294" height="61"/>
                                         <color key="backgroundColor" red="1" green="0.93619076662225154" blue="0.91670493685620891" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.9987069395509619" green="0.97741345477272934" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Bd-06-d4H">
@@ -193,17 +205,11 @@
                                     </collectionView>
                                 </subviews>
                             </scrollView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dc-sP-gb8">
-                                <rect key="frame" x="5" y="59" width="310" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                                <color key="textColor" red="0.88411458333333337" green="0.007291697794381451" blue="0.058491309900330614" alpha="0.85999999999999999" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtD-2H-bfG">
-                                <rect key="frame" x="10" y="214" width="294" height="65"/>
+                                <rect key="frame" x="10" y="214" width="294" height="73"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mkc-YG-3El">
-                                        <rect key="frame" x="0.0" y="0.0" width="294" height="61"/>
+                                        <rect key="frame" x="0.0" y="5" width="294" height="61"/>
                                         <color key="backgroundColor" red="1" green="0.9361907666" blue="0.91670493689999999" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.99870693960000001" green="0.97741345479999997" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tuj-Hx-RxJ">
@@ -250,12 +256,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qec-3l-cfz">
-                        <barButtonItem key="backBarButtonItem" title="&lt;" id="HFB-f4-mfg"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="qec-3l-cfz"/>
                     <connections>
                         <outlet property="cellDetailLabel" destination="s26-qe-kIE" id="lQO-85-NfC"/>
-                        <outlet property="cellNameLabel" destination="2dc-sP-gb8" id="012-sw-89H"/>
                         <outlet property="cellStartsOnLabel" destination="8Ov-Mt-Om2" id="aTp-2B-xw6"/>
                         <outlet property="confirmedMemersCollectionView" destination="pQy-m7-0fH" id="Wpd-yO-zbD"/>
                         <outlet property="mapView" destination="UrP-Yk-skz" id="VSg-l5-4Zy"/>
@@ -265,6 +268,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEt-z6-G0f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3733" y="552"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="Eto-CN-a6B">
+            <objects>
+                <viewController storyboardIdentifier="chatVC" id="oJV-tn-hf2" customClass="ChatViewController" customModule="Hangout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B1h-CR-gKt"/>
+                        <viewControllerLayoutGuide type="bottom" id="hrf-SM-mhu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UyA-7U-Op0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaU-la-XJ9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="eaU-la-XJ9" id="FvK-ud-JV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z2G-0x-9OI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4188" y="552"/>
         </scene>
         <!--About yourself-->
         <scene sceneID="98q-eU-1m8">
@@ -338,22 +369,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mountain-trip-1024x1024-wallpaper-3628.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oiP-gL-d9R">
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bicycle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="oiP-gL-d9R">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-MR-f3T">
-                                <rect key="frame" x="270" y="45" width="39" height="39"/>
+                                <rect key="frame" x="270" y="45" width="39" height="45"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserInfo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwX-th-boO">
                                 <rect key="frame" x="-16" y="42" width="283" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="13"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="logged in as" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIc-nU-Zxs">
                                 <rect key="frame" x="249" y="25" width="60" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="10"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -430,8 +461,11 @@
     </scenes>
     <resources>
         <image name="bicycle.jpg" width="640" height="1136"/>
-        <image name="citybike.jpg" width="640" height="1136"/>
-        <image name="mountain-trip-1024x1024-wallpaper-3628.jpg" width="615" height="947"/>
+        <image name="facebookRed.png" width="128" height="128"/>
+        <image name="googleRed.png" width="128" height="128"/>
+        <image name="grey_new_seo-17-512.png" width="512" height="512"/>
         <image name="sky.jpg" width="640" height="1136"/>
+        <image name="snowBoard.jpg" width="640" height="1136"/>
+        <image name="twitterRed.png" width="128" height="128"/>
     </resources>
 </document>

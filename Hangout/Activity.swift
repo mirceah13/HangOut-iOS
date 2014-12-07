@@ -256,12 +256,21 @@ class Activity: Serializable{
         if (!self.hasParticipant(member)){
             return;
         }
-        //self.bailAudit.push({at:NSDate(), email: member.email, reason: reason})
+        self.bailAudit.push(Audit(reason: reason, at: Utils.currentDate(), email: member.email))
         if(self.isParticipantConfirmed(member) && self.isWrapped){
             self.unWrap(member.email + " who was a confirmed participant, bailed out, quoting:'" + reason + "'")
         }
-        self.pendingMembers.remove(self.pendingMembers.filter{$0.email == member.email}.first!)
-        self.confirmedMembers.remove(self.pendingMembers.filter{$0.email == member.email}.first!)
+        for item in self.pendingMembers{
+            if (item.email == member.email){
+                self.pendingMembers.remove(item)
+            }
+        }
+        for item in self.confirmedMembers{
+            if (item.email == member.email){
+                self.pendingMembers.remove(item)
+            }
+        }
+        
     }
     
     func meta() -> Meta{

@@ -29,23 +29,29 @@ class LandingViewController: UIViewController {
         yourActivitiesBtn.setTitle("YOUR ACTIVITIES", forState: UIControlState.Normal)
         
         let joinableEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 400, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
-        joinableEventsBtn.setTitle("EVENTS YOU MAI JOIN ", forState: UIControlState.Normal)
+        joinableEventsBtn.setTitle("ACTIVITIES YOU MAY JOIN ", forState: UIControlState.Normal)
         
         let joinedEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 450, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDefault)
         joinedEventsBtn.setTitle("JOINED EVENTS", forState: UIControlState.Normal)
         lblUserInfo?.text = self.user.name
         let url = NSURL(string: self.user.avatarImageUrl);
-        var imageData:NSData = NSData(contentsOfURL: url!)!
-        imgUserInfo?.image = UIImage(data: imageData)
+        if (self.user.avatarImageUrl as String != ""){
+            var imageData:NSData = NSData(contentsOfURL: url!)!
+            imgUserInfo?.image = UIImage(data: imageData)
+        }
+        else{
+            imgUserInfo?.image = UIImage(named: "avatar-male.png")
+        }
         
-        imgUserInfo?.layer.shadowColor = UIColor.whiteColor().CGColor
+        imgUserInfo?.layer.shadowColor = UIColor.grayColor().CGColor
         imgUserInfo?.layer.shadowOffset = CGSizeMake(0, 3);
         imgUserInfo?.layer.shadowOpacity = 1;
         imgUserInfo?.layer.shadowRadius = 3.0;
         imgUserInfo?.clipsToBounds = false;
         
         let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        button.frame = CGRectMake(270, 45, 39, 39)
+        button.frame = CGRectMake(270, 45, 39, 45
+        )
         button.addTarget(self, action: "promptLogout", forControlEvents:.TouchUpInside)
         
         self.view.addSubview(button)

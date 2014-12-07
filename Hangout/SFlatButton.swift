@@ -45,9 +45,9 @@ class SFlatButton: UIButton
         switch (SFbuttonType)
         {
             case .SFBDefault:
-                self.setBackgroundImage(self.imageWithColorToButton(UIColor(red: 254/255, green: 1/255, blue: 1/255, alpha: 0.1)), forState: UIControlState.Normal)
+                self.setBackgroundImage(self.imageWithColorToButton(UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)), forState: UIControlState.Normal)
                 self.setBackgroundImage(self.imageWithColorToButton(UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1)), forState: UIControlState.Highlighted)
-                self.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+                self.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
                 self.setTitleColor(UIColor(red: 77/255, green: 51/255, blue: 51/255, alpha: 1), forState: UIControlState.Highlighted)
                 self.layer.borderColor = UIColor(red: 162/255, green: 162/255, blue: 162/255, alpha: 0.1).CGColor
                 self.layer.borderWidth = 1.0

@@ -12,7 +12,6 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     
     //This is our Activity tableView
     @IBOutlet var activityTable: UITableView!
-
     var user:Individual = Individual()
     var screenType:ActivityScreenType = ActivityScreenType.JoinableActivities
     var formater = NSDateFormatter()
@@ -29,7 +28,17 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         navigationItem.title = "Activities"
         self.saveAuthUser()
         activities = persistenceHelper.list(self.user, type: self.screenType) as [Activity]
-        // Do any additional setup after loading the view, typically from a nib.
+
+        if (self.activities.count == 0 || (self.activities.count == 1 && self.activities[0].getId() == "" )){
+            let nothingLabel = UILabel(frame: CGRectMake(55, 285, 240, 30))
+            nothingLabel.font = UIFont(name: "Avenir", size: 15)
+
+            nothingLabel.text = "Nothing to see here...move along"
+            nothingLabel.textColor = UIColor.whiteColor()
+            
+            self.view.addSubview(nothingLabel)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,6 +66,7 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        tableView.rowHeight = 64.0
         let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "TableView")!
     
         let rowActivity = activities[indexPath.row]
@@ -68,6 +78,7 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
             cell.detailTextLabel?.text = "Happenning on " + formater.stringFromDate(happening)
         }
         cell.textLabel?.textColor = UIColor.whiteColor()
+        
         cell.textLabel?.font = UIFont(name: "Avenir", size: 15)
         cell.detailTextLabel?.textColor = UIColor(red: 10/255, green: 10/255, blue: 10/255, alpha: 1)
         cell.detailTextLabel?.font = UIFont(name: "Avenir", size: 10)
@@ -77,18 +88,20 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         let initiatorlbl = UILabel(frame: CGRectMake(0, 0, 200, 21))
         initiatorlbl.textColor = color
         initiatorlbl.font = UIFont(name: "Avenir", size: 10)
-        initiatorlbl.center = CGPointMake(210, 10)
+        initiatorlbl.center = CGPointMake(217, 47)
         initiatorlbl.textAlignment = NSTextAlignment.Right
         initiatorlbl.text = "with " + rowActivity.initiator.name
-        cell.addSubview(initiatorlbl)
+        if (rowActivity.initiator.name != ""){
+            cell.addSubview(initiatorlbl)
+        }
 
         if (rowActivity.confirmedMembers.count > 0){
             let withOtherslbl = UILabel(frame: CGRectMake(0, 0, 200, 21))
             withOtherslbl.textColor = color
             withOtherslbl.font = UIFont(name: "Avenir", size: 10)
-            withOtherslbl.center = CGPointMake(210, 23)
+            withOtherslbl.center = CGPointMake(210, 60)
             withOtherslbl.textAlignment = NSTextAlignment.Right
-            withOtherslbl.text = "and \(rowActivity.confirmedMembers.count) others"
+            withOtherslbl.text = "and \(rowActivity.confirmedMembers.count) other(s)"
             cell.addSubview(withOtherslbl)
         }
         

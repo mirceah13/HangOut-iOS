@@ -68,6 +68,11 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         self.navigationController?.pushViewController(landingVC, animated: true)
     }
     
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        self.view.endEditing(true);
+        return false;
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -75,4 +75,12 @@ class DataService: NSObject {
         
         persistUpdatedActivity(id, token: token, imageUrl: imageUrl, activity: activity)
     }
+    
+    func leaveActivity(id: String, token: String, imageUrl: String, activity: Activity, individual: Individual, reason:String){
+        if (activity.hasParticipant(individual)){
+            //activity.leaveMember(individual)
+            activity.bailOut(individual, reason: reason)
+        }
+        persistUpdatedActivity(id, token: token, imageUrl: imageUrl, activity: activity)
+    }
 }
