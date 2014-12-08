@@ -11,10 +11,13 @@ import UIKit
 class ChatViewController: UIViewController {
 
     @IBOutlet var webView: UIWebView?
+    
+    var activityId:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSURL(string: "http://rshankar.com/swift-webview-demo/")
+        let url = NSURL(string: "http://h-httpstore.azurewebsites.net/h-hang-out-activities/#!/activity/comments/\(self.activityId)")
         let request = NSURLRequest(URL: url!)
         webView?.loadRequest(request)
 

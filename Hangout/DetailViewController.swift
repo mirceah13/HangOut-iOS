@@ -213,6 +213,7 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     
     func goToChat(){
         let chatVC = self.storyboard?.instantiateViewControllerWithIdentifier("chatVC") as ChatViewController
+        chatVC.activityId = self.activity.getId()
         self.navigationController?.pushViewController(chatVC, animated: true)
     }
     
