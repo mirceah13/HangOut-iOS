@@ -17,7 +17,7 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSURL(string: "http://h-httpstore.azurewebsites.net/h-hang-out-activities/#!/activity/comments/\(self.activityId)")
+        let url = NSURL(string: "http://h-hang-out.azurewebsites.net/#!/activity/comments/\(self.activityId)")
         let request = NSURLRequest(URL: url!)
         webView?.loadRequest(request)
 
