@@ -94,6 +94,14 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         // Dispose of any resources that can be recreated.
     }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> Int {
+        return UIInterfaceOrientation.Portrait.rawValue
+    }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == confirmedMemersCollectionView{
             return confirmedMembers.count

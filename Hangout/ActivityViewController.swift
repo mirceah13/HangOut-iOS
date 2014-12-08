@@ -46,6 +46,14 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> Int {
+        return UIInterfaceOrientation.Portrait.rawValue
+    }
+    
     func saveAuthUser(){
         if (PersistenceHelper.loadUserFromCoreData(self.user.email).count > 0){
             //show his activities
@@ -88,7 +96,7 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         let initiatorlbl = UILabel(frame: CGRectMake(0, 0, 200, 21))
         initiatorlbl.textColor = color
         initiatorlbl.font = UIFont(name: "Avenir", size: 10)
-        initiatorlbl.center = CGPointMake(217, 47)
+        initiatorlbl.center = CGPointMake(217, 45)
         initiatorlbl.textAlignment = NSTextAlignment.Right
         initiatorlbl.text = "with " + rowActivity.initiator.name
         if (rowActivity.initiator.name != ""){
@@ -99,7 +107,7 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
             let withOtherslbl = UILabel(frame: CGRectMake(0, 0, 200, 21))
             withOtherslbl.textColor = color
             withOtherslbl.font = UIFont(name: "Avenir", size: 10)
-            withOtherslbl.center = CGPointMake(210, 60)
+            withOtherslbl.center = CGPointMake(210, 58)
             withOtherslbl.textAlignment = NSTextAlignment.Right
             withOtherslbl.text = "and \(rowActivity.confirmedMembers.count) other(s)"
             cell.addSubview(withOtherslbl)

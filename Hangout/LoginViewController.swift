@@ -34,6 +34,14 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         
     }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> Int {
+        return UIInterfaceOrientation.Portrait.rawValue
+    }
+    
     //Facebook  Delegate Methods
     
     func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
@@ -68,9 +76,14 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         self.navigationController?.pushViewController(landingVC, animated: true)
     }
     
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        self.view.endEditing(true);
-        return false;
+        
+        textField.resignFirstResponder()
+        return true
     }
     
     override func didReceiveMemoryWarning() {

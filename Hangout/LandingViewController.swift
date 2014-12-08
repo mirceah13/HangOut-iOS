@@ -73,6 +73,14 @@ class LandingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> Int {
+        return UIInterfaceOrientation.Portrait.rawValue
+    }
+    
     func goToJoinable(){
         let activityVC = fillActivityController()
         activityVC.screenType = ActivityScreenType.JoinableActivities
@@ -92,7 +100,8 @@ class LandingViewController: UIViewController {
     }
     
     func goToInitiate(){
-        let initiateVC = self.storyboard?.instantiateViewControllerWithIdentifier("initiateVC") as ActivityViewController
+        let initiateVC = self.storyboard?.instantiateViewControllerWithIdentifier("initiateVC") as AddActivityViewController
+        initiateVC.user = self.user
         self.navigationController?.pushViewController(initiateVC, animated: true)
     }
     

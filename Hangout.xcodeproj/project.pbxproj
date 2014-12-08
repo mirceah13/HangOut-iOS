@@ -10,20 +10,12 @@
 		EC404C9E1A1A531E00AA24DD /* SFlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC404C9D1A1A531E00AA24DD /* SFlatButton.swift */; };
 		EC55F1741A1CF17100810425 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC55F1731A1CF17100810425 /* LoginViewController.swift */; };
 		EC55F1771A1DDB2200810425 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC55F1761A1DDB2200810425 /* FacebookSDK.framework */; };
-		EC55F17A1A1DEB5F00810425 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC55F1791A1DEB5F00810425 /* 5.jpg */; };
-		EC55F17C1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC55F17B1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg */; };
 		ECC176DB1A232DF000A9C675 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC176DA1A232DF000A9C675 /* User.swift */; };
 		ECC176E51A23557A00A9C675 /* Hangout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECC176E31A23557A00A9C675 /* Hangout.xcdatamodeld */; };
 		ECCB0E3D1A1F43E300A10240 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCB0E3C1A1F43E300A10240 /* DataStore.swift */; };
 		ECCB0E3F1A1F48D700A10240 /* QueryParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCB0E3E1A1F48D700A10240 /* QueryParameter.swift */; };
 		F70172581A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172511A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg */; };
 		F70172591A299C720003EC09 /* citybike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172521A299C720003EC09 /* citybike.jpg */; };
-		F701725A1A299C720003EC09 /* catSmile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172531A299C720003EC09 /* catSmile.jpg */; };
-		F701725B1A299C720003EC09 /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172541A299C720003EC09 /* sky.jpg */; };
-		F701725C1A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172551A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg */; };
-		F701725D1A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172561A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg */; };
-		F701725E1A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172571A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg */; };
-		F70172601A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F701725F1A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg */; };
 		F70172621A29F8810003EC09 /* snowBoard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172611A29F8810003EC09 /* snowBoard.jpg */; };
 		F70172641A29FFD10003EC09 /* snowboard2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F70172631A29FFD10003EC09 /* snowboard2.jpg */; };
 		F72E735D1A0FA43C00A29B71 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72E735C1A0FA43C00A29B71 /* NavController.swift */; };
@@ -35,18 +27,10 @@
 		F7309AFB1A16266B00B63266 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7309AFA1A16266B00B63266 /* Activity.swift */; };
 		F73628B81A2A4B54002B1F4E /* bicycle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73628B71A2A4B54002B1F4E /* bicycle.jpg */; };
 		F73628BA1A2AF9C7002B1F4E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73628B91A2AF9C7002B1F4E /* Utils.swift */; };
-		F75784371A2B072400F559D4 /* red.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F75784361A2B072400F559D4 /* red.jpg */; };
-		F767BAA81A34597C0010F196 /* blue_running_track-wallpaper-960x640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F767BAA71A34597C0010F196 /* blue_running_track-wallpaper-960x640.jpg */; };
-		F767BAAA1A345C720010F196 /* basketball-wallpaper-960x640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F767BAA91A345C720010F196 /* basketball-wallpaper-960x640.jpg */; };
 		F7926A7F1A347F1C00D3B79D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7926A7E1A347F1C00D3B79D /* ChatViewController.swift */; };
 		F79439F31A2CA43E00B8F29B /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79439F21A2CA43E00B8F29B /* Serializable.swift */; };
-		F7958A881A326B2700DA7101 /* Ski 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7958A871A326B2700DA7101 /* Ski 3.jpg */; };
-		F7958A8A1A326CD200DA7101 /* extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7958A891A326CD200DA7101 /* extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg */; };
-		F7958A8C1A326DAB00DA7101 /* tennis-balls-1280x1024-wallpaper-8533.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7958A8B1A326DAB00DA7101 /* tennis-balls-1280x1024-wallpaper-8533.jpg */; };
 		F7958A8E1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7958A8D1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg */; };
-		F79628671A34ABAA002D9D36 /* Chat-1213155811.png_s.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F79628661A34ABAA002D9D36 /* Chat-1213155811.png_s.jpg */; };
 		F79628691A34AD56002D9D36 /* grey_new_seo-17-512.png in Resources */ = {isa = PBXBuildFile; fileRef = F79628681A34AD56002D9D36 /* grey_new_seo-17-512.png */; };
-		F796286E1A34B694002D9D36 /* twitterBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F796286A1A34B694002D9D36 /* twitterBlue.png */; };
 		F796286F1A34B694002D9D36 /* twitterRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F796286B1A34B694002D9D36 /* twitterRed.png */; };
 		F79628701A34B694002D9D36 /* facebookRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F796286C1A34B694002D9D36 /* facebookRed.png */; };
 		F79628711A34B694002D9D36 /* googleRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F796286D1A34B694002D9D36 /* googleRed.png */; };
@@ -66,6 +50,14 @@
 		F7CF2E561A0D1D56003D0041 /* HangoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E551A0D1D56003D0041 /* HangoutTests.swift */; };
 		F7CF2E661A0D3019003D0041 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E651A0D3019003D0041 /* DetailViewController.swift */; };
 		F7CF2E6C1A0F7040003D0041 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E6B1A0F7040003D0041 /* PersistenceHelper.swift */; };
+		F7D1F17C1A35E2EC00A55F5B /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F17A1A35E2EC00A55F5B /* sky.jpg */; };
+		F7D1F17D1A35E2EC00A55F5B /* SplashScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F17B1A35E2EC00A55F5B /* SplashScreen.jpg */; };
+		F7D1F18F1A35FC6900A55F5B /* ballGames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F18A1A35FC6900A55F5B /* ballGames.jpg */; };
+		F7D1F1901A35FC6900A55F5B /* indoor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F18B1A35FC6900A55F5B /* indoor.jpg */; };
+		F7D1F1911A35FC6900A55F5B /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F18C1A35FC6900A55F5B /* mountain.jpg */; };
+		F7D1F1921A35FC6900A55F5B /* outdoor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F18D1A35FC6900A55F5B /* outdoor.jpg */; };
+		F7D1F1931A35FC6900A55F5B /* water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F18E1A35FC6900A55F5B /* water.jpg */; };
+		F7D1F1951A35FCA500A55F5B /* social.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F1941A35FCA500A55F5B /* social.jpg */; };
 		F7E0DF261A1941F400C7E59D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E0DF251A1941F400C7E59D /* CollectionViewCell.swift */; };
 		F7E0DF291A19447500C7E59D /* avatar-male.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E0DF281A19447500C7E59D /* avatar-male.png */; };
 		F7E1B2381A1A503200D3E501 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B22C1A1A503200D3E501 /* Array.swift */; };
@@ -95,20 +87,12 @@
 		EC55F1731A1CF17100810425 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EC55F1761A1DDB2200810425 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		EC55F1781A1DDE8600810425 /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
-		EC55F1791A1DEB5F00810425 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
-		EC55F17B1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg; sourceTree = "<group>"; };
 		ECC176DA1A232DF000A9C675 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECC176E41A23557A00A9C675 /* Hangout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hangout.xcdatamodel; sourceTree = "<group>"; };
 		ECCB0E3C1A1F43E300A10240 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		ECCB0E3E1A1F48D700A10240 /* QueryParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryParameter.swift; sourceTree = "<group>"; };
 		F70172511A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bike Rider Top Mountain iPhone 6 Wallpaper.jpg"; sourceTree = "<group>"; };
 		F70172521A299C720003EC09 /* citybike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = citybike.jpg; sourceTree = "<group>"; };
-		F70172531A299C720003EC09 /* catSmile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = catSmile.jpg; sourceTree = "<group>"; };
-		F70172541A299C720003EC09 /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
-		F70172551A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Penn Tennis Ball iPhone 5 Wallpaper.jpg"; sourceTree = "<group>"; };
-		F70172561A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg"; sourceTree = "<group>"; };
-		F70172571A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Women Water Wet Surfing iPhone 5 Wallpaper.jpg"; sourceTree = "<group>"; };
-		F701725F1A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg"; sourceTree = "<group>"; };
 		F70172611A29F8810003EC09 /* snowBoard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowBoard.jpg; sourceTree = "<group>"; };
 		F70172631A29FFD10003EC09 /* snowboard2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowboard2.jpg; sourceTree = "<group>"; };
 		F72E735C1A0FA43C00A29B71 /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
@@ -120,18 +104,10 @@
 		F7309AFA1A16266B00B63266 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F73628B71A2A4B54002B1F4E /* bicycle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bicycle.jpg; sourceTree = "<group>"; };
 		F73628B91A2AF9C7002B1F4E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		F75784361A2B072400F559D4 /* red.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = red.jpg; sourceTree = "<group>"; };
-		F767BAA71A34597C0010F196 /* blue_running_track-wallpaper-960x640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blue_running_track-wallpaper-960x640.jpg"; sourceTree = "<group>"; };
-		F767BAA91A345C720010F196 /* basketball-wallpaper-960x640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "basketball-wallpaper-960x640.jpg"; sourceTree = "<group>"; };
 		F7926A7E1A347F1C00D3B79D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F79439F21A2CA43E00B8F29B /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
-		F7958A871A326B2700DA7101 /* Ski 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ski 3.jpg"; sourceTree = "<group>"; };
-		F7958A891A326CD200DA7101 /* extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg"; sourceTree = "<group>"; };
-		F7958A8B1A326DAB00DA7101 /* tennis-balls-1280x1024-wallpaper-8533.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tennis-balls-1280x1024-wallpaper-8533.jpg"; sourceTree = "<group>"; };
 		F7958A8D1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mountain-trip-1024x1024-wallpaper-3628.jpg"; sourceTree = "<group>"; };
-		F79628661A34ABAA002D9D36 /* Chat-1213155811.png_s.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Chat-1213155811.png_s.jpg"; sourceTree = "<group>"; };
 		F79628681A34AD56002D9D36 /* grey_new_seo-17-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey_new_seo-17-512.png"; sourceTree = "<group>"; };
-		F796286A1A34B694002D9D36 /* twitterBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterBlue.png; sourceTree = "<group>"; };
 		F796286B1A34B694002D9D36 /* twitterRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterRed.png; sourceTree = "<group>"; };
 		F796286C1A34B694002D9D36 /* facebookRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookRed.png; sourceTree = "<group>"; };
 		F796286D1A34B694002D9D36 /* googleRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = googleRed.png; sourceTree = "<group>"; };
@@ -156,6 +132,14 @@
 		F7CF2E551A0D1D56003D0041 /* HangoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangoutTests.swift; sourceTree = "<group>"; };
 		F7CF2E651A0D3019003D0041 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F7CF2E6B1A0F7040003D0041 /* PersistenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		F7D1F17A1A35E2EC00A55F5B /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
+		F7D1F17B1A35E2EC00A55F5B /* SplashScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SplashScreen.jpg; sourceTree = "<group>"; };
+		F7D1F18A1A35FC6900A55F5B /* ballGames.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ballGames.jpg; sourceTree = "<group>"; };
+		F7D1F18B1A35FC6900A55F5B /* indoor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = indoor.jpg; sourceTree = "<group>"; };
+		F7D1F18C1A35FC6900A55F5B /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
+		F7D1F18D1A35FC6900A55F5B /* outdoor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = outdoor.jpg; sourceTree = "<group>"; };
+		F7D1F18E1A35FC6900A55F5B /* water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = water.jpg; sourceTree = "<group>"; };
+		F7D1F1941A35FCA500A55F5B /* social.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = social.jpg; sourceTree = "<group>"; };
 		F7E0DF251A1941F400C7E59D /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F7E0DF281A19447500C7E59D /* avatar-male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-male.png"; sourceTree = "<group>"; };
 		F7E1B22C1A1A503200D3E501 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = "ExSwift-master 3/ExSwift/Array.swift"; sourceTree = "<group>"; };
@@ -331,32 +315,24 @@
 		F7E0DF271A19442F00C7E59D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				F796286A1A34B694002D9D36 /* twitterBlue.png */,
+				F7D1F18A1A35FC6900A55F5B /* ballGames.jpg */,
+				F7D1F18B1A35FC6900A55F5B /* indoor.jpg */,
+				F7D1F18C1A35FC6900A55F5B /* mountain.jpg */,
+				F7D1F18D1A35FC6900A55F5B /* outdoor.jpg */,
+				F7D1F18E1A35FC6900A55F5B /* water.jpg */,
+				F7D1F17A1A35E2EC00A55F5B /* sky.jpg */,
+				F7D1F1941A35FCA500A55F5B /* social.jpg */,
+				F7D1F17B1A35E2EC00A55F5B /* SplashScreen.jpg */,
 				F796286B1A34B694002D9D36 /* twitterRed.png */,
 				F796286C1A34B694002D9D36 /* facebookRed.png */,
 				F796286D1A34B694002D9D36 /* googleRed.png */,
-				F79628661A34ABAA002D9D36 /* Chat-1213155811.png_s.jpg */,
-				F767BAA91A345C720010F196 /* basketball-wallpaper-960x640.jpg */,
-				F767BAA71A34597C0010F196 /* blue_running_track-wallpaper-960x640.jpg */,
 				F7958A8D1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg */,
-				F7958A8B1A326DAB00DA7101 /* tennis-balls-1280x1024-wallpaper-8533.jpg */,
-				F7958A891A326CD200DA7101 /* extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg */,
-				F7958A871A326B2700DA7101 /* Ski 3.jpg */,
-				F75784361A2B072400F559D4 /* red.jpg */,
 				F73628B71A2A4B54002B1F4E /* bicycle.jpg */,
 				F70172631A29FFD10003EC09 /* snowboard2.jpg */,
 				F70172611A29F8810003EC09 /* snowBoard.jpg */,
 				F79628681A34AD56002D9D36 /* grey_new_seo-17-512.png */,
 				F70172511A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg */,
 				F70172521A299C720003EC09 /* citybike.jpg */,
-				F70172531A299C720003EC09 /* catSmile.jpg */,
-				F70172541A299C720003EC09 /* sky.jpg */,
-				F701725F1A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg */,
-				F70172551A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg */,
-				F70172561A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg */,
-				F70172571A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg */,
-				EC55F17B1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg */,
-				EC55F1791A1DEB5F00810425 /* 5.jpg */,
 				F7E0DF281A19447500C7E59D /* avatar-male.png */,
 			);
 			name = Images;
@@ -443,36 +419,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7958A8A1A326CD200DA7101 /* extreme-snowboarding-adventure-640x960-wallpaper-11029.jpg in Resources */,
-				F79628671A34ABAA002D9D36 /* Chat-1213155811.png_s.jpg in Resources */,
+				F7D1F1911A35FC6900A55F5B /* mountain.jpg in Resources */,
 				F7958A8E1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg in Resources */,
-				F796286E1A34B694002D9D36 /* twitterBlue.png in Resources */,
-				F7958A8C1A326DAB00DA7101 /* tennis-balls-1280x1024-wallpaper-8533.jpg in Resources */,
-				F701725B1A299C720003EC09 /* sky.jpg in Resources */,
 				F73628B81A2A4B54002B1F4E /* bicycle.jpg in Resources */,
-				F70172601A29B02B0003EC09 /* Cool-Alpine-Skiing-iphone-5s-parallax-wallpaper-ilikewallpaper_com.jpg in Resources */,
-				EC55F17C1A1DEF8D00810425 /* Sports_Other_mountaineering_dare_Mountaineering_sports_sun_126679.jpg in Resources */,
-				F7958A881A326B2700DA7101 /* Ski 3.jpg in Resources */,
+				F7D1F1901A35FC6900A55F5B /* indoor.jpg in Resources */,
+				F7D1F1951A35FCA500A55F5B /* social.jpg in Resources */,
 				F7E0DF291A19447500C7E59D /* avatar-male.png in Resources */,
+				F7D1F18F1A35FC6900A55F5B /* ballGames.jpg in Resources */,
 				F7CF2E451A0D1D56003D0041 /* Main.storyboard in Resources */,
-				F767BAAA1A345C720010F196 /* basketball-wallpaper-960x640.jpg in Resources */,
+				F7D1F1921A35FC6900A55F5B /* outdoor.jpg in Resources */,
 				F79628701A34B694002D9D36 /* facebookRed.png in Resources */,
-				EC55F17A1A1DEB5F00810425 /* 5.jpg in Resources */,
-				F701725A1A299C720003EC09 /* catSmile.jpg in Resources */,
 				F79628691A34AD56002D9D36 /* grey_new_seo-17-512.png in Resources */,
+				F7D1F1931A35FC6900A55F5B /* water.jpg in Resources */,
 				F70172581A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg in Resources */,
-				F701725E1A299C720003EC09 /* Women Water Wet Surfing iPhone 5 Wallpaper.jpg in Resources */,
-				F767BAA81A34597C0010F196 /* blue_running_track-wallpaper-960x640.jpg in Resources */,
 				F7CF2E4A1A0D1D56003D0041 /* LaunchScreen.xib in Resources */,
-				F75784371A2B072400F559D4 /* red.jpg in Resources */,
 				F70172591A299C720003EC09 /* citybike.jpg in Resources */,
 				F796286F1A34B694002D9D36 /* twitterRed.png in Resources */,
 				F79628711A34B694002D9D36 /* googleRed.png in Resources */,
 				F7E1B23D1A1A503200D3E501 /* Info.plist in Resources */,
-				F701725C1A299C720003EC09 /* Penn Tennis Ball iPhone 5 Wallpaper.jpg in Resources */,
 				F70172621A29F8810003EC09 /* snowBoard.jpg in Resources */,
-				F701725D1A299C720003EC09 /* Ski Jet Water Sports Splash iPhone 5 Wallpaper.jpg in Resources */,
+				F7D1F17C1A35E2EC00A55F5B /* sky.jpg in Resources */,
 				F7CF2E471A0D1D56003D0041 /* Images.xcassets in Resources */,
+				F7D1F17D1A35E2EC00A55F5B /* SplashScreen.jpg in Resources */,
 				F7A271251A1643FE00205424 /* Info.plist in Resources */,
 				F70172641A29FFD10003EC09 /* snowboard2.jpg in Resources */,
 			);
