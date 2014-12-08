@@ -116,8 +116,8 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         if collectionView == confirmedMemersCollectionView{
             let member = confirmedMembers[indexPath.row] as Individual
             cell.userName?.text = member.name
-            if (member.avatarImageUrl != ""){
-                let url = NSURL(string: member.avatarImageUrl);
+            if (member.avatar("100") != ""){
+                let url = NSURL(string: member.avatar("100"));
                 var imageData:NSData = NSData(contentsOfURL: url!)!
                 cell.imgView.image = UIImage(data: imageData)
             } else {
@@ -127,8 +127,8 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         if collectionView == pendingMembersCollectionView{
             let member = pendingMembers[indexPath.row] as Individual
             cell.userName?.text = member.name
-            if (member.avatarImageUrl != ""){
-                let url = NSURL(string: member.avatarImageUrl);
+            if (member.avatar("100") != ""){
+                let url = NSURL(string: member.avatar("100"));
                 var imageData:NSData = NSData(contentsOfURL: url!)!
                 cell.imgView.image = UIImage(data: imageData)
             } else {

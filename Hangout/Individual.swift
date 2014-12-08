@@ -49,7 +49,7 @@ class Individual: Serializable {
     }
     
     func emailHash()->String{
-        return "Generate Hash TODO"
+        return (self.email as String).md5()
     }
     
     func gravatarProfileImageUrl(size:String)->String{

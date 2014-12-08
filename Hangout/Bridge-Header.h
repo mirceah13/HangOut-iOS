@@ -10,5 +10,6 @@
 #define Hangout_Bridge_Header_h
 
 #import <FacebookSDK/FacebookSDK.h>
+#import <CommonCrypto/CommonCrypto.h>
 
 #endif
