@@ -133,9 +133,14 @@ class LandingViewController: UIViewController {
         bView0.layer.shadowRadius = 1.0;
         bView0.clipsToBounds = false;
         
+        let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        xButton.frame = CGRectMake(10, 29, 21, 28)
+        xButton.addTarget(self, action: "logOut", forControlEvents:.TouchUpInside)
+        
         self.view.addSubview(bView0)
         self.view.sendSubviewToBack(bView0)
         self.view.addSubview(button)
+        self.view.addSubview(xButton)
 
     }
     

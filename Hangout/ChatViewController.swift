@@ -15,6 +15,7 @@ class ChatViewController: UIViewController {
     @IBOutlet var imgUserInfo: UIImageView?
     var activityId:String = ""
     var user:Individual = Individual()
+    var activity:Activity = Activity()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,10 +91,22 @@ class ChatViewController: UIViewController {
         bView0.layer.shadowRadius = 1.0;
         bView0.clipsToBounds = false;
         
+        let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        xButton.frame = CGRectMake(10, 29, 21, 28)
+        xButton.addTarget(self, action: "goBack", forControlEvents:.TouchUpInside)
+        
         self.view.addSubview(bView0)
         self.view.sendSubviewToBack(bView0)
         self.view.addSubview(button)
+        self.view.addSubview(xButton)
         
+    }
+    
+    func goBack(){
+        let detailVC = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
+        detailVC.user = self.user
+        detailVC.activity = self.activity
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 
 }

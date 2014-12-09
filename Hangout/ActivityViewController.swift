@@ -145,6 +145,12 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
+    func goToLanding(){
+        let landingVC = self.storyboard?.instantiateViewControllerWithIdentifier("landingVC") as LandingViewController
+        landingVC.user = self.user
+        self.navigationController?.pushViewController(landingVC, animated: true)
+    }
+    
     func drawLogin(){
         lblUserInfo?.text = self.user.name
         let url = NSURL(string: self.user.avatarImageUrl);
@@ -177,10 +183,14 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         bView0.layer.shadowRadius = 1.0;
         bView0.clipsToBounds = false;
         
+        let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        xButton.frame = CGRectMake(10, 29, 21, 28)
+        xButton.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
+        
         self.view.addSubview(bView0)
         self.view.sendSubviewToBack(bView0)
         self.view.addSubview(button)
-        
+        self.view.addSubview(xButton)
     }
 
 }
