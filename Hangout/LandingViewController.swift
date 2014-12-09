@@ -33,29 +33,8 @@ class LandingViewController: UIViewController {
         
         let joinedEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 450, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDefault)
         joinedEventsBtn.setTitle("JOINED EVENTS", forState: UIControlState.Normal)
-        lblUserInfo?.text = self.user.name
-        let url = NSURL(string: self.user.avatarImageUrl);
-        if (self.user.avatarImageUrl as String != ""){
-            var imageData:NSData = NSData(contentsOfURL: url!)!
-            imgUserInfo?.image = UIImage(data: imageData)
-        }
-        else{
-            imgUserInfo?.image = UIImage(named: "avatar-male.png")
-        }
         
-        imgUserInfo?.layer.shadowColor = UIColor.grayColor().CGColor
-        imgUserInfo?.layer.shadowOffset = CGSizeMake(0, 3);
-        imgUserInfo?.layer.shadowOpacity = 1;
-        imgUserInfo?.layer.shadowRadius = 3.0;
-        imgUserInfo?.clipsToBounds = false;
-        
-        let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        button.frame = CGRectMake(270, 45, 39, 45
-        )
-        button.addTarget(self, action: "promptLogout", forControlEvents:.TouchUpInside)
-        
-        self.view.addSubview(button)
-
+        self.drawLogin()
         
         initiateBtn.addTarget(self, action: "goToInitiate", forControlEvents: .TouchUpInside)
         joinableEventsBtn.addTarget(self, action: "goToJoinable", forControlEvents: .TouchUpInside)
@@ -120,6 +99,44 @@ class LandingViewController: UIViewController {
         alertController.addAction(logoutAction)
         alertController.addAction(cancelAction)
         self.presentViewController(alertController, animated: true, completion:nil)
+    }
+    
+    func drawLogin(){
+        lblUserInfo?.text = self.user.name
+        let url = NSURL(string: self.user.avatarImageUrl);
+        if (self.user.avatarImageUrl as String != ""){
+            var imageData:NSData = NSData(contentsOfURL: url!)!
+            imgUserInfo?.image = UIImage(data: imageData)
+        }
+        else{
+            imgUserInfo?.image = UIImage(named: "avatar-male.png")
+        }
+        
+        imgUserInfo?.layer.shadowColor = UIColor.grayColor().CGColor
+        imgUserInfo?.layer.shadowOffset = CGSizeMake(0, 3);
+        imgUserInfo?.layer.shadowOpacity = 1;
+        imgUserInfo?.layer.shadowRadius = 3.0;
+        imgUserInfo?.clipsToBounds = false;
+        
+        let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        button.frame = CGRectMake(270, 45, 39, 45
+        )
+        button.addTarget(self, action: "promptLogout", forControlEvents:.TouchUpInside)
+        
+        let bGround0 = CGRectMake(0, 0, self.view.bounds.width, 60)
+        var bView0:UIView = UIView(frame: bGround0)
+        bView0.backgroundColor = Utils.colorWithHexString("#EB3F3F")
+        
+        bView0.layer.shadowColor = UIColor.grayColor().CGColor
+        bView0.layer.shadowOffset = CGSizeMake(0, 1);
+        bView0.layer.shadowOpacity = 1;
+        bView0.layer.shadowRadius = 1.0;
+        bView0.clipsToBounds = false;
+        
+        self.view.addSubview(bView0)
+        self.view.sendSubviewToBack(bView0)
+        self.view.addSubview(button)
+
     }
     
     func logOut(){
