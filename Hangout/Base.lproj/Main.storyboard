@@ -166,49 +166,40 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snowBoard.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gVK-as-0AO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDU-S4-Qug">
-                                <rect key="frame" x="0.0" y="64" width="330" height="504"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="lfP-xJ-9ky">
-                                    <rect key="frame" x="0.0" y="0.0" width="330" height="504"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UrP-Yk-skz">
+                                <rect key="frame" x="0.0" y="200" width="320" height="400"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tMS-E3-1JG" id="Nxn-sx-oWD"/>
+                                </connections>
+                            </mapView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iha-b8-wbT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="13y-Eg-VOB">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UrP-Yk-skz">
-                                            <rect key="frame" x="3" y="275" width="315" height="140"/>
-                                            <connections>
-                                                <outlet property="delegate" destination="tMS-E3-1JG" id="Nxn-sx-oWD"/>
-                                            </connections>
-                                        </mapView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StartsOn" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ov-Mt-Om2">
-                                            <rect key="frame" x="48" y="256" width="269" height="25"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="11"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grey_new_seo-17-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wta-TV-vgI">
-                                            <rect key="frame" x="257" y="9" width="45" height="45"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitterRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="oWu-gg-LrJ">
-                                            <rect key="frame" x="105" y="9" width="45" height="45"/>
-                                        </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebookRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="C2t-ou-Mz5">
-                                            <rect key="frame" x="25" y="9" width="45" height="45"/>
+                                            <rect key="frame" x="25" y="73" width="45" height="45"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="googleRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="a3k-N3-qj3">
-                                            <rect key="frame" x="182" y="9" width="45" height="45"/>
+                                            <rect key="frame" x="105" y="73" width="45" height="45"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s26-qe-kIE">
-                                            <rect key="frame" x="8" y="409" width="309" height="25"/>
-                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitterRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="oWu-gg-LrJ">
+                                            <rect key="frame" x="182" y="73" width="45" height="45"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grey_new_seo-17-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wta-TV-vgI">
+                                            <rect key="frame" x="256" y="73" width="45" height="45"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happens on" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vct-uM-QQ6">
+                                            <rect key="frame" x="8" y="284" width="304" height="21"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46v-8N-10d">
-                                <rect key="frame" x="-5" y="256" width="330" height="56"/>
-                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02O-2Y-gpg">
                                 <rect key="frame" x="10" y="127" width="294" height="73"/>
                                 <subviews>
@@ -305,13 +296,29 @@
                                     </collectionView>
                                 </subviews>
                             </scrollView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwt-oH-qbk">
+                                <rect key="frame" x="0.0" y="476" width="320" height="92"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="KEk-mG-Hnk">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Initiated By" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sD-rC-41o">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="21"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="qec-3l-cfz"/>
                     <connections>
-                        <outlet property="cellDetailLabel" destination="s26-qe-kIE" id="lQO-85-NfC"/>
-                        <outlet property="cellStartsOnLabel" destination="8Ov-Mt-Om2" id="aTp-2B-xw6"/>
+                        <outlet property="cellDetailLabel" destination="3sD-rC-41o" id="MiP-vx-cyI"/>
+                        <outlet property="cellStartsOnLabel" destination="Vct-uM-QQ6" id="wKa-iL-UFi"/>
                         <outlet property="confirmedMemersCollectionView" destination="pQy-m7-0fH" id="Wpd-yO-zbD"/>
                         <outlet property="mapView" destination="UrP-Yk-skz" id="VSg-l5-4Zy"/>
                         <outlet property="pendingMembersCollectionView" destination="mkc-YG-3El" id="agF-Bh-sSJ"/>
@@ -476,7 +483,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fdT-5q-cip">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2ZY-E1-sq9" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="2ZY-E1-sq9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="grR-pa-hav">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
