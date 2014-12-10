@@ -99,6 +99,7 @@ class ChatViewController: UIViewController {
         self.view.sendSubviewToBack(bView0)
         self.view.addSubview(button)
         self.view.addSubview(xButton)
+        self.view.bringSubviewToFront(xButton)
         
     }
     

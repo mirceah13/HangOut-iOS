@@ -46,11 +46,15 @@ class Activity: Serializable{
     
     init(JSONString: String){
         var null:NSNull
-        let cleanQuotes = JSONString.stringByReplacingOccurrencesOfString("\\\"", withString: "<mToKm>", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        let cleanedv1 = cleanQuotes.stringByReplacingOccurrencesOfString("\\\"", withString: "\"", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        //let cleaned = cleanedv1.stringByReplacingOccurrencesOfString("\"\"}", withString: "\"}", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        let cleanedFinal = cleanedv1.stringByReplacingOccurrencesOfString("<mToKm>", withString: "\\\"", options: NSStringCompareOptions.LiteralSearch, range: nil) as NSString!
-        var JSONdata = (cleanedFinal).dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) as NSData?
+        
+        var a = JSONString as  NSString!
+        let b = (a as String).stringByReplacingOccurrencesOfString(":\"\"", withString: "<mToKm>", options: NSStringCompareOptions.LiteralSearch, range: nil) as NSString!
+        let c = (b as String).stringByReplacingOccurrencesOfString("\"\"", withString: "\"", options: NSStringCompareOptions.LiteralSearch, range: nil) as NSString!
+        let d = (c as String).stringByReplacingOccurrencesOfString(": \"", withString: ": \'", options: NSStringCompareOptions.LiteralSearch, range: nil) as NSString!
+        let e = (d as String).stringByReplacingOccurrencesOfString("<mToKm>", withString: ":\"\"", options: NSStringCompareOptions.LiteralSearch, range: nil) as NSString!
+
+        
+        var JSONdata = (e).dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) as NSData?
         let parser = JSONParser(JSONdata)
         
         if let id = parser.get("Id") as? String{
