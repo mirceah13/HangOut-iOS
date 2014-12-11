@@ -14,7 +14,7 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     @IBOutlet var UserNameTextField: UITextField!
     @IBOutlet var fbLoginView: FBLoginView!
     @IBOutlet weak var lblError: UILabel!
-    
+    var landed:Bool = false
     var profileImageUrl:String = ""
     
     override func viewDidLoad() {
@@ -52,7 +52,7 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         UserNameTextField.text = user.name
         self.profileImageUrl = "https://graph.facebook.com/\(user.objectID)/picture?type=normal"
         
-        //self.goToLanding()
+        self.goToLanding()
     }
     
     func loginViewShowingLoggedOutUser(loginView: FBLoginView!) {

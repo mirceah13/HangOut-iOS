@@ -1,39 +1,26 @@
 //
-//  ChatViewController.swift
+//  NewActivityViewController.swift
 //  Hangout
 //
-//  Created by Recognos on 07/12/14.
+//  Created by Recognos on 11/12/14.
 //  Copyright (c) 2014 RECOGNOS ROMANIA. All rights reserved.
 //
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class NewActivityViewController: UIViewController {
 
-    @IBOutlet var webView: UIWebView?
     @IBOutlet var lblUserInfo: UILabel?
     @IBOutlet var imgUserInfo: UIImageView?
-    var activityId:String = ""
+    @IBOutlet var lblPublish: UILabel?
+    @IBOutlet var imgBackground: UIImageView?
     var user:Individual = Individual()
-    var activity:Activity = Activity()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let url = NSURL(string: "http://h-hang-out.azurewebsites.net/#!/activity/comments/\(self.activityId)")
-        let request = NSURLRequest(URL: url!)
-        webView?.loadRequest(request)
-        self.drawLogin()
 
-        // Do any additional setup after loading the view.
-    }
-    
-    override func shouldAutorotate() -> Bool {
-        return false
-    }
-    
-    override func supportedInterfaceOrientations() -> Int {
-        return UIInterfaceOrientation.Portrait.rawValue
+        self.drawLayout()
+        self.drawLogin()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,14 +36,6 @@ class ChatViewController: UIViewController {
         alertController.addAction(logoutAction)
         alertController.addAction(cancelAction)
         self.presentViewController(alertController, animated: true, completion:nil)
-    }
-    
-    func logOut(){
-        let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC") as LoginViewController
-        loginVC.UserNameTextField?.text = ""
-        loginVC.UserEmailTextField?.text = ""
-        FBSession.activeSession().closeAndClearTokenInformation()
-        self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
     func drawLogin(){
@@ -93,7 +72,7 @@ class ChatViewController: UIViewController {
         
         let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         xButton.frame = CGRectMake(10, 29, 65, 35)
-        xButton.addTarget(self, action: "goBack", forControlEvents:.TouchUpInside)
+        xButton.addTarget(self, action: "goToInitiate", forControlEvents:.TouchUpInside)
         
         self.view.addSubview(bView0)
         self.view.sendSubviewToBack(bView0)
@@ -103,11 +82,41 @@ class ChatViewController: UIViewController {
         
     }
     
-    func goBack(){
-        let detailVC = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as DetailViewController
-        detailVC.user = self.user
-        detailVC.activity = self.activity
-        self.navigationController?.pushViewController(detailVC, animated: true)
+    func logOut(){
+        let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC") as LoginViewController
+        loginVC.UserNameTextField?.text = ""
+        loginVC.UserEmailTextField?.text = ""
+        FBSession.activeSession().closeAndClearTokenInformation()
+        self.navigationController?.pushViewController(loginVC, animated: true)
+    }
+
+    func goToInitiate(){
+        let initiateVC = self.storyboard?.instantiateViewControllerWithIdentifier("initiateVC") as AddActivityViewController
+        initiateVC.user = self.user
+        self.navigationController?.pushViewController(initiateVC, animated: true)
+    }
+    
+    func drawLayout(){
+        
+        let bGround = CGRectMake(8, 500, 305, 32)
+        var bView:UIView = UIView(frame: bGround)
+        bView.backgroundColor = Utils.colorWithHexString("#EB3F3F")
+        
+        bView.layer.shadowColor = UIColor.grayColor().CGColor
+        bView.layer.shadowOffset = CGSizeMake(0, 2);
+        bView.layer.shadowOpacity = 2;
+        bView.layer.shadowRadius = 2.0;
+        bView.clipsToBounds = false;
+
+        let newButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        newButton.frame = CGRectMake(8, 155, 305, 32)
+        newButton.addTarget(self, action: "", forControlEvents:.TouchUpInside)
+        
+        self.view.addSubview(bView)
+        self.view.addSubview(newButton);
+        self.view.bringSubviewToFront(newButton)
+        self.view.sendSubviewToBack(imgBackground!)
+        self.view.bringSubviewToFront(lblPublish!)
     }
 
 }

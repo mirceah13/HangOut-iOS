@@ -12,7 +12,7 @@ class AddActivityViewController: UIViewController {
 
     @IBOutlet var lblUserInfo: UILabel?
     @IBOutlet var imgUserInfo: UIImageView?
-    var categArr:[String] = []
+    @IBOutlet var lblCreateNew: UILabel?
     var user:Individual = Individual()
     
     @IBAction func btnCancel(){
@@ -21,8 +21,6 @@ class AddActivityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = "Add new"
         
         self.drawLayout()
         self.drawLogin()
@@ -55,6 +53,12 @@ class AddActivityViewController: UIViewController {
         let landingVC = self.storyboard?.instantiateViewControllerWithIdentifier("landingVC") as LandingViewController
         landingVC.user = self.user
         self.navigationController?.pushViewController(landingVC, animated: true)
+    }
+    
+    func goToEditNewActivity(){
+        let newVC = self.storyboard?.instantiateViewControllerWithIdentifier("newVC") as NewActivityViewController
+        newVC.user = self.user
+        self.navigationController?.pushViewController(newVC, animated: true)
     }
     
     func drawLayout(){
@@ -135,7 +139,7 @@ class AddActivityViewController: UIViewController {
         self.view.addSubview(bView5)
         self.view.addSubview(bView6)
         self.view.addSubview(bView7)
-        self.view.sendSubviewToBack(bView7)
+        self.view.bringSubviewToFront(lblCreateNew!)
         
         let labelItems = [("Indoor",55, 183),("Outdoor",215, 183),("Water", 55 ,333), ("Mountain", 215 ,333),("Ballgames", 55, 482),("Social",215, 482)]
         for labelItem in labelItems {
@@ -156,14 +160,14 @@ class AddActivityViewController: UIViewController {
             let y = buttonItem.2 as Int
             let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
             button.frame = CGRectMake(CGFloat(x), CGFloat(y), 150, 132)
-            button.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
+            button.addTarget(self, action: "goToEditNewActivity", forControlEvents:.TouchUpInside)
             
             self.view.addSubview(button);
         }
         
         let newButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         newButton.frame = CGRectMake(8, 515, 305, 32)
-        newButton.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
+        newButton.addTarget(self, action: "goToEditNewActivity", forControlEvents:.TouchUpInside)
         
         self.view.addSubview(newButton);
 
@@ -213,7 +217,7 @@ class AddActivityViewController: UIViewController {
         bView0.clipsToBounds = false;
         
         let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        xButton.frame = CGRectMake(10, 29, 35, 35)
+        xButton.frame = CGRectMake(10, 29, 65, 35)
         xButton.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
         
         self.view.addSubview(bView0)

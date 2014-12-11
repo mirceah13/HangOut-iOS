@@ -25,6 +25,8 @@
 		F73040191A0F83AD002EBDBB /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73040181A0F83AD002EBDBB /* AddActivityViewController.swift */; };
 		F7309AF91A1623D100B63266 /* GpsLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7309AF81A1623D100B63266 /* GpsLocation.swift */; };
 		F7309AFB1A16266B00B63266 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7309AFA1A16266B00B63266 /* Activity.swift */; };
+		F730A44D1A39591200B3DA1B /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F730A44C1A39591200B3DA1B /* NewActivityViewController.swift */; };
+		F730A4511A3965B900B3DA1B /* snowboard3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F730A4501A3965B900B3DA1B /* snowboard3.jpg */; };
 		F73628B81A2A4B54002B1F4E /* bicycle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73628B71A2A4B54002B1F4E /* bicycle.jpg */; };
 		F73628BA1A2AF9C7002B1F4E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73628B91A2AF9C7002B1F4E /* Utils.swift */; };
 		F73DECDB1A3936D300768379 /* ballGames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73DECD51A3936D300768379 /* ballGames.jpg */; };
@@ -107,6 +109,8 @@
 		F73040181A0F83AD002EBDBB /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
 		F7309AF81A1623D100B63266 /* GpsLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpsLocation.swift; sourceTree = "<group>"; };
 		F7309AFA1A16266B00B63266 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		F730A44C1A39591200B3DA1B /* NewActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
+		F730A4501A3965B900B3DA1B /* snowboard3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowboard3.jpg; sourceTree = "<group>"; };
 		F73628B71A2A4B54002B1F4E /* bicycle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bicycle.jpg; sourceTree = "<group>"; };
 		F73628B91A2AF9C7002B1F4E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F73DECD51A3936D300768379 /* ballGames.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ballGames.jpg; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 				F7CF2E411A0D1D56003D0041 /* ActivityViewController.swift */,
 				F7CF2E651A0D3019003D0041 /* DetailViewController.swift */,
 				F73040181A0F83AD002EBDBB /* AddActivityViewController.swift */,
+				F730A44C1A39591200B3DA1B /* NewActivityViewController.swift */,
 				F72E735C1A0FA43C00A29B71 /* NavController.swift */,
 				F7E0DF251A1941F400C7E59D /* CollectionViewCell.swift */,
 				EC55F1731A1CF17100810425 /* LoginViewController.swift */,
@@ -325,6 +330,7 @@
 		F7E0DF271A19442F00C7E59D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F730A4501A3965B900B3DA1B /* snowboard3.jpg */,
 				F73DECD51A3936D300768379 /* ballGames.jpg */,
 				F73DECD61A3936D300768379 /* indoor.jpg */,
 				F73DECD71A3936D300768379 /* mountain.jpg */,
@@ -449,6 +455,7 @@
 				F70172581A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg in Resources */,
 				F7CF2E4A1A0D1D56003D0041 /* LaunchScreen.xib in Resources */,
 				F70172591A299C720003EC09 /* citybike.jpg in Resources */,
+				F730A4511A3965B900B3DA1B /* snowboard3.jpg in Resources */,
 				F73DECE01A3936D300768379 /* water.jpg in Resources */,
 				F796286F1A34B694002D9D36 /* twitterRed.png in Resources */,
 				F79628711A34B694002D9D36 /* googleRed.png in Resources */,
@@ -502,6 +509,7 @@
 				ECCB0E3F1A1F48D700A10240 /* QueryParameter.swift in Sources */,
 				F7A2712C1A18752700205424 /* Individual.swift in Sources */,
 				F7CF2E661A0D3019003D0041 /* DetailViewController.swift in Sources */,
+				F730A44D1A39591200B3DA1B /* NewActivityViewController.swift in Sources */,
 				F7E1B2381A1A503200D3E501 /* Array.swift in Sources */,
 				F73040191A0F83AD002EBDBB /* AddActivityViewController.swift in Sources */,
 				F7E1B2401A1A503200D3E501 /* Range.swift in Sources */,

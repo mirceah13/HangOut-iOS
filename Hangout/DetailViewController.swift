@@ -313,7 +313,7 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         bView0.clipsToBounds = false;
         
         let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        xButton.frame = CGRectMake(10, 29, 35, 35)
+        xButton.frame = CGRectMake(10, 29, 65, 35)
         xButton.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
         
         let facebookButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
