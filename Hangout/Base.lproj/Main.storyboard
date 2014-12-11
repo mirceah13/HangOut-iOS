@@ -298,23 +298,34 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebookRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="C2t-ou-Mz5">
-                                            <rect key="frame" x="9" y="14" width="45" height="45"/>
+                                            <rect key="frame" x="9" y="-1" width="45" height="45"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="googleRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="a3k-N3-qj3">
-                                            <rect key="frame" x="154" y="14" width="45" height="45"/>
+                                            <rect key="frame" x="154" y="-1" width="45" height="45"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitterRed.png" translatesAutoresizingMaskIntoConstraints="NO" id="oWu-gg-LrJ">
-                                            <rect key="frame" x="81" y="14" width="45" height="45"/>
+                                            <rect key="frame" x="81" y="-1" width="45" height="45"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grey_new_seo-17-512.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wta-TV-vgI">
-                                            <rect key="frame" x="224" y="14" width="45" height="45"/>
+                                            <rect key="frame" x="224" y="-1" width="45" height="45"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6g-0w-SMH">
+                                            <rect key="frame" x="8" y="216" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="q6g-0w-SMH"/>
+                                        </mask>
+                                    </variation>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02O-2Y-gpg">
-                                <rect key="frame" x="10" y="127" width="294" height="73"/>
+                                <rect key="frame" x="10" y="112" width="294" height="73"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pQy-m7-0fH">
                                         <rect key="frame" x="0.0" y="12" width="294" height="61"/>
@@ -362,7 +373,7 @@
                                 </subviews>
                             </scrollView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtD-2H-bfG">
-                                <rect key="frame" x="10" y="214" width="294" height="73"/>
+                                <rect key="frame" x="10" y="199" width="294" height="73"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mkc-YG-3El">
                                         <rect key="frame" x="0.0" y="5" width="294" height="61"/>
@@ -428,12 +439,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Drm-gB-zaI">
                                 <rect key="frame" x="270" y="45" width="39" height="45"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happens on" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vct-uM-QQ6">
-                                <rect key="frame" x="11" y="279" width="304" height="21"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="logged in as" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlW-mR-snz">
                                 <rect key="frame" x="249" y="27" width="60" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="10"/>
@@ -452,6 +457,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happens on" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vct-uM-QQ6">
+                                <rect key="frame" x="4" y="458" width="304" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icF-kN-UY3">
+                                <rect key="frame" x="200" y="279" width="120" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
+                                <color key="textColor" red="0.88235294119999996" green="0.15686274510000001" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4c-x3-KTz">
+                                <rect key="frame" x="2" y="275" width="172" height="30"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
+                                <state key="normal" title="Website">
+                                    <color key="titleColor" red="0.88235294119999996" green="0.15686274510000001" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -461,7 +486,9 @@
                         <outlet property="cellStartsOnLabel" destination="Vct-uM-QQ6" id="wKa-iL-UFi"/>
                         <outlet property="confirmedMemersCollectionView" destination="pQy-m7-0fH" id="Wpd-yO-zbD"/>
                         <outlet property="imgUserInfo" destination="Drm-gB-zaI" id="PIr-wa-qdg"/>
+                        <outlet property="lblPhone" destination="icF-kN-UY3" id="97o-pV-bIs"/>
                         <outlet property="lblUserInfo" destination="HaT-pS-2SJ" id="WAy-Bn-Yyd"/>
+                        <outlet property="lnkWebsite" destination="O4c-x3-KTz" id="47E-s8-veV"/>
                         <outlet property="mapView" destination="UrP-Yk-skz" id="VSg-l5-4Zy"/>
                         <outlet property="pendingMembersCollectionView" destination="mkc-YG-3El" id="agF-Bh-sSJ"/>
                     </connections>

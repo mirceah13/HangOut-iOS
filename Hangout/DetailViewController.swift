@@ -21,6 +21,8 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet var lblUserInfo: UILabel?
     @IBOutlet var imgUserInfo: UIImageView?
+    @IBOutlet var lnkWebsite: UIButton?
+    @IBOutlet var lblPhone: UILabel?
     
 
     var persistenceHelper: PersistenceHelper = PersistenceHelper()
@@ -72,6 +74,8 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         if let startsOn = activity.startsOn{
             cellStartsOnLabel.text = "Happening on " + formater.stringFromDate(startsOn)
         }
+        lnkWebsite?.setTitle(activity.place.websiteUrl, forState: UIControlState.Normal)
+        lnkWebsite?.addTarget(self, action: "goToUrl", forControlEvents: .TouchUpInside)
         
         pendingMembers = self.activity.pendingMembers
         confirmedMembers = self.activity.confirmedMembers
@@ -110,6 +114,10 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
             return pendingMembers.count
         }
         return 0
+    }
+    
+    func goToUrl(){
+        UIApplication.sharedApplication().openURL(NSURL(string: self.activity.place.websiteUrl)!)
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -317,11 +325,11 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         xButton.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
         
         let facebookButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        facebookButton.frame = CGRectMake(9, 73, 45, 45)
+        facebookButton.frame = CGRectMake(9, 60, 45, 45)
         facebookButton.addTarget(self, action: "shareToFacebook", forControlEvents:.TouchUpInside)
         
         let twitterButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        twitterButton.frame = CGRectMake(81, 73, 45, 45)
+        twitterButton.frame = CGRectMake(81, 60, 45, 45)
         twitterButton.addTarget(self, action: "shareToTwitter", forControlEvents:.TouchUpInside)
         
         self.view.addSubview(bView0)
@@ -341,7 +349,7 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         button.frame = CGRectMake(224, 73, 43, 43)
         button.addTarget(self, action: "goToChat", forControlEvents:.TouchUpInside)
         
-        let bGround0 = CGRectMake(0, 121, self.view.bounds.width, 16)
+        let bGround0 = CGRectMake(0, 103, self.view.bounds.width, 16)
         var bView0:UIView = UIView(frame: bGround0)
         bView0.backgroundColor = Utils.colorWithHexString("#EB3F3F")
         
@@ -351,7 +359,7 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         bView0.layer.shadowRadius = 1.0;
         bView0.clipsToBounds = false;
         
-        let bGround1 = CGRectMake(0, 201, self.view.bounds.width, 16)
+        let bGround1 = CGRectMake(0, 183, self.view.bounds.width, 16)
         var bView1:UIView = UIView(frame: bGround1)
         bView1.backgroundColor = UIColor.whiteColor()
         
@@ -361,12 +369,12 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         bView1.layer.shadowRadius = 1.0;
         bView1.clipsToBounds = false;
         
-        let confirmedLabel = UILabel(frame: CGRectMake(5, 119, 200, 21))
+        let confirmedLabel = UILabel(frame: CGRectMake(5, 101, 200, 21))
         confirmedLabel.font = UIFont(name: "Avenir", size: 11)
         confirmedLabel.text = "\(self.confirmedMembers.count) confirmed participant(s)"
         confirmedLabel.textColor = UIColor.whiteColor()
         
-        pendingLabel = UILabel(frame: CGRectMake(5, 199, 200, 21))
+        pendingLabel = UILabel(frame: CGRectMake(5, 181, 203, 21))
         pendingLabel.font = UIFont(name: "Avenir", size: 11)
         pendingLabel.text = "\(self.pendingMembers.count) willing participant(s)"
         pendingLabel.textColor = UIColor.grayColor()
