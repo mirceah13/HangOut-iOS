@@ -16,12 +16,14 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     @IBOutlet weak var lblError: UILabel!
     var landed:Bool = false
     var profileImageUrl:String = ""
+    var landingVC = LandingViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fbLoginView.delegate = self
         self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
         
+        landingVC = self.storyboard?.instantiateViewControllerWithIdentifier("landingVC") as LandingViewController
         let dangerbtn: SFlatButton = SFlatButton(frame: CGRectMake(60, 450, 200, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
         dangerbtn.setTitle("YUP, THAT'S ME", forState: UIControlState.Normal)
         dangerbtn.addTarget(self, action: "goToLanding", forControlEvents: .TouchUpInside)
@@ -32,6 +34,10 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         
         //FBSession.activeSession().closeAndClearTokenInformation()
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.landed = false
     }
     
     override func shouldAutorotate() -> Bool {
@@ -64,12 +70,19 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
     }
     
     func goToLanding(){
+        if (!landed){
+            landed = true
+        }
+        else {
+            return;
+        }
+
         if (UserNameTextField?.text == "" || UserEmailTextField?.text == ""){
             lblError.text = "Are you sure this is you? You haven't filled in the fields"
+            landed = false
             return
         }
-        var landingVC = self.storyboard?.instantiateViewControllerWithIdentifier("landingVC") as LandingViewController
-
+        
         landingVC.user.name = UserNameTextField.text
         landingVC.user.email = UserEmailTextField.text
         landingVC.user.avatarImageUrl = self.profileImageUrl
