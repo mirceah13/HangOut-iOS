@@ -52,13 +52,14 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         UserNameTextField.text = user.name
         self.profileImageUrl = "https://graph.facebook.com/\(user.objectID)/picture?type=normal"
         
-        self.goToLanding()
+        //self.goToLanding()
     }
     
     func loginViewShowingLoggedOutUser(loginView: FBLoginView!) {
     }
     
     func loginView(loginView: FBLoginView!, handleError:NSError) {
+        self.goToLanding()
         println("Error: \(handleError.localizedDescription)")
     }
     

@@ -74,101 +74,72 @@
             </objects>
             <point key="canvasLocation" x="3399" y="994"/>
         </scene>
-        <!--AddActivityViewController-->
+        <!--Add Activity View Controller-->
         <scene sceneID="ycg-rN-FGK">
             <objects>
                 <viewController storyboardIdentifier="initiateVC" id="Jnm-qh-vFg" customClass="AddActivityViewController" customModule="Hangout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AyX-Ir-ryL"/>
-                        <viewControllerLayoutGuide type="bottom" id="IIj-9k-Nqa"/>
+                        <viewControllerLayoutGuide type="top" id="p1Z-UR-zEt"/>
+                        <viewControllerLayoutGuide type="bottom" id="1u7-RW-PaQ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Mtd-gh-Abr">
+                    <view key="view" contentMode="scaleToFill" id="Uke-SY-day">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qef-9N-4As">
-                                <rect key="frame" x="0.0" y="48" width="320" height="66"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="66" image="indoor.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bkv-aX-biU">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e21-qD-Wk2">
-                                <rect key="frame" x="0.0" y="127" width="320" height="66"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" image="outdoor.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Sm0-gO-tYA">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3JM-go-zLC">
-                                <rect key="frame" x="0.0" y="207" width="320" height="66"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="66" image="mountain.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KQ8-pP-Xg1">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-3c-0TA">
-                                <rect key="frame" x="0.0" y="287" width="320" height="66"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="66" image="water.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KcU-ey-ygU">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-f3-CQe">
-                                <rect key="frame" x="0.0" y="366" width="320" height="66"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="66" image="ballGames.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dyO-cX-jHV">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lIS-KE-Ftx">
-                                <rect key="frame" x="0.0" y="445" width="320" height="66"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="66" image="social.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="QOE-c5-O4N">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="... OR ADD A NEW ONE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiQ-Zt-IBd">
-                                <rect key="frame" x="70" y="534" width="234" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="indoor.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HXt-ud-OeT">
+                                <rect key="frame" x="7" y="71" width="150" height="114"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outdoor.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="J2R-8n-YW2">
+                                <rect key="frame" x="165" y="71" width="150" height="114"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="water.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rpP-jU-dMd">
+                                <rect key="frame" x="7" y="220" width="150" height="114"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mountain.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4fp-Co-Rze">
+                                <rect key="frame" x="165" y="220" width="150" height="114"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ballGames.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="N7q-l3-1Xy">
+                                <rect key="frame" x="7" y="369" width="150" height="114"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="social.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uIc-fl-GxZ">
+                                <rect key="frame" x="165" y="369" width="150" height="114"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DRi-bP-hRX">
+                                <rect key="frame" x="270" y="45" width="39" height="45"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="logged in as" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-z1-xty">
+                                <rect key="frame" x="249" y="24" width="60" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqS-E7-YYx">
-                                <rect key="frame" x="16" y="532" width="42" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserInfo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWl-lO-kyg">
+                                <rect key="frame" x="-16" y="45" width="283" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izR-7e-zIR">
+                                <rect key="frame" x="10" y="28" width="21" height="28"/>
                                 <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="26"/>
-                                <color key="textColor" red="0.94337303321678323" green="0.2370793269230769" blue="0.24803321063518524" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="... OR ADD A NEW ONE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ0-qC-3Hp">
+                                <rect key="frame" x="61" y="522" width="218" height="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" red="0.31365740740740744" green="0.31365740740740744" blue="0.31365740740740744" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="AddActivityViewController" id="Eal-NA-YZK">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Vg3-P4-49f">
-                            <connections>
-                                <action selector="btnCancel" destination="Jnm-qh-vFg" id="fPV-rt-ENs"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UQj-cZ-HHr">
-                            <connections>
-                                <action selector="btnAddTask:" destination="Jnm-qh-vFg" id="ics-cs-9Wv"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="imgUserInfo" destination="DRi-bP-hRX" id="1fj-sW-Obb"/>
+                        <outlet property="lblUserInfo" destination="qWl-lO-kyg" id="tCq-aW-s1Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRY-fN-qMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -613,18 +584,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ballGames.jpg" width="640" height="180"/>
+        <image name="ballGames.jpg" width="1920" height="1080"/>
         <image name="bicycle.jpg" width="640" height="1136"/>
         <image name="facebookRed.png" width="128" height="128"/>
         <image name="googleRed.png" width="128" height="128"/>
         <image name="grey_new_seo-17-512.png" width="512" height="512"/>
-        <image name="indoor.jpg" width="640" height="190"/>
-        <image name="mountain.jpg" width="640" height="134"/>
-        <image name="outdoor.jpg" width="640" height="204"/>
+        <image name="indoor.jpg" width="2115" height="1420"/>
+        <image name="mountain.jpg" width="1600" height="1200"/>
+        <image name="outdoor.jpg" width="2000" height="1000"/>
         <image name="sky.jpg" width="640" height="1136"/>
         <image name="snowBoard.jpg" width="640" height="1136"/>
-        <image name="social.jpg" width="600" height="174"/>
+        <image name="social.jpg" width="600" height="398"/>
         <image name="twitterRed.png" width="128" height="128"/>
-        <image name="water.jpg" width="640" height="170"/>
+        <image name="water.jpg" width="2560" height="1600"/>
     </resources>
 </document>

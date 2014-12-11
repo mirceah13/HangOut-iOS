@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit.MKMapView
+import Social
 
 
 class DetailViewController: UIViewController,  UICollectionViewDataSource, UICollectionViewDelegate, MKMapViewDelegate {
@@ -250,6 +251,35 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
+    func shareToFacebook(){
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            var controller = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            controller.setInitialText("Want to hang out? http://hang-out-with.us/#!/activity/\(self.activity.getId())")
+            controller.addImage(UIImage(named: "Branding_120x120.png"))
+            self.presentViewController(controller, animated:true, completion:nil)
+        }
+        else {
+            println("no Facebook account found on device")
+        }
+    }
+    
+    func shareToTwitter(){
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            var controller = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            controller.setInitialText("Want to hang out? http://hang-out-with.us/#!/activity/\(self.activity.getId())")
+            controller.addImage(UIImage(named: "Branding_120x120.png"))
+            self.presentViewController(controller, animated:true, completion:nil)
+        }
+        else {
+            println("no Twitter account found on device")
+        }
+        
+    }
+    
+    func shareToGooglePlus(){
+        
+    }
+    
     func drawLogin(){
         lblUserInfo?.text = self.user.name
         let url = NSURL(string: self.user.avatarImageUrl);
@@ -283,14 +313,26 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         bView0.clipsToBounds = false;
         
         let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        xButton.frame = CGRectMake(10, 29, 21, 28)
+        xButton.frame = CGRectMake(10, 29, 35, 35)
         xButton.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
+        
+        let facebookButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        facebookButton.frame = CGRectMake(9, 73, 45, 45)
+        facebookButton.addTarget(self, action: "shareToFacebook", forControlEvents:.TouchUpInside)
+        
+        let twitterButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        twitterButton.frame = CGRectMake(81, 73, 45, 45)
+        twitterButton.addTarget(self, action: "shareToTwitter", forControlEvents:.TouchUpInside)
         
         self.view.addSubview(bView0)
         self.view.sendSubviewToBack(bView0)
         self.view.addSubview(button)
         self.view.addSubview(xButton)
+        self.view.addSubview(facebookButton)
+        self.view.addSubview(twitterButton)
         self.view.bringSubviewToFront(xButton)
+        self.view.bringSubviewToFront(facebookButton)
+        self.view.bringSubviewToFront(twitterButton)
         
     }
     

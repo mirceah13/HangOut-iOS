@@ -10,6 +10,8 @@ import UIKit
 
 class AddActivityViewController: UIViewController {
 
+    @IBOutlet var lblUserInfo: UILabel?
+    @IBOutlet var imgUserInfo: UIImageView?
     var categArr:[String] = []
     var user:Individual = Individual()
     
@@ -23,6 +25,7 @@ class AddActivityViewController: UIViewController {
         navigationItem.title = "Add new"
         
         self.drawLayout()
+        self.drawLogin()
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,22 +58,7 @@ class AddActivityViewController: UIViewController {
     }
     
     func drawLayout(){
-        
-        let fGround = CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height)
-        var fView:UIView = UIView(frame: fGround)
-        fView.backgroundColor = Utils.colorWithHexString("#EB3F3F")
-        
-        let bGround0 = CGRectMake(0, 32, self.view.bounds.width, 16)
-        var bView0:UIView = UIView(frame: bGround0)
-        bView0.backgroundColor = UIColor.whiteColor()
-        
-        bView0.layer.shadowColor = UIColor.grayColor().CGColor
-        bView0.layer.shadowOffset = CGSizeMake(0, 2);
-        bView0.layer.shadowOpacity = 2;
-        bView0.layer.shadowRadius = 2.0;
-        bView0.clipsToBounds = false;
-        
-        let bGround1 = CGRectMake(0, 113, self.view.bounds.width, 16)
+        let bGround1 = CGRectMake(7, 184, 150, 16)
         var bView1:UIView = UIView(frame: bGround1)
         bView1.backgroundColor = UIColor.whiteColor()
         
@@ -80,7 +68,7 @@ class AddActivityViewController: UIViewController {
         bView1.layer.shadowRadius = 2.0;
         bView1.clipsToBounds = false;
         
-        let bGround2 = CGRectMake(0, 193, self.view.bounds.width, 16)
+        let bGround2 = CGRectMake(165, 184, 150, 16)
         var bView2:UIView = UIView(frame: bGround2)
         bView2.backgroundColor = UIColor.whiteColor()
         
@@ -90,7 +78,7 @@ class AddActivityViewController: UIViewController {
         bView2.layer.shadowRadius = 2.0;
         bView2.clipsToBounds = false;
         
-        let bGround3 = CGRectMake(0, 273, self.view.bounds.width, 16)
+        let bGround3 = CGRectMake(7, 334, 150, 16)
         var bView3:UIView = UIView(frame: bGround3)
         bView3.backgroundColor = UIColor.whiteColor()
         
@@ -100,7 +88,7 @@ class AddActivityViewController: UIViewController {
         bView3.layer.shadowRadius = 2.0;
         bView3.clipsToBounds = false;
         
-        let bGround4 = CGRectMake(0, 352, self.view.bounds.width, 16)
+        let bGround4 = CGRectMake(165, 334, 150, 16)
         var bView4:UIView = UIView(frame: bGround4)
         bView4.backgroundColor = UIColor.whiteColor()
         
@@ -110,7 +98,7 @@ class AddActivityViewController: UIViewController {
         bView4.layer.shadowRadius = 2.0;
         bView4.clipsToBounds = false;
         
-        let bGround5 = CGRectMake(0, 431, self.view.bounds.width, 16)
+        let bGround5 = CGRectMake(7, 483, 150, 16)
         var bView5:UIView = UIView(frame: bGround5)
         bView5.backgroundColor = UIColor.whiteColor()
         
@@ -120,7 +108,7 @@ class AddActivityViewController: UIViewController {
         bView5.layer.shadowRadius = 2.0;
         bView5.clipsToBounds = false;
         
-        let bGround6 = CGRectMake(0, 509, self.view.bounds.width, 16)
+        let bGround6 = CGRectMake(165, 483, 150, 16)
         var bView6:UIView = UIView(frame: bGround6)
         bView6.backgroundColor = UIColor.whiteColor()
         
@@ -130,32 +118,30 @@ class AddActivityViewController: UIViewController {
         bView6.layer.shadowRadius = 2.0;
         bView6.clipsToBounds = false;
         
-        let bGroundClose = CGRectMake(0, 525, 43, 43)
-        var bViewClose:UIView = UIView(frame: bGroundClose)
-        bViewClose.backgroundColor = UIColor.grayColor()
+        let bGround7 = CGRectMake(8, 515, 305, 32)
+        var bView7:UIView = UIView(frame: bGround7)
+        bView7.backgroundColor = UIColor.whiteColor()
         
-        let buttonClose = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        buttonClose.frame = CGRectMake(12, 532, 42, 28)
-        buttonClose.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
+        bView7.layer.shadowColor = UIColor.grayColor().CGColor
+        bView7.layer.shadowOffset = CGSizeMake(0, 2);
+        bView7.layer.shadowOpacity = 2;
+        bView7.layer.shadowRadius = 2.0;
+        bView7.clipsToBounds = false;
 
-
-        self.view.addSubview(fView)
-        self.view.addSubview(bView0)
         self.view.addSubview(bView1)
         self.view.addSubview(bView2)
         self.view.addSubview(bView3)
         self.view.addSubview(bView4)
         self.view.addSubview(bView5)
         self.view.addSubview(bView6)
-        self.view.addSubview(bViewClose)
-        self.view.addSubview(buttonClose)
-        self.view.sendSubviewToBack(bViewClose)
-        self.view.sendSubviewToBack(fView)
+        self.view.addSubview(bView7)
+        self.view.sendSubviewToBack(bView7)
         
-        let labelItems = [("Indoor",112),("Outdoor",192),("Mountain",272),("Water",351),("Ballgames",429),("Social",508)]
+        let labelItems = [("Indoor",55, 183),("Outdoor",215, 183),("Water", 55 ,333), ("Mountain", 215 ,333),("Ballgames", 55, 482),("Social",215, 482)]
         for labelItem in labelItems {
-            let yx = labelItem.1 as Int
-            let label = UILabel(frame: CGRectMake(0, CGFloat(yx), 320, 21))
+            let x = labelItem.1 as Int
+            let y = labelItem.2 as Int
+            let label = UILabel(frame: CGRectMake(CGFloat(x), CGFloat(y), 60, 21))
             label.font = UIFont(name: "Avenir-Heavy", size: 11)
             label.text = labelItem.0 as NSString
             label.textColor = UIColor.grayColor()
@@ -163,6 +149,86 @@ class AddActivityViewController: UIViewController {
             
             self.view.addSubview(label);
         }
+        
+        let buttonItems = [("Indoor",7, 71),("Outdoor",165, 71),("Water", 7 ,220), ("Mountain", 165 ,220),("Ballgames", 7, 369),("Social",165, 369)]
+        for buttonItem in buttonItems {
+            let x = buttonItem.1 as Int
+            let y = buttonItem.2 as Int
+            let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
+            button.frame = CGRectMake(CGFloat(x), CGFloat(y), 150, 132)
+            button.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
+            
+            self.view.addSubview(button);
+        }
+        
+        let newButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        newButton.frame = CGRectMake(8, 515, 305, 32)
+        newButton.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
+        
+        self.view.addSubview(newButton);
 
+
+    }
+    
+    func promptLogout(){
+        let alertController: UIAlertController = UIAlertController(title: "Log out", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let logoutAction = UIAlertAction(title: "Log Out", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in self.logOut()})
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
+        alertController.addAction(logoutAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion:nil)
+    }
+    
+    func drawLogin(){
+        lblUserInfo?.text = self.user.name
+        let url = NSURL(string: self.user.avatarImageUrl);
+        if (self.user.avatarImageUrl as String != ""){
+            var imageData:NSData = NSData(contentsOfURL: url!)!
+            imgUserInfo?.image = UIImage(data: imageData)
+        }
+        else{
+            imgUserInfo?.image = UIImage(named: "avatar-male.png")
+        }
+        
+        imgUserInfo?.layer.shadowColor = UIColor.grayColor().CGColor
+        imgUserInfo?.layer.shadowOffset = CGSizeMake(0, 3);
+        imgUserInfo?.layer.shadowOpacity = 1;
+        imgUserInfo?.layer.shadowRadius = 3.0;
+        imgUserInfo?.clipsToBounds = false;
+        
+        let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        button.frame = CGRectMake(270, 45, 39, 45
+        )
+        button.addTarget(self, action: "promptLogout", forControlEvents:.TouchUpInside)
+        
+        let bGround0 = CGRectMake(0, 0, self.view.bounds.width, 60)
+        var bView0:UIView = UIView(frame: bGround0)
+        bView0.backgroundColor = Utils.colorWithHexString("#EB3F3F")
+        
+        bView0.layer.shadowColor = UIColor.grayColor().CGColor
+        bView0.layer.shadowOffset = CGSizeMake(0, 1);
+        bView0.layer.shadowOpacity = 1;
+        bView0.layer.shadowRadius = 1.0;
+        bView0.clipsToBounds = false;
+        
+        let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        xButton.frame = CGRectMake(10, 29, 35, 35)
+        xButton.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
+        
+        self.view.addSubview(bView0)
+        self.view.sendSubviewToBack(bView0)
+        self.view.addSubview(button)
+        self.view.addSubview(xButton)
+        self.view.bringSubviewToFront(xButton)
+        
+    }
+    
+    func logOut(){
+        let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC") as LoginViewController
+        loginVC.UserNameTextField?.text = ""
+        loginVC.UserEmailTextField?.text = ""
+        FBSession.activeSession().closeAndClearTokenInformation()
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
 }

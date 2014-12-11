@@ -92,7 +92,7 @@ class ChatViewController: UIViewController {
         bView0.clipsToBounds = false;
         
         let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
-        xButton.frame = CGRectMake(10, 29, 21, 28)
+        xButton.frame = CGRectMake(10, 29, 35, 35)
         xButton.addTarget(self, action: "goBack", forControlEvents:.TouchUpInside)
         
         self.view.addSubview(bView0)

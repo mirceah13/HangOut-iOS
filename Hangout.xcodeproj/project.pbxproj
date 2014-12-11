@@ -27,6 +27,12 @@
 		F7309AFB1A16266B00B63266 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7309AFA1A16266B00B63266 /* Activity.swift */; };
 		F73628B81A2A4B54002B1F4E /* bicycle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73628B71A2A4B54002B1F4E /* bicycle.jpg */; };
 		F73628BA1A2AF9C7002B1F4E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73628B91A2AF9C7002B1F4E /* Utils.swift */; };
+		F73DECDB1A3936D300768379 /* ballGames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73DECD51A3936D300768379 /* ballGames.jpg */; };
+		F73DECDC1A3936D300768379 /* indoor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73DECD61A3936D300768379 /* indoor.jpg */; };
+		F73DECDD1A3936D300768379 /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73DECD71A3936D300768379 /* mountain.jpg */; };
+		F73DECDE1A3936D300768379 /* outdoor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73DECD81A3936D300768379 /* outdoor.jpg */; };
+		F73DECDF1A3936D300768379 /* social.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73DECD91A3936D300768379 /* social.jpg */; };
+		F73DECE01A3936D300768379 /* water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73DECDA1A3936D300768379 /* water.jpg */; };
 		F7926A7F1A347F1C00D3B79D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7926A7E1A347F1C00D3B79D /* ChatViewController.swift */; };
 		F79439F31A2CA43E00B8F29B /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79439F21A2CA43E00B8F29B /* Serializable.swift */; };
 		F7958A8E1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7958A8D1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg */; };
@@ -42,6 +48,11 @@
 		F7A2712C1A18752700205424 /* Individual.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2712B1A18752700205424 /* Individual.swift */; };
 		F7A2712E1A18756100205424 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2712D1A18756100205424 /* Place.swift */; };
 		F7A271301A1875EE00205424 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A2712F1A1875EE00205424 /* Meta.swift */; };
+		F7AFFE2F1A38DD2A00EA3D12 /* Branding_76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AFFE2A1A38DD2A00EA3D12 /* Branding_76x76.png */; };
+		F7AFFE301A38DD2A00EA3D12 /* Branding_120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AFFE2B1A38DD2A00EA3D12 /* Branding_120x120.png */; };
+		F7AFFE311A38DD2A00EA3D12 /* Branding_152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AFFE2C1A38DD2A00EA3D12 /* Branding_152x152.png */; };
+		F7AFFE321A38DD2A00EA3D12 /* Branding_180x180.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AFFE2D1A38DD2A00EA3D12 /* Branding_180x180.png */; };
+		F7AFFE331A38DD2A00EA3D12 /* Branding_1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AFFE2E1A38DD2A00EA3D12 /* Branding_1024x1024.png */; };
 		F7CF2E3D1A0D1D56003D0041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */; };
 		F7CF2E421A0D1D56003D0041 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E411A0D1D56003D0041 /* ActivityViewController.swift */; };
 		F7CF2E451A0D1D56003D0041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CF2E431A0D1D56003D0041 /* Main.storyboard */; };
@@ -52,12 +63,6 @@
 		F7CF2E6C1A0F7040003D0041 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CF2E6B1A0F7040003D0041 /* PersistenceHelper.swift */; };
 		F7D1F17C1A35E2EC00A55F5B /* sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F17A1A35E2EC00A55F5B /* sky.jpg */; };
 		F7D1F17D1A35E2EC00A55F5B /* SplashScreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F17B1A35E2EC00A55F5B /* SplashScreen.jpg */; };
-		F7D1F18F1A35FC6900A55F5B /* ballGames.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F18A1A35FC6900A55F5B /* ballGames.jpg */; };
-		F7D1F1901A35FC6900A55F5B /* indoor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F18B1A35FC6900A55F5B /* indoor.jpg */; };
-		F7D1F1911A35FC6900A55F5B /* mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F18C1A35FC6900A55F5B /* mountain.jpg */; };
-		F7D1F1921A35FC6900A55F5B /* outdoor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F18D1A35FC6900A55F5B /* outdoor.jpg */; };
-		F7D1F1931A35FC6900A55F5B /* water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F18E1A35FC6900A55F5B /* water.jpg */; };
-		F7D1F1951A35FCA500A55F5B /* social.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F7D1F1941A35FCA500A55F5B /* social.jpg */; };
 		F7E0DF261A1941F400C7E59D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E0DF251A1941F400C7E59D /* CollectionViewCell.swift */; };
 		F7E0DF291A19447500C7E59D /* avatar-male.png in Resources */ = {isa = PBXBuildFile; fileRef = F7E0DF281A19447500C7E59D /* avatar-male.png */; };
 		F7E1B2381A1A503200D3E501 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1B22C1A1A503200D3E501 /* Array.swift */; };
@@ -104,6 +109,12 @@
 		F7309AFA1A16266B00B63266 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		F73628B71A2A4B54002B1F4E /* bicycle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bicycle.jpg; sourceTree = "<group>"; };
 		F73628B91A2AF9C7002B1F4E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F73DECD51A3936D300768379 /* ballGames.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ballGames.jpg; sourceTree = "<group>"; };
+		F73DECD61A3936D300768379 /* indoor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = indoor.jpg; sourceTree = "<group>"; };
+		F73DECD71A3936D300768379 /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
+		F73DECD81A3936D300768379 /* outdoor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = outdoor.jpg; sourceTree = "<group>"; };
+		F73DECD91A3936D300768379 /* social.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = social.jpg; sourceTree = "<group>"; };
+		F73DECDA1A3936D300768379 /* water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = water.jpg; sourceTree = "<group>"; };
 		F7926A7E1A347F1C00D3B79D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F79439F21A2CA43E00B8F29B /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		F7958A8D1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mountain-trip-1024x1024-wallpaper-3628.jpg"; sourceTree = "<group>"; };
@@ -120,6 +131,11 @@
 		F7A2712B1A18752700205424 /* Individual.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Individual.swift; sourceTree = "<group>"; };
 		F7A2712D1A18756100205424 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		F7A2712F1A1875EE00205424 /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		F7AFFE2A1A38DD2A00EA3D12 /* Branding_76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Branding_76x76.png; sourceTree = "<group>"; };
+		F7AFFE2B1A38DD2A00EA3D12 /* Branding_120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Branding_120x120.png; sourceTree = "<group>"; };
+		F7AFFE2C1A38DD2A00EA3D12 /* Branding_152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Branding_152x152.png; sourceTree = "<group>"; };
+		F7AFFE2D1A38DD2A00EA3D12 /* Branding_180x180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Branding_180x180.png; sourceTree = "<group>"; };
+		F7AFFE2E1A38DD2A00EA3D12 /* Branding_1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Branding_1024x1024.png; sourceTree = "<group>"; };
 		F7CF2E371A0D1D56003D0041 /* Hangout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CF2E3B1A0D1D56003D0041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7CF2E3C1A0D1D56003D0041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,12 +150,6 @@
 		F7CF2E6B1A0F7040003D0041 /* PersistenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		F7D1F17A1A35E2EC00A55F5B /* sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sky.jpg; sourceTree = "<group>"; };
 		F7D1F17B1A35E2EC00A55F5B /* SplashScreen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SplashScreen.jpg; sourceTree = "<group>"; };
-		F7D1F18A1A35FC6900A55F5B /* ballGames.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ballGames.jpg; sourceTree = "<group>"; };
-		F7D1F18B1A35FC6900A55F5B /* indoor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = indoor.jpg; sourceTree = "<group>"; };
-		F7D1F18C1A35FC6900A55F5B /* mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mountain.jpg; sourceTree = "<group>"; };
-		F7D1F18D1A35FC6900A55F5B /* outdoor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = outdoor.jpg; sourceTree = "<group>"; };
-		F7D1F18E1A35FC6900A55F5B /* water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = water.jpg; sourceTree = "<group>"; };
-		F7D1F1941A35FCA500A55F5B /* social.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = social.jpg; sourceTree = "<group>"; };
 		F7E0DF251A1941F400C7E59D /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F7E0DF281A19447500C7E59D /* avatar-male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-male.png"; sourceTree = "<group>"; };
 		F7E1B22C1A1A503200D3E501 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Array.swift; path = "ExSwift-master 3/ExSwift/Array.swift"; sourceTree = "<group>"; };
@@ -315,13 +325,18 @@
 		F7E0DF271A19442F00C7E59D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				F7D1F18A1A35FC6900A55F5B /* ballGames.jpg */,
-				F7D1F18B1A35FC6900A55F5B /* indoor.jpg */,
-				F7D1F18C1A35FC6900A55F5B /* mountain.jpg */,
-				F7D1F18D1A35FC6900A55F5B /* outdoor.jpg */,
-				F7D1F18E1A35FC6900A55F5B /* water.jpg */,
+				F73DECD51A3936D300768379 /* ballGames.jpg */,
+				F73DECD61A3936D300768379 /* indoor.jpg */,
+				F73DECD71A3936D300768379 /* mountain.jpg */,
+				F73DECD81A3936D300768379 /* outdoor.jpg */,
+				F73DECD91A3936D300768379 /* social.jpg */,
+				F73DECDA1A3936D300768379 /* water.jpg */,
+				F7AFFE2A1A38DD2A00EA3D12 /* Branding_76x76.png */,
+				F7AFFE2B1A38DD2A00EA3D12 /* Branding_120x120.png */,
+				F7AFFE2C1A38DD2A00EA3D12 /* Branding_152x152.png */,
+				F7AFFE2D1A38DD2A00EA3D12 /* Branding_180x180.png */,
+				F7AFFE2E1A38DD2A00EA3D12 /* Branding_1024x1024.png */,
 				F7D1F17A1A35E2EC00A55F5B /* sky.jpg */,
-				F7D1F1941A35FCA500A55F5B /* social.jpg */,
 				F7D1F17B1A35E2EC00A55F5B /* SplashScreen.jpg */,
 				F796286B1A34B694002D9D36 /* twitterRed.png */,
 				F796286C1A34B694002D9D36 /* facebookRed.png */,
@@ -419,26 +434,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7D1F1911A35FC6900A55F5B /* mountain.jpg in Resources */,
+				F7AFFE301A38DD2A00EA3D12 /* Branding_120x120.png in Resources */,
 				F7958A8E1A32711A00DA7101 /* mountain-trip-1024x1024-wallpaper-3628.jpg in Resources */,
+				F7AFFE2F1A38DD2A00EA3D12 /* Branding_76x76.png in Resources */,
 				F73628B81A2A4B54002B1F4E /* bicycle.jpg in Resources */,
-				F7D1F1901A35FC6900A55F5B /* indoor.jpg in Resources */,
-				F7D1F1951A35FCA500A55F5B /* social.jpg in Resources */,
+				F73DECDB1A3936D300768379 /* ballGames.jpg in Resources */,
 				F7E0DF291A19447500C7E59D /* avatar-male.png in Resources */,
-				F7D1F18F1A35FC6900A55F5B /* ballGames.jpg in Resources */,
+				F7AFFE331A38DD2A00EA3D12 /* Branding_1024x1024.png in Resources */,
+				F73DECDE1A3936D300768379 /* outdoor.jpg in Resources */,
 				F7CF2E451A0D1D56003D0041 /* Main.storyboard in Resources */,
-				F7D1F1921A35FC6900A55F5B /* outdoor.jpg in Resources */,
 				F79628701A34B694002D9D36 /* facebookRed.png in Resources */,
 				F79628691A34AD56002D9D36 /* grey_new_seo-17-512.png in Resources */,
-				F7D1F1931A35FC6900A55F5B /* water.jpg in Resources */,
+				F73DECDC1A3936D300768379 /* indoor.jpg in Resources */,
 				F70172581A299C720003EC09 /* Bike Rider Top Mountain iPhone 6 Wallpaper.jpg in Resources */,
 				F7CF2E4A1A0D1D56003D0041 /* LaunchScreen.xib in Resources */,
 				F70172591A299C720003EC09 /* citybike.jpg in Resources */,
+				F73DECE01A3936D300768379 /* water.jpg in Resources */,
 				F796286F1A34B694002D9D36 /* twitterRed.png in Resources */,
 				F79628711A34B694002D9D36 /* googleRed.png in Resources */,
 				F7E1B23D1A1A503200D3E501 /* Info.plist in Resources */,
 				F70172621A29F8810003EC09 /* snowBoard.jpg in Resources */,
+				F73DECDD1A3936D300768379 /* mountain.jpg in Resources */,
+				F73DECDF1A3936D300768379 /* social.jpg in Resources */,
+				F7AFFE321A38DD2A00EA3D12 /* Branding_180x180.png in Resources */,
 				F7D1F17C1A35E2EC00A55F5B /* sky.jpg in Resources */,
+				F7AFFE311A38DD2A00EA3D12 /* Branding_152x152.png in Resources */,
 				F7CF2E471A0D1D56003D0041 /* Images.xcassets in Resources */,
 				F7D1F17D1A35E2EC00A55F5B /* SplashScreen.jpg in Resources */,
 				F7A271251A1643FE00205424 /* Info.plist in Resources */,
