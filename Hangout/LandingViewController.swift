@@ -21,30 +21,8 @@ class LandingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let initiateBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 270, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
-        initiateBtn.setTitle("INITIATE ACTIVITY", forState: UIControlState.Normal)
-        
-        let yourActivitiesBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 320, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDefault)
-        yourActivitiesBtn.setTitle("YOUR ACTIVITIES", forState: UIControlState.Normal)
-        
-        let joinableEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 400, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
-        joinableEventsBtn.setTitle("ACTIVITIES YOU MAY JOIN ", forState: UIControlState.Normal)
-        
-        let joinedEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 450, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDefault)
-        joinedEventsBtn.setTitle("JOINED EVENTS", forState: UIControlState.Normal)
-        
-        self.drawLogin()
-        
-        initiateBtn.addTarget(self, action: "goToInitiate", forControlEvents: .TouchUpInside)
-        joinableEventsBtn.addTarget(self, action: "goToJoinable", forControlEvents: .TouchUpInside)
-        joinedEventsBtn.addTarget(self, action: "goToJoined", forControlEvents: .TouchUpInside)
-        yourActivitiesBtn.addTarget(self, action: "goToMyActivities", forControlEvents: .TouchUpInside)
-        
-        self.view.addSubview(initiateBtn)
-        self.view.addSubview(joinableEventsBtn)
-        self.view.addSubview(yourActivitiesBtn)
-        self.view.addSubview(joinedEventsBtn)
+        self.saveAuthUser()
+        self.drawLayout()
     }
 
     override func didReceiveMemoryWarning() {
@@ -135,7 +113,7 @@ class LandingViewController: UIViewController {
         
         let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         xButton.frame = CGRectMake(10, 29, 65, 35)
-        xButton.addTarget(self, action: "logOut", forControlEvents:.TouchUpInside)
+        xButton.addTarget(self, action: "logOut", forControlEvents:.AllEvents)
         
         self.view.addSubview(bView0)
         self.view.sendSubviewToBack(bView0)
@@ -145,12 +123,49 @@ class LandingViewController: UIViewController {
 
     }
     
+    func drawLayout(){
+        let initiateBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 270, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
+        initiateBtn.setTitle("INITIATE ACTIVITY", forState: UIControlState.Normal)
+        
+        let yourActivitiesBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 320, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDefault)
+        yourActivitiesBtn.setTitle("YOUR ACTIVITIES", forState: UIControlState.Normal)
+        
+        let joinableEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 400, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
+        joinableEventsBtn.setTitle("ACTIVITIES YOU MAY JOIN ", forState: UIControlState.Normal)
+        
+        let joinedEventsBtn: SFlatButton = SFlatButton(frame: CGRectMake(10, 450, 300, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDefault)
+        joinedEventsBtn.setTitle("JOINED EVENTS", forState: UIControlState.Normal)
+        
+        self.drawLogin()
+        
+        initiateBtn.addTarget(self, action: "goToInitiate", forControlEvents: .TouchUpInside)
+        joinableEventsBtn.addTarget(self, action: "goToJoinable", forControlEvents: .TouchUpInside)
+        joinedEventsBtn.addTarget(self, action: "goToJoined", forControlEvents: .TouchUpInside)
+        yourActivitiesBtn.addTarget(self, action: "goToMyActivities", forControlEvents: .TouchUpInside)
+        
+        self.view.addSubview(initiateBtn)
+        self.view.addSubview(joinableEventsBtn)
+        self.view.addSubview(yourActivitiesBtn)
+        self.view.addSubview(joinedEventsBtn)
+    }
+    
     func logOut(){
         let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC") as LoginViewController
         loginVC.UserNameTextField?.text = ""
         loginVC.UserEmailTextField?.text = ""
         FBSession.activeSession().closeAndClearTokenInformation()
         self.navigationController?.pushViewController(loginVC, animated: true)
+    }
+    
+    func saveAuthUser(){
+        if (PersistenceHelper.loadUserFromCoreData(self.user.email).count > 0){
+            //show his activities
+        }
+        else {
+            PersistenceHelper.removeUserFromCoreData()
+            PersistenceHelper.saveUserToCoreData(self.user.email, name: self.user.name)
+        }
+        
     }
     
 }

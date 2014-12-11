@@ -24,10 +24,9 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
     @IBOutlet var lnkWebsite: UIButton?
     @IBOutlet var lblPhone: UILabel?
     
-
-    var persistenceHelper: PersistenceHelper = PersistenceHelper()
     var activity:Activity = Activity()
     var user:Individual = Individual()
+    var persistenceHelper: PersistenceHelper = PersistenceHelper()
     var pendingLabel:UILabel = UILabel()
     var formater = NSDateFormatter()
     
@@ -90,7 +89,6 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         self.drawLogin()
         
         self.showMap()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -284,10 +282,6 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         
     }
     
-    func shareToGooglePlus(){
-        
-    }
-    
     func drawLogin(){
         lblUserInfo?.text = self.user.name
         let url = NSURL(string: self.user.avatarImageUrl);
@@ -322,15 +316,15 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         
         let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         xButton.frame = CGRectMake(10, 29, 65, 35)
-        xButton.addTarget(self, action: "goToLanding", forControlEvents:.TouchUpInside)
+        xButton.addTarget(self, action: "goToLanding", forControlEvents: UIControlEvents.AllEvents)
         
         let facebookButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         facebookButton.frame = CGRectMake(9, 60, 45, 45)
-        facebookButton.addTarget(self, action: "shareToFacebook", forControlEvents:.TouchUpInside)
+        facebookButton.addTarget(self, action: "shareToFacebook", forControlEvents: UIControlEvents.TouchUpInside)
         
         let twitterButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         twitterButton.frame = CGRectMake(81, 60, 45, 45)
-        twitterButton.addTarget(self, action: "shareToTwitter", forControlEvents:.TouchUpInside)
+        twitterButton.addTarget(self, action: "shareToTwitter", forControlEvents:UIControlEvents.TouchUpInside)
         
         self.view.addSubview(bView0)
         self.view.sendSubviewToBack(bView0)

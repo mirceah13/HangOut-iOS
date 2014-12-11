@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBProfilePictureView.self
         
         configureAppearance()
-        //return true
-        exit(0)
+        return true
+        //exit(0)
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: NSString?, annotation: AnyObject) -> Bool {

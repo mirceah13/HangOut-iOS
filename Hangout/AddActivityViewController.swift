@@ -44,7 +44,6 @@ class AddActivityViewController: UIViewController {
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        
         textField.resignFirstResponder()
         return true
     }
@@ -174,16 +173,6 @@ class AddActivityViewController: UIViewController {
 
     }
     
-    func promptLogout(){
-        let alertController: UIAlertController = UIAlertController(title: "Log out", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.ActionSheet)
-        
-        let logoutAction = UIAlertAction(title: "Log Out", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in self.logOut()})
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
-        alertController.addAction(logoutAction)
-        alertController.addAction(cancelAction)
-        self.presentViewController(alertController, animated: true, completion:nil)
-    }
-    
     func drawLogin(){
         lblUserInfo?.text = self.user.name
         let url = NSURL(string: self.user.avatarImageUrl);
@@ -226,6 +215,16 @@ class AddActivityViewController: UIViewController {
         self.view.addSubview(xButton)
         self.view.bringSubviewToFront(xButton)
         
+    }
+    
+    func promptLogout(){
+        let alertController: UIAlertController = UIAlertController(title: "Log out", message: "Are you sure you want to log out?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let logoutAction = UIAlertAction(title: "Log Out", style: UIAlertActionStyle.Default, handler: {(alert: UIAlertAction!) in self.logOut()})
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil)
+        alertController.addAction(logoutAction)
+        alertController.addAction(cancelAction)
+        self.presentViewController(alertController, animated: true, completion:nil)
     }
     
     func logOut(){

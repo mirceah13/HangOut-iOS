@@ -52,6 +52,13 @@ class Utils: NSObject {
         return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: 1)
     }
     
+    class func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        var emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let result = emailTest?.evaluateWithObject(testStr)
+        return result!
+    }
+    
     class func currentDate()->NSDate{
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()

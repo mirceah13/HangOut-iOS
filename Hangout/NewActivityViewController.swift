@@ -38,6 +38,20 @@ class NewActivityViewController: UIViewController {
         self.presentViewController(alertController, animated: true, completion:nil)
     }
     
+    func logOut(){
+        let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC") as LoginViewController
+        loginVC.UserNameTextField?.text = ""
+        loginVC.UserEmailTextField?.text = ""
+        FBSession.activeSession().closeAndClearTokenInformation()
+        self.navigationController?.pushViewController(loginVC, animated: true)
+    }
+
+    func goToInitiate(){
+        let initiateVC = self.storyboard?.instantiateViewControllerWithIdentifier("initiateVC") as AddActivityViewController
+        initiateVC.user = self.user
+        self.navigationController?.pushViewController(initiateVC, animated: true)
+    }
+    
     func drawLogin(){
         lblUserInfo?.text = self.user.name
         let url = NSURL(string: self.user.avatarImageUrl);
@@ -72,7 +86,7 @@ class NewActivityViewController: UIViewController {
         
         let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         xButton.frame = CGRectMake(10, 29, 65, 35)
-        xButton.addTarget(self, action: "goToInitiate", forControlEvents:.TouchUpInside)
+        xButton.addTarget(self, action: "goToInitiate", forControlEvents:.AllEvents)
         
         self.view.addSubview(bView0)
         self.view.sendSubviewToBack(bView0)
@@ -80,20 +94,6 @@ class NewActivityViewController: UIViewController {
         self.view.addSubview(xButton)
         self.view.bringSubviewToFront(xButton)
         
-    }
-    
-    func logOut(){
-        let loginVC = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC") as LoginViewController
-        loginVC.UserNameTextField?.text = ""
-        loginVC.UserEmailTextField?.text = ""
-        FBSession.activeSession().closeAndClearTokenInformation()
-        self.navigationController?.pushViewController(loginVC, animated: true)
-    }
-
-    func goToInitiate(){
-        let initiateVC = self.storyboard?.instantiateViewControllerWithIdentifier("initiateVC") as AddActivityViewController
-        initiateVC.user = self.user
-        self.navigationController?.pushViewController(initiateVC, animated: true)
     }
     
     func drawLayout(){

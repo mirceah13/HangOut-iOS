@@ -24,20 +24,21 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
         
         landingVC = self.storyboard?.instantiateViewControllerWithIdentifier("landingVC") as LandingViewController
-        let dangerbtn: SFlatButton = SFlatButton(frame: CGRectMake(60, 450, 200, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
-        dangerbtn.setTitle("YUP, THAT'S ME", forState: UIControlState.Normal)
-        dangerbtn.addTarget(self, action: "goToLanding", forControlEvents: .TouchUpInside)
-        self.view.addSubview(dangerbtn)
         
         self.UserEmailTextField.backgroundColor = UIColor(red: 10, green: 10, blue: 10, alpha: 0.1)
         self.UserNameTextField.backgroundColor = UIColor(red: 10, green: 10, blue: 10, alpha: 0.1)
         
-        //FBSession.activeSession().closeAndClearTokenInformation()
+        self.drawLayout()
         
     }
     
     override func viewDidAppear(animated: Bool) {
         self.landed = false
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     override func shouldAutorotate() -> Bool {
@@ -48,8 +49,7 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         return UIInterfaceOrientation.Portrait.rawValue
     }
     
-    //Facebook  Delegate Methods
-    
+    /// Facebook  Delegate Methods
     func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
     }
     
@@ -69,6 +69,16 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         println("Error: \(handleError.localizedDescription)")
     }
     
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
+    
     func goToLanding(){
         if (!landed){
             landed = true
@@ -76,9 +86,14 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         else {
             return;
         }
-
+        
         if (UserNameTextField?.text == "" || UserEmailTextField?.text == ""){
-            lblError.text = "Are you sure this is you? You haven't filled in the fields"
+            lblError.text = "Are you sure this is you? You haven't filled in the fields 🚫"
+            landed = false
+            return
+        }
+        if (!Utils.isValidEmail(UserEmailTextField.text)){
+            lblError.text = "That cannot possibly be a valid email address 🚫"
             landed = false
             return
         }
@@ -90,19 +105,11 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         self.navigationController?.pushViewController(landingVC, animated: true)
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func drawLayout(){
+        let dangerbtn: SFlatButton = SFlatButton(frame: CGRectMake(60, 450, 200, 40), sfButtonType: SFlatButton.SFlatButtonType.SFBDanger)
+        dangerbtn.setTitle("YUP, THAT'S ME", forState: UIControlState.Normal)
+        dangerbtn.addTarget(self, action: "goToLanding", forControlEvents: .TouchUpInside)
+        self.view.addSubview(dangerbtn)
     }
 
 }

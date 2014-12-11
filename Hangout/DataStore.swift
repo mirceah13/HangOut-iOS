@@ -139,15 +139,14 @@ class DataStore: NSObject {
                 println("Error could not parse JSON: '\(jsonStr)'")
             }
             else {
-                // The JSONObjectWithData constructor didn't return an error. But, we should still
-                // check and make sure that json has a value using optional binding.
+                // The JSONObjectWithData constructor didn't return an error.
                 if let parseJSON = json {
-                    // Okay, the parsedJSON is here, let's get the value for 'success' out of it
+                    // Okay, the parsedJSON is here
                     var success = parseJSON["success"] as? Int
                     println("Succes: \(success)")
                 }
                 else {
-                    // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
+                    // something went worng. Maybe the server isn't running?
                     let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
                     println("Error could not parse JSON: \(jsonStr)")
                 }

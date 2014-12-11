@@ -24,8 +24,10 @@ class ChatViewController: UIViewController {
         let request = NSURLRequest(URL: url!)
         webView?.loadRequest(request)
         self.drawLogin()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     override func shouldAutorotate() -> Bool {
@@ -34,11 +36,6 @@ class ChatViewController: UIViewController {
     
     override func supportedInterfaceOrientations() -> Int {
         return UIInterfaceOrientation.Portrait.rawValue
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func promptLogout(){
@@ -93,7 +90,7 @@ class ChatViewController: UIViewController {
         
         let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         xButton.frame = CGRectMake(10, 29, 65, 35)
-        xButton.addTarget(self, action: "goBack", forControlEvents:.TouchUpInside)
+        xButton.addTarget(self, action: "goBack", forControlEvents: UIControlEvents.AllEvents)
         
         self.view.addSubview(bView0)
         self.view.sendSubviewToBack(bView0)

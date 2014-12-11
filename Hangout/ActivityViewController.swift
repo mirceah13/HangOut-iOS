@@ -20,14 +20,15 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     var activities:[Activity] = []
     var persistenceHelper: PersistenceHelper = PersistenceHelper()
     
+    var refreshControl:UIRefreshControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.drawLogin()
         navigationItem.title = "Activities"
-        self.saveAuthUser()
-        activities = persistenceHelper.list(self.user, type: self.screenType) as [Activity]
-
+        //activities = persistenceHelper.list(self.user, type: self.screenType) as [Activity]
+        self.loadData()
+        
         if (self.activities.count == 0 || (self.activities.count == 1 && self.activities[0].getId() == "" )){
             let nothingLabel = UILabel(frame: CGRectMake(55, 285, 240, 30))
             nothingLabel.font = UIFont(name: "Avenir", size: 15)
@@ -37,6 +38,11 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
         
             self.view.addSubview(nothingLabel)
         }
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
+        self.activityTable.addSubview(refreshControl)
 
     }
 
@@ -52,20 +58,17 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     override func supportedInterfaceOrientations() -> Int {
         return UIInterfaceOrientation.Portrait.rawValue
     }
-    
-    func saveAuthUser(){
-        if (PersistenceHelper.loadUserFromCoreData(self.user.email).count > 0){
-            //show his activities
-        }
-        else {
-            PersistenceHelper.removeUserFromCoreData()
-            PersistenceHelper.saveUserToCoreData(self.user.email, name: self.user.name)
-        }
-
-    }
 
     override func viewWillAppear(animated: Bool) {
         activityTable.reloadData()
+    }
+    
+    func loadData(){
+        activities = persistenceHelper.list(self.user, type: self.screenType) as [Activity]
+        if (self.refreshControl != nil){
+            self.refreshControl.endRefreshing()
+        self.activityTable.reloadData()
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
