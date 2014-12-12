@@ -93,7 +93,7 @@ class DataStore: NSObject {
     }
     
     func Load(id: String) -> AnyObject {
-        var url = ""
+        var url = "\(self.storeName)/\(id)"
         var request:NSMutableURLRequest = NSMutableURLRequest()
         request.URL = NSURL(string: url)
         request.HTTPMethod = "GET"

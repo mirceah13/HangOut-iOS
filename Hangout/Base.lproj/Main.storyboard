@@ -439,6 +439,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Drm-gB-zaI">
                                 <rect key="frame" x="270" y="45" width="39" height="45"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1418397670_sync-01-128.png" translatesAutoresizingMaskIntoConstraints="NO" id="4cO-na-ZMv">
+                                <rect key="frame" x="14" y="517" width="27" height="27"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="logged in as" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlW-mR-snz">
                                 <rect key="frame" x="249" y="27" width="60" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="10"/>
@@ -744,6 +747,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1418397670_sync-01-128.png" width="128" height="128"/>
         <image name="ballGames.jpg" width="1920" height="1080"/>
         <image name="facebookRed.png" width="128" height="128"/>
         <image name="googleRed.png" width="128" height="128"/>

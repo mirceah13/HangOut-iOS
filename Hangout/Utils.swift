@@ -29,7 +29,7 @@ extension String {
 }
 
 class Utils: NSObject {
-    class func colorWithHexString (hex:String) -> UIColor {
+    class func colorWithHexString(hex:String, alpha: Float) -> UIColor {
         var cString:String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
         
         if (cString.hasPrefix("#")) {
@@ -49,7 +49,11 @@ class Utils: NSObject {
         NSScanner(string: gString).scanHexInt(&g)
         NSScanner(string: bString).scanHexInt(&b)
         
-        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: 1)
+        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(alpha))
+    }
+    
+    class func colorWithHexString (hex:String) -> UIColor {
+       return self.colorWithHexString(hex, alpha: 1)
     }
     
     class func isValidEmail(testStr:String) -> Bool {
@@ -67,5 +71,37 @@ class Utils: NSObject {
         let minutes = components.minute
         
         return date
+    }
+    
+    class func showActivityIndicatory(uiView: UIView) -> (UIActivityIndicatorView, UIView){
+        var container: UIView = UIView()
+        container.frame = uiView.frame
+        container.center = uiView.center
+        container.backgroundColor = self.colorWithHexString("#868A89", alpha: 0.3)
+        
+        var loadingView: UIView = UIView()
+        loadingView.frame = CGRectMake(0, 0, 80, 80)
+        loadingView.center = uiView.center
+        loadingView.backgroundColor = self.colorWithHexString("#444444", alpha: 0.7)
+        loadingView.clipsToBounds = true
+        loadingView.layer.cornerRadius = 10
+        
+        var actInd: UIActivityIndicatorView = UIActivityIndicatorView()
+        actInd.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+        actInd.activityIndicatorViewStyle =
+            UIActivityIndicatorViewStyle.WhiteLarge
+        actInd.center = CGPointMake(loadingView.frame.size.width / 2,
+            loadingView.frame.size.height / 2);
+        loadingView.addSubview(actInd)
+        container.addSubview(loadingView)
+        uiView.addSubview(container)
+        actInd.startAnimating()
+        
+        return (actInd, container)
+    }
+    
+    class func hideActivityIndicator(containingView: UIView, actInd: UIActivityIndicatorView) {
+        actInd.stopAnimating()
+        containingView.removeFromSuperview()
     }
 }

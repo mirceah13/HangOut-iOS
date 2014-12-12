@@ -86,7 +86,7 @@ class NewActivityViewController: UIViewController {
         
         let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         xButton.frame = CGRectMake(10, 29, 65, 35)
-        xButton.addTarget(self, action: "goToInitiate", forControlEvents:.AllEvents)
+        xButton.addTarget(self, action: "goToInitiate", forControlEvents:UIControlEvents.TouchUpInside)
         
         self.view.addSubview(bView0)
         self.view.sendSubviewToBack(bView0)

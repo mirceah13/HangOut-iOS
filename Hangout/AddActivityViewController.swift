@@ -214,7 +214,6 @@ class AddActivityViewController: UIViewController {
         self.view.addSubview(button)
         self.view.addSubview(xButton)
         self.view.bringSubviewToFront(xButton)
-        
     }
     
     func promptLogout(){

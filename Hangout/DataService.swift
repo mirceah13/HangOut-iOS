@@ -12,8 +12,9 @@ class DataService: NSObject {
     
     var dataStore: DataStore = DataStore()
     
-    func loadActivity(id: String){
-        let activity: AnyObject = dataStore.Load(id)
+    func loadActivity(id: String) -> Activity{
+        let activity: Activity = dataStore.Load(id) as Activity
+        return activity
         
     }
     

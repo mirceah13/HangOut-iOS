@@ -282,6 +282,18 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         
     }
     
+    func refreshActivity(){
+        var indicator = Utils.showActivityIndicatory(self.view)
+        self.activity = persistenceHelper.load(self.activity.getId())
+        self.pendingMembers = self.activity.pendingMembers
+        self.confirmedMembers = self.activity.confirmedMembers
+        self.pendingMembers.push(self.activity.initiator)
+        self.confirmedMembers.push(self.activity.initiator)
+        self.pendingMembersCollectionView.reloadData()
+        self.confirmedMemersCollectionView.reloadData()
+        Utils.hideActivityIndicator(indicator.1, actInd: indicator.0)
+    }
+    
     func drawLogin(){
         lblUserInfo?.text = self.user.name
         let url = NSURL(string: self.user.avatarImageUrl);
@@ -316,7 +328,7 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         
         let xButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         xButton.frame = CGRectMake(10, 29, 65, 35)
-        xButton.addTarget(self, action: "goToLanding", forControlEvents: UIControlEvents.AllEvents)
+        xButton.addTarget(self, action: "goToLanding", forControlEvents: UIControlEvents.TouchUpInside)
         
         let facebookButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
         facebookButton.frame = CGRectMake(9, 60, 45, 45)
@@ -373,12 +385,19 @@ class DetailViewController: UIViewController,  UICollectionViewDataSource, UICol
         pendingLabel.text = "\(self.pendingMembers.count) willing participant(s)"
         pendingLabel.textColor = UIColor.grayColor()
         
+        let refreshButton = UIButton.buttonWithType(UIButtonType.System) as UIButton
+        refreshButton.frame = CGRectMake(14, 517, 30, 30)
+        refreshButton.addTarget(self, action: "refreshActivity", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(bView0)
         self.view.addSubview(bView1)
         self.view.addSubview(confirmedLabel)
         self.view.addSubview(pendingLabel)
         self.view.addSubview(button)
+        self.view.addSubview(refreshButton)
+        self.view.bringSubviewToFront(refreshButton)
 
     }
+    
+    
 }

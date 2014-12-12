@@ -31,6 +31,11 @@ class PersistenceHelper: NSObject {
                     }
                 }
             }
+            else {
+                //just one. It's a load
+                var act:Activity = Activity(JSONString: datastr)
+                entities.push(act)
+            }
             for item in objectsJSONStrings!{
                 
                 var act:Activity = Activity(JSONString: item as String)
@@ -52,6 +57,11 @@ class PersistenceHelper: NSObject {
             activities = dataService.fetchActivitiesFor(user)
         }
         return activities
+    }
+    
+    func load(id: String) -> Activity{
+        var activity:Activity = dataService.loadActivity(id);
+        return activity
     }
     
     func joinActivity(activity: Activity, individual: Individual){
